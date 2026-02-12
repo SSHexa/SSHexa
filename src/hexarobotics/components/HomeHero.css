@@ -1,0 +1,394 @@
+/* HR Hero Section — Robotics/Industrial Theme */
+.hr-hero-section {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 120px 0 80px;
+}
+
+/* Dark industrial background with warm undertones */
+.hr-hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hr-hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #0c0c0c 0%, #1a1a2e 40%, #16213e 70%, #0c0c0c 100%);
+}
+
+/* Technical grid pattern */
+.hr-hero-grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(245, 158, 11, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 158, 11, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Container layout */
+.hr-hero-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Content */
+.hr-hero-content {
+  color: white;
+}
+
+/* Badge with spinning gear */
+.hr-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: #f59e0b;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.hr-badge-spin {
+  font-size: 0.85rem;
+  animation: hr-spin 4s linear infinite;
+}
+
+@keyframes hr-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Title — multi-line industrial feel */
+.hr-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  color: white;
+  letter-spacing: -0.5px;
+}
+
+.hr-title-highlight {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hr-title-sub {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 2px;
+  margin-top: 0.25rem;
+}
+
+/* Subtitle */
+.hr-hero-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 2rem;
+  max-width: 480px;
+}
+
+/* Buttons — amber primary */
+.hr-hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.hr-btn-primary-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  border: none;
+  padding: 0.9rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  color: #0c0c0c;
+  transition: all 0.3s ease;
+}
+
+.hr-btn-primary-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.35);
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #0c0c0c;
+}
+
+.hr-btn-icon {
+  font-size: 0.85rem;
+}
+
+.hr-btn-secondary-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  padding: 0.9rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.hr-btn-secondary-hero:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(245, 158, 11, 0.5);
+  color: #fbbf24;
+}
+
+/* Engineering Specs bar */
+.hr-hero-specs {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+
+.hr-spec-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hr-spec-icon {
+  font-size: 1.1rem;
+  color: #f59e0b;
+}
+
+.hr-spec-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-spec-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  font-family: "Courier New", monospace;
+}
+
+.hr-spec-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hr-spec-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Product Visual — robot image showcase */
+.hr-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hr-product-showcase {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+.hr-product-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.hr-product-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+}
+
+/* Floating tags — industrial style */
+.hr-floating-tag {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(20, 20, 30, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  z-index: 2;
+  animation: hr-tag-float 4s ease-in-out infinite;
+}
+
+.hr-tag-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.hr-dot-green { background: #22c55e; box-shadow: 0 0 6px rgba(34, 197, 94, 0.5); }
+.hr-dot-amber { background: #f59e0b; box-shadow: 0 0 6px rgba(245, 158, 11, 0.5); }
+.hr-dot-blue { background: #3b82f6; box-shadow: 0 0 6px rgba(59, 130, 246, 0.5); }
+
+.hr-tag-1 {
+  top: 5%;
+  right: -5%;
+  animation-delay: 0s;
+}
+
+.hr-tag-2 {
+  bottom: 30%;
+  left: -8%;
+  animation-delay: 1.5s;
+}
+
+.hr-tag-3 {
+  bottom: 5%;
+  right: 0;
+  animation-delay: 3s;
+}
+
+@keyframes hr-tag-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .hr-hero-title {
+    font-size: 3rem;
+  }
+  .hr-title-sub {
+    font-size: 2rem;
+  }
+  .hr-hero-container {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hr-hero-section {
+    padding: 100px 0 60px;
+  }
+  .hr-hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hr-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hr-hero-subtitle {
+    max-width: 600px;
+  }
+  .hr-hero-buttons {
+    justify-content: center;
+  }
+  .hr-hero-specs {
+    justify-content: center;
+  }
+  .hr-hero-visual {
+    max-width: 400px;
+    margin: 2rem auto 0;
+  }
+  .hr-floating-tag {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hr-hero-section {
+    min-height: auto;
+    padding: 100px 0 60px;
+  }
+  .hr-hero-title {
+    font-size: 2.25rem;
+  }
+  .hr-title-sub {
+    font-size: 1.5rem;
+  }
+  .hr-hero-subtitle {
+    font-size: 1rem;
+  }
+  .hr-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  .hr-btn-primary-hero,
+  .hr-btn-secondary-hero {
+    width: 100%;
+    justify-content: center;
+  }
+  .hr-hero-specs {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+  }
+  .hr-spec-divider {
+    display: none;
+  }
+  .hr-hero-visual {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hr-hero-title {
+    font-size: 1.85rem;
+  }
+  .hr-title-sub {
+    font-size: 1.25rem;
+  }
+  .hr-hero-badge {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .hr-spec-value {
+    font-size: 0.95rem;
+  }
+  .hr-spec-label {
+    font-size: 0.7rem;
+  }
+}

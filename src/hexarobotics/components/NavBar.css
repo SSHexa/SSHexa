@@ -1,0 +1,195 @@
+/* =========================
+   HR NAVBAR BASE STYLES
+========================= */
+.hr-custom-navbar {
+  background-size: cover;
+  background-position: center;
+  min-height: 100px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Logo */
+.hr-navbar-logo img {
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.hr-navbar-logo img:hover {
+  transform: scale(1.05);
+}
+
+.hr-navbar-brand-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: 0.5px;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.hr-navbar-logo:hover .hr-navbar-brand-text {
+  color: #2563eb;
+}
+
+/* Nav links */
+.hr-nav-link-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black !important;
+  margin-left: 20px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.hr-nav-link-text:hover {
+  color: #ffcc00 !important;
+  transform: translateY(-2px);
+}
+
+.hr-nav-link-text.active {
+  color: #2563eb !important;
+  border-bottom: 2px solid #2563eb;
+}
+
+/* Nav Buttons */
+.hr-nav-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-left: 1.5rem;
+  align-items: center;
+}
+
+.hr-back-sshexa-btn {
+  border: 2px solid #f59e0b !important;
+  color: #f59e0b !important;
+  background: transparent !important;
+  padding: 0.5rem 1.25rem !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+}
+
+.hr-back-sshexa-btn:hover {
+  background: #f59e0b !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TABLETS (≤ 992px)
+========================= */
+@media (max-width: 992px) {
+  .hr-custom-navbar {
+    min-height: 80px;
+    padding: 0.75rem 1rem;
+  }
+
+  .hr-navbar-logo img {
+    height: 60px;
+  }
+
+  .hr-nav-link-text {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+
+  .hr-nav-buttons {
+    margin-left: 1rem;
+  }
+
+  .hr-back-sshexa-btn {
+    padding: 0.4rem 1rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* =========================
+   PHONES (≤ 768px)
+========================= */
+@media (max-width: 768px) {
+  .hr-custom-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .hr-navbar-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .hr-navbar-logo img {
+    height: 55px;
+  }
+
+  .hr-navbar-brand-text {
+    font-size: 1.2rem;
+  }
+
+  /* Stack nav links vertically */
+  .hr-nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+
+  .hr-nav-link-text {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    font-size: 1rem;
+    padding: 0.4rem 0;
+  }
+
+  /* Nav buttons on mobile */
+  .hr-nav-buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+    gap: 0.5rem;
+  }
+
+  .hr-back-sshexa-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Toggler styling */
+  .navbar-toggler {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+  }
+}
+
+/* =========================
+   SMALL PHONES (≤ 480px)
+========================= */
+@media (max-width: 480px) {
+  .hr-custom-navbar {
+    min-height: 60px;
+    padding: 0.75rem;
+  }
+
+  .hr-navbar-logo img {
+    height: 50px;
+  }
+
+  .hr-nav-link-text {
+    font-size: 0.9rem;
+    margin: 6px 0;
+  }
+}

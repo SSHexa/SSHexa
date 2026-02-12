@@ -1,0 +1,96 @@
+/* Global container */
+.App {
+  text-align: center;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #222;
+  background-color: #ffffff;
+  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+}
+
+/* Optional logo animation */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* App Header */
+.App-header {
+  background-color: #003366; /* Matches site color palette */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Links */
+.App-link {
+  color: #61dafb;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: #ffcc00;
+}
+
+/* ✅ Responsive Adjustments */
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .App-header {
+    font-size: calc(9px + 1.8vmin);
+    padding: 1.5rem;
+  }
+
+  .App-logo {
+    height: 35vmin;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 1.5vmin);
+    padding: 1.2rem;
+  }
+
+  .App-logo {
+    height: 30vmin;
+  }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+  .App-header {
+    font-size: calc(8px + 1.2vmin);
+    padding: 1rem;
+  }
+
+  .App-logo {
+    height: 25vmin;
+  }
+
+  .App-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* Logo animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,363 @@
+/* ===== HEXA ROBOTICS SCOPED STYLES ===== */
+
+.hr-app {
+  font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+  color: #1e293b;
+}
+
+/* ===== NAVBAR ===== */
+.hr-navbar {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.75rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.hr-navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hr-back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.hr-back-link:hover {
+  color: #f59e0b;
+}
+
+.hr-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hr-logo {
+  height: 50px;
+}
+
+.hr-brand-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.hr-nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hr-nav-links a {
+  color: #475569;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.hr-nav-links a:hover {
+  color: #f59e0b;
+}
+
+/* ===== HERO ===== */
+.hr-hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.hr-hero-content {
+  max-width: 800px;
+}
+
+.hr-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: azure;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hr-hero-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.hr-hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hr-btn-primary {
+  background: #6b7280;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.hr-btn-primary:hover {
+  background: #4b5563;
+  transform: translateY(-2px);
+  color: white;
+  text-decoration: none;
+}
+
+.hr-btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.hr-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: white;
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== SERVICES ===== */
+.hr-services {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  text-align: center;
+}
+
+.hr-section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.hr-section-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-bottom: 3rem;
+}
+
+.hr-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hr-service-card {
+  background: white;
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border-top: 4px solid #f59e0b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hr-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.hr-service-icon {
+  font-size: 2rem;
+  color: #f59e0b;
+  margin-bottom: 1rem;
+}
+
+.hr-service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: #1e293b;
+}
+
+.hr-service-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== CTA ===== */
+.hr-cta {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hr-cta-content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.hr-cta-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.hr-cta-content p {
+  font-size: 1.05rem;
+  color: #475569;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.hr-cta-btn {
+  display: inline-block;
+  background: white;
+  color: #1e293b;
+  border: 2px solid #1e293b;
+  padding: 0.65rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hr-cta-btn:hover {
+  background: #1e293b;
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== FOOTER ===== */
+.hr-footer {
+  background: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.hr-footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.hr-footer-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.hr-footer-links a:hover {
+  color: #f59e0b;
+}
+
+.hr-footer p {
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+  .hr-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hr-hero-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hr-navbar-inner {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .hr-nav-links {
+    display: none;
+  }
+
+  .hr-hero {
+    min-height: 60vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .hr-hero-title {
+    font-size: 2rem;
+  }
+
+  .hr-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hr-hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hr-hero-buttons a {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+
+  .hr-services-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .hr-cta-content {
+    padding: 1.5rem;
+  }
+
+  .hr-cta-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .hr-footer-links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hr-hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hr-hero-subtitle {
+    font-size: 0.95rem;
+  }
+}

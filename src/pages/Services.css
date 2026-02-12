@@ -1,0 +1,490 @@
+/* ===== SERVICES PAGE ===== */
+.services-page {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== HERO SECTION ===== */
+.services-hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* ===== DIVISIONS SECTION ===== */
+.divisions-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.divisions-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.divisions-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.divisions-header p {
+  font-size: 1.1rem;
+  color: #64748b;
+}
+
+.divisions-flow {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.division-flow-item {
+  display: flex;
+  align-items: stretch;
+}
+
+.division-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 320px;
+  min-height: 320px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.division-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.division-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.division-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.3rem;
+}
+
+.division-tagline {
+  display: block;
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.division-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.division-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.division-card-link:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.flow-arrow {
+  padding: 0 1.5rem;
+  color: #94a3b8;
+  font-size: 1.5rem;
+}
+
+/* ===== DIVISION SERVICES SECTION ===== */
+.division-services {
+  scroll-margin-top: 80px;
+}
+
+.division-services-header {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.division-services-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.division-services-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.division-services-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.division-header-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.8rem;
+  padding: 0.5rem 1.4rem;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.division-header-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== SERVICES LIST ===== */
+.services-list {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.service-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+}
+
+.service-block:nth-child(even) {
+  flex-direction: row-reverse;
+  background: linear-gradient(90deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.service-block:nth-child(odd) {
+  background: #ffffff;
+}
+
+/* Text section */
+.service-text {
+  flex: 1.2;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.service-text h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.service-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* Image/3D section */
+.service-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+
+.service-image-wrapper > div {
+  width: 100%;
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+  width: 100%;
+  max-width: 400px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-image:hover {
+  transform: scale(1.02);
+}
+
+/* ===== DIVISION VISIT CTA ===== */
+.division-visit-cta {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 2rem 3rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.division-visit-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 2.2rem;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.division-visit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Large Tablets */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .divisions-flow {
+    gap: 1.5rem;
+  }
+
+  .division-card {
+    width: 280px;
+    padding: 1.5rem;
+  }
+
+  .flow-arrow {
+    display: none;
+  }
+
+  .service-block {
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .service-text {
+    padding: 0 1.5rem;
+  }
+
+  .service-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .service-text p {
+    font-size: 0.95rem;
+  }
+
+  .service-image-wrapper {
+    max-width: 320px;
+  }
+
+  .service-image-wrapper > div,
+  .service-image {
+    height: 220px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .services-hero {
+    min-height: 40vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .divisions-section {
+    padding: 3rem 1rem;
+  }
+
+  .divisions-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .divisions-flow {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .division-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .division-services-header {
+    padding: 2rem 1rem;
+  }
+
+  .division-services-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-block,
+  .service-block:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .service-text {
+    padding: 0 1rem;
+    text-align: center;
+    order: 2;
+  }
+
+  .service-image-wrapper {
+    order: 1;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .service-text p {
+    font-size: 0.9rem;
+  }
+
+  .service-image-wrapper > div,
+  .service-image {
+    height: 200px;
+    max-width: 100%;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .divisions-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .division-card {
+    padding: 1.2rem;
+  }
+
+  .division-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .division-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .division-card p {
+    font-size: 0.9rem;
+  }
+
+  .service-block {
+    padding: 1.5rem 0.75rem;
+    gap: 1rem;
+  }
+
+  .service-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .service-text p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .service-image-wrapper > div,
+  .service-image {
+    height: 180px;
+    border-radius: 10px;
+  }
+}
