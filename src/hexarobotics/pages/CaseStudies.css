@@ -1,0 +1,154 @@
+.case-page {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 50px;
+  font-family: "Inter", sans-serif;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.case-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.case-subtitle {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Filters & Sorting */
+.case-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.case-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  border: 1.5px solid #000;
+  background: #fff;
+  color: #000;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.2s ease-in-out;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Sort dropdown */
+.case-sort select {
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 0.85rem;
+}
+
+/* Case Study Cards Grid */
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Card */
+.case-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease-in-out;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+a.case-card,
+a.case-card:hover,
+a.case-card:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.case-card:hover {
+  transform: translateY(-5px);
+}
+
+.case-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.case-content {
+  padding: 20px;
+}
+
+.case-category {
+  font-size: 0.7rem;
+  color: #666;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.case-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.case-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.case-readtime {
+  font-size: 0.78rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+/* Read More button */
+.case-readmore {
+  padding: 6px 14px;
+  border: 1.5px solid #000;
+  background: #fff;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+  transition: 0.2s;
+}
+
+.case-readmore:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+}

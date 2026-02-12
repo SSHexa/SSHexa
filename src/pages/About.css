@@ -1,0 +1,188 @@
+/* Overlay behind hero or banner */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main hero / title text */
+.hero-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* About content section */
+.about-content {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-content h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.8;
+}
+
+/* Logo section */
+.about-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.about-logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Section titles */
+.section-title {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Divisions info section */
+.divisions-info {
+  padding-top: 20px;
+}
+
+.division-item {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  border-left: 4px solid #3b82f6;
+}
+
+.division-item h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.division-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* Team section */
+.team-section {
+  padding-top: 20px;
+}
+
+.team-member {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.team-member h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* ✅ Tablet screens (≤ 992px) */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .about-content {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* ✅ Mobile screens (≤ 768px) */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.3;
+    padding: 0 1rem;
+  }
+
+  .about-content {
+    padding: 2rem 1rem;
+  }
+
+  .about-logo img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    padding-top: 20px;
+  }
+
+  .team-section {
+    padding-top: 15px;
+  }
+
+  .division-item,
+  .team-member {
+    padding: 1rem;
+  }
+}
+
+/* ✅ Very small phones (≤ 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .about-content {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .about-logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .division-item h4,
+  .team-member h4 {
+    font-size: 1.1rem;
+  }
+
+  .division-item p,
+  .team-member p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,129 @@
+/* =========================
+   NAVBAR BASE STYLES
+========================= */
+.custom-navbar {
+  background-size: cover;
+  background-position: center;
+  min-height: 100px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Nav links */
+.nav-link-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black !important;
+  margin-left: 20px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link-text:hover {
+  color: #ffcc00 !important;
+  transform: translateY(-2px);
+}
+
+/* Collapse transition fix */
+.navbar-collapse {
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* =========================
+   TABLETS (≤ 992px)
+========================= */
+@media (max-width: 992px) {
+  .custom-navbar {
+    min-height: 80px;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-logo img {
+    height: 60px;
+  }
+
+  .nav-link-text {
+    font-size: 1.1rem;
+    margin-left: 15px;
+  }
+}
+
+/* =========================
+   PHONES (≤ 768px)
+========================= */
+@media (max-width: 768px) {
+  .custom-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-logo img {
+    height: 55px;
+  }
+
+  /* Stack nav links vertically */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+
+  .nav-link-text {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    font-size: 1rem;
+    padding: 0.4rem 0;
+  }
+
+  /* Toggler styling */
+  .navbar-toggler {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+  }
+}
+
+/* =========================
+   SMALL PHONES (≤ 480px)
+========================= */
+@media (max-width: 480px) {
+  .custom-navbar {
+    min-height: 60px;
+    padding: 0.75rem;
+  }
+
+  .navbar-logo img {
+    height: 50px;
+  }
+
+  .nav-link-text {
+    font-size: 0.9rem;
+    margin: 6px 0;
+  }
+}
