@@ -1,6 +1,7 @@
 import { useRef, useMemo } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import SafeCanvas from "../components/SafeCanvas";
 
 function Microscope() {
   const group = useRef();
@@ -91,13 +92,13 @@ export default function ConsultationVisual() {
       background: "linear-gradient(135deg, #faf5ff 0%, #ede9fe 50%, #faf5ff 100%)",
       borderRadius: "12px",
     }}>
-      <Canvas camera={{ position: [0, 0, 7], fov: 45 }}>
+      <SafeCanvas camera={{ position: [0, 0, 7], fov: 45 }}>
         <ambientLight intensity={0.6} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
         <pointLight position={[0, 0, 3]} intensity={0.5} color="#a78bfa" />
         <Microscope />
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
-      </Canvas>
+      </SafeCanvas>
     </div>
   );
 }
