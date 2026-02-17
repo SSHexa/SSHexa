@@ -57,57 +57,59 @@ function AppContent() {
   const isSubApp = location.pathname.startsWith('/practicloud') || location.pathname.startsWith('/hexarobotics');
 
   return (
-    <>
+    <div className={!isSubApp ? "app-container" : undefined}>
       <ScrollToTop />
       {!isSubApp && <NavBar />}
-      <Routes>
+      <div className={!isSubApp ? "page-content" : undefined}>
+        <Routes>
 
-        <Route path="/"
-          element={
-            <>
-              <HomeHero />
-              <HomeServices />
-              <HomeFeatures/>
-              <HomeCTA />
-            </>
-          } />
+          <Route path="/"
+            element={
+              <>
+                <HomeHero />
+                <HomeServices />
+                <HomeFeatures/>
+                <HomeCTA />
+              </>
+            } />
 
 
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contactus" element={<ContactUs />} />
 
-        {/* Practicloud Routes */}
-        <Route path="/practicloud" element={<PracticloudLayout />}>
-          <Route index element={<PCHome />} />
-          <Route path="services" element={<PCServices />} />
-          <Route path="pricing" element={<PCPricing />} />
-          <Route path="academia" element={<PCAcademia />} />
-          <Route path="faq" element={<PCFAQ />} />
-          <Route path="contactus" element={<ContactUs />} />
-        </Route>
+          {/* Practicloud Routes */}
+          <Route path="/practicloud" element={<PracticloudLayout />}>
+            <Route index element={<PCHome />} />
+            <Route path="services" element={<PCServices />} />
+            <Route path="pricing" element={<PCPricing />} />
+            <Route path="academia" element={<PCAcademia />} />
+            <Route path="faq" element={<PCFAQ />} />
+            <Route path="contactus" element={<ContactUs />} />
+          </Route>
 
-        {/* Hexa Robotics Routes */}
-        <Route path="/hexarobotics" element={<HexaRoboticsLayout />}>
-          <Route index element={<HRHome />} />
-          <Route path="products" element={<HRProducts />} />
-          <Route path="products/vitriflex" element={<HRVitriflex />} />
-          <Route path="services" element={<HRServices />} />
-          <Route path="blog" element={<HRBlog />} />
-          <Route path="blogs/blog1" element={<HRBlog1 />} />
-          <Route path="blogs/blog2" element={<HRBlog2 />} />
-          <Route path="blogs/blog3" element={<HRBlog3 />} />
-          <Route path="blogs/blog4" element={<HRBlog4 />} />
-          <Route path="blogs/blog5" element={<HRBlog5 />} />
-          <Route path="casestudies" element={<HRCaseStudies />} />
-          <Route path="CS/CS1" element={<HRCS1 />} />
-          <Route path="CS/CS2" element={<HRCS2 />} />
-          <Route path="pricing" element={<HRPricing />} />
-          <Route path="contactus" element={<ContactUs />} />
-        </Route>
-      </Routes>
+          {/* Hexa Robotics Routes */}
+          <Route path="/hexarobotics" element={<HexaRoboticsLayout />}>
+            <Route index element={<HRHome />} />
+            <Route path="products" element={<HRProducts />} />
+            <Route path="products/vitriflex" element={<HRVitriflex />} />
+            <Route path="services" element={<HRServices />} />
+            <Route path="blog" element={<HRBlog />} />
+            <Route path="blogs/blog1" element={<HRBlog1 />} />
+            <Route path="blogs/blog2" element={<HRBlog2 />} />
+            <Route path="blogs/blog3" element={<HRBlog3 />} />
+            <Route path="blogs/blog4" element={<HRBlog4 />} />
+            <Route path="blogs/blog5" element={<HRBlog5 />} />
+            <Route path="casestudies" element={<HRCaseStudies />} />
+            <Route path="CS/CS1" element={<HRCS1 />} />
+            <Route path="CS/CS2" element={<HRCS2 />} />
+            <Route path="pricing" element={<HRPricing />} />
+            <Route path="contactus" element={<ContactUs />} />
+          </Route>
+        </Routes>
+      </div>
       {!isSubApp && <Footer />}
-    </>
+    </div>
   );
 }
 

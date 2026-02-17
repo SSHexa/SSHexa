@@ -1,6 +1,7 @@
 import { useRef, useMemo } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import SafeCanvas from "../components/SafeCanvas";
 
 function NetworkNodes() {
   const group = useRef();
@@ -123,13 +124,13 @@ export default function CollaborationVisual() {
       background: "linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 50%, #f0fdfa 100%)",
       borderRadius: "12px",
     }}>
-      <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
+      <SafeCanvas camera={{ position: [0, 0, 8], fov: 45 }}>
         <ambientLight intensity={0.6} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
         <directionalLight position={[-3, -3, 3]} intensity={0.3} />
         <NetworkNodes />
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.35} />
-      </Canvas>
+      </SafeCanvas>
     </div>
   );
 }

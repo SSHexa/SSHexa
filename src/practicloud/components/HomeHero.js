@@ -34,14 +34,14 @@ const HomeHero = () => {
           <div className="hero-buttons">
             <Button
               className="btn-primary-hero"
-              onClick={() => navigate("/contactus")}
+              onClick={() => navigate("/practicloud/contactus")}
             >
               Get Started Free
               <FaArrowRight className="btn-icon" />
             </Button>
             <Button
               className="btn-secondary-hero"
-              onClick={() => navigate("/services")}
+              onClick={() => navigate("/practicloud/services")}
             >
               <FaPlay className="play-icon" />
               See How It Works
