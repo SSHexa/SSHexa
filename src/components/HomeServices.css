@@ -1,55 +1,56 @@
+/* SSHexa Services Section */
 .services-section {
-  padding: 4rem 2rem;
-  background-color: #f8f9fa;
+  padding: 5rem 2rem;
+  background: #ffffff;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .services-heading {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #0f172a;
   margin-bottom: 0.5rem;
 }
 
 .services-subheading {
   font-size: 1.1rem;
   color: #64748b;
-  margin-bottom: 3rem;
-}
-
-/* Link styling */
-.card-link {
-  text-decoration: none;
-  color: inherit;
+  margin-bottom: 3.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Service Card */
 .service-card {
   border: none;
-  border-radius: 16px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff;
   height: 100%;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Division Card specific styles */
+/* Division Card */
 .division-card {
   border-top: 4px solid;
-  padding: 1rem;
+  border-left: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.5rem;
 }
 
 .division-card .card-body {
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.75rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,28 +58,28 @@
 }
 
 .division-icon {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.2rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: white;
 }
 
 /* Title */
 .service-card .card-title {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #0f172a;
   margin-bottom: 0.3rem;
 }
 
 .division-tagline {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: #64748b;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -87,11 +88,11 @@
 .service-card .card-text {
   font-size: 0.95rem;
   color: #475569;
-  line-height: 1.6;
+  line-height: 1.65;
   flex-grow: 1;
 }
 
-/* Visit sub-app link */
+/* Visit link */
 .visit-link {
   display: inline-flex;
   align-items: center;
@@ -109,64 +110,25 @@
   gap: 0.7rem;
 }
 
-/* ✅ Medium screens (Tablets) */
+/* Responsive */
 @media (max-width: 992px) {
-  .services-heading {
-    font-size: 1.8rem;
-  }
-
-  .service-card .card-title {
-    font-size: 1.3rem;
-  }
-
-  .division-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-  }
+  .services-section { padding: 4rem 1.5rem; }
+  .services-heading { font-size: 2rem; }
+  .service-card .card-title { font-size: 1.25rem; }
+  .division-icon { width: 56px; height: 56px; font-size: 1.4rem; }
 }
 
-/* ✅ Small screens (Phones) */
 @media (max-width: 768px) {
-  .services-section {
-    padding: 3rem 1rem;
-  }
-
-  .services-heading {
-    font-size: 1.6rem;
-  }
-
-  .services-subheading {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .service-card .card-title {
-    font-size: 1.2rem;
-  }
-
-  .service-card .card-text {
-    font-size: 0.9rem;
-  }
+  .services-section { padding: 3rem 1rem; }
+  .services-heading { font-size: 1.7rem; }
+  .services-subheading { font-size: 1rem; margin-bottom: 2.5rem; }
+  .service-card .card-title { font-size: 1.2rem; }
+  .service-card .card-text { font-size: 0.9rem; }
 }
 
-/* ✅ Very small phones */
 @media (max-width: 480px) {
-  .services-section {
-    padding: 2rem 0.5rem;
-  }
-
-  .services-heading {
-    font-size: 1.4rem;
-  }
-
-  .division-icon {
-    width: 55px;
-    height: 55px;
-    font-size: 1.3rem;
-  }
-
-  .service-card .card-title {
-    font-size: 1.1rem;
-  }
+  .services-section { padding: 2.5rem 0.75rem; }
+  .services-heading { font-size: 1.5rem; }
+  .division-icon { width: 50px; height: 50px; font-size: 1.25rem; }
+  .service-card .card-title { font-size: 1.1rem; }
 }

@@ -1,9 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { FaGraduationCap, FaCloud, FaChalkboardTeacher, FaUsers, FaFlask, FaAward } from "react-icons/fa";
+import { FaCloud, FaChalkboardTeacher, FaUsers, FaFlask, FaAward } from "react-icons/fa";
 import "./Academia.css";
-import backgroundImage from "./background.png";
 
 const academicPrograms = [
   {
@@ -53,22 +52,19 @@ const Academia = () => {
   return (
     <div className="academia-page">
       {/* Hero Section */}
-      <div
-        className="academia-hero"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="overlay">
-          <FaGraduationCap className="hero-icon" />
+      <div className="academia-hero">
+        <div className="hero-background">
+          <div className="hero-gradient"></div>
+          <div className="hero-pattern"></div>
+        </div>
+        <div className="hero-content">
+          <span className="hero-badge">Academia</span>
           <h1 className="hero-title">PractiCloud for Academia</h1>
           <p className="hero-subtitle">
             Empowering the next generation of structural biologists with free cloud access,
             expert-led training, and hands-on learning experiences.
           </p>
-          <Button className="hero-btn" onClick={() => navigate("/contactus")}>
+          <Button className="hero-btn" onClick={() => navigate("/practicloud/contactus")}>
             Apply for Academic Access
           </Button>
         </div>
@@ -94,38 +90,6 @@ const Academia = () => {
                 </Card>
               </Col>
             ))}
-          </Row>
-        </Container>
-      </section>
-
-      {/* Stats Section */}
-      <section className="academia-stats">
-        <Container>
-          <Row className="text-center">
-            <Col md={3} sm={6}>
-              <div className="stat-item">
-                <h3>500+</h3>
-                <p>Students Trained</p>
-              </div>
-            </Col>
-            <Col md={3} sm={6}>
-              <div className="stat-item">
-                <h3>50+</h3>
-                <p>Partner Universities</p>
-              </div>
-            </Col>
-            <Col md={3} sm={6}>
-              <div className="stat-item">
-                <h3>100+</h3>
-                <p>Training Sessions</p>
-              </div>
-            </Col>
-            <Col md={3} sm={6}>
-              <div className="stat-item">
-                <h3>$500</h3>
-                <p>Free Credits/Year</p>
-              </div>
-            </Col>
           </Row>
         </Container>
       </section>

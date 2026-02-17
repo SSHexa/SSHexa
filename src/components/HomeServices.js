@@ -36,7 +36,7 @@ const divisions = [
 const HomeServices = () => {
   return (
     <div className="services-section">
-      <Container fluid>
+      <Container>
         <h2 className="services-heading">Our Three Pillars</h2>
         <p className="services-subheading">Together delivering a complete cryo-EM workflow solution</p>
         <Row className="g-4 justify-content-center">
