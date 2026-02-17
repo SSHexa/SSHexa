@@ -5,28 +5,65 @@
 
 /* Hero Section */
 .faq-hero {
-  height: 40vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+  padding: 8rem 2rem 6rem;
+  text-align: center;
+  overflow: hidden;
 }
 
-.faq-hero .overlay {
-  text-align: center;
+.faq-hero .hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.faq-hero .hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #8b5cf6 100%);
+}
+
+.faq-hero .hero-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+}
+
+.faq-hero .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-hero .hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   color: white;
-  padding: 2rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .faq-hero .hero-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
+  color: white;
+  line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 .faq-hero .hero-subtitle {
-  font-size: 1.2rem;
-  opacity: 0.9;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
 }
 
 /* FAQ Container */
@@ -143,8 +180,12 @@
 
 /* Responsive */
 @media (max-width: 992px) {
+  .faq-hero {
+    padding: 6rem 1.5rem 4rem;
+  }
+
   .faq-hero .hero-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .faq-container {
@@ -154,12 +195,15 @@
 
 @media (max-width: 768px) {
   .faq-hero {
-    height: auto;
-    padding: 3rem 1rem;
+    padding: 5rem 1rem 3rem;
   }
 
   .faq-hero .hero-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
+  }
+
+  .faq-hero .hero-subtitle {
+    font-size: 1rem;
   }
 
   .faq-question {

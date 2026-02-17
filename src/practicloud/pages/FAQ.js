@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import "./FAQ.css";
-import backgroundImage from "./background.png";
 
 const faqData = [
   {
@@ -118,15 +117,13 @@ const FAQ = () => {
   return (
     <div className="faq-page">
       {/* Hero section */}
-      <div
-        className="faq-hero"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="overlay">
+      <div className="faq-hero">
+        <div className="hero-background">
+          <div className="hero-gradient"></div>
+          <div className="hero-pattern"></div>
+        </div>
+        <div className="hero-content">
+          <span className="hero-badge">FAQ</span>
           <h1 className="hero-title">Frequently Asked Questions</h1>
           <p className="hero-subtitle">
             Everything you need to know about PractiCloud

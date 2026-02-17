@@ -10,18 +10,9 @@ const About = () => {
         className="about-hero"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${backgroundImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "60vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          position: "relative",
         }}
       >
-        <div className="overlay">
-          <h1 className="hero-title">About SS Hexa</h1>
-        </div>
+        <h1 className="about-hero-title">About SS Hexa</h1>
       </div>
 
       <div className="about-logo" style={{ textAlign: "center" }}>
@@ -73,7 +64,7 @@ const About = () => {
               standards of quality and scientific rigor.
             </p>
             <p>
-              <strong>Contact:</strong> venkata@sshexa.com
+              <strong>Contact:</strong> venkat.d@sshexa.com
             </p>
           </div>
 
@@ -90,12 +81,12 @@ const About = () => {
               Kubernetes, and working with messaging systems like Apache Kafka.
             </p>
             <p>
-              <strong>Contact:</strong> lakshmi@sshexa.com
+              <strong>Contact:</strong> lakshmi.n@sshexa.com
             </p>
           </div>
 
           <div className="team-member">
-            <h4>Sreyya Gutta</h4>
+            <h4>Sreeya Gutta</h4>
             <p>
               Software Developer specializing in building scalable microservices
               for enterprise applications. Experienced in Java, Spring Boot,
@@ -106,7 +97,7 @@ const About = () => {
               pipelines and monitoring tools to enhance efficiency.
             </p>
             <p>
-              <strong>Contact:</strong> sreyya@sshexa.com
+              <strong>Contact:</strong> sreeya.g@sshexa.com
             </p>
           </div>
         </div>

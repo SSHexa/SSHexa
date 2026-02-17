@@ -1,113 +1,193 @@
-.home-cta {
-  height: 60vh;
+/* SSHexa CTA — Teal/Dark theme */
+.sh-cta {
+  position: relative;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.sh-cta-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.sh-cta-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(150deg, #0f172a 0%, #134e4a 50%, #0f172a 100%);
+}
+
+/* Container */
+.sh-cta-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Content */
+.sh-cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+/* Badge */
+.sh-cta-badge {
+  display: inline-block;
+  background: rgba(20, 184, 166, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  color: #5eead4;
+}
+
+/* Title */
+.sh-cta-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  color: white;
+}
+
+.sh-cta-accent {
+  display: block;
+  background: linear-gradient(90deg, #14b8a6 0%, #5eead4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Description */
+.sh-cta-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+/* Features */
+.sh-cta-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.sh-cta-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.sh-cta-check {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 2rem;
+  width: 20px;
+  height: 20px;
+  background: rgba(20, 184, 166, 0.2);
+  border-radius: 50%;
+  font-size: 0.7rem;
+  color: #5eead4;
 }
 
-/* CTA Box */
-.cta-box {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 2rem 3rem;
-  border-radius: 8px;
-  max-width: 800px;
-  width: 100%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+/* Buttons */
+.sh-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.cta-box h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #111;
-}
-
-.cta-box p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #222;
-}
-
-.cta-box button {
-  background: white;
-  border: 1px solid #333;
-  padding: 0.6rem 1.5rem;
+.sh-btn-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
   font-size: 1rem;
-  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
   transition: all 0.3s ease;
 }
 
-.cta-box button:hover {
-  background: #003366;
+.sh-btn-cta-primary:hover {
+  background: linear-gradient(135deg, #14b8a6 0%, #2dd4bf 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(13, 148, 136, 0.3);
+}
+
+.sh-btn-cta-primary .sh-btn-arrow {
+  font-size: 0.85rem;
+  transition: transform 0.3s ease;
+}
+
+.sh-btn-cta-primary:hover .sh-btn-arrow {
+  transform: translateX(3px);
+}
+
+.sh-btn-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
   color: white;
-  border-color: #003366;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
-/* ✅ Tablet screens (<= 992px) */
+.sh-btn-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(20, 184, 166, 0.5);
+  color: #5eead4;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
 @media (max-width: 992px) {
-  .home-cta {
-    height: auto;
-    padding: 3rem 2rem;
-  }
-
-  .cta-box {
-    max-width: 90%;
-    padding: 2rem;
-  }
-
-  .cta-box h2 {
-    font-size: 1.6rem;
-  }
-
-  .cta-box p {
-    font-size: 1rem;
-  }
-
-  .cta-box button {
-    font-size: 0.95rem;
-  }
+  .sh-cta { padding: 5rem 0; }
+  .sh-cta-title { font-size: 2.25rem; }
 }
 
-/* ✅ Mobile screens (<= 768px) */
 @media (max-width: 768px) {
-  .home-cta {
-    flex-direction: column;
-    height: auto;
-    padding: 2rem 1.5rem;
-  }
-
-  .cta-box {
-    padding: 1.5rem;
-  }
-
-  .cta-box h2 {
-    font-size: 1.4rem;
-  }
-
-  .cta-box p {
+  .sh-cta { padding: 4rem 0; }
+  .sh-cta-content { padding: 0 1rem; }
+  .sh-cta-title { font-size: 1.85rem; }
+  .sh-cta-accent { display: inline; }
+  .sh-cta-description { font-size: 1rem; }
+  .sh-cta-features { gap: 1rem; }
+  .sh-cta-feature { font-size: 0.875rem; }
+  .sh-btn-cta-primary,
+  .sh-btn-cta-secondary {
+    padding: 0.875rem 1.5rem;
     font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .cta-box button {
     width: 100%;
-    padding: 0.75rem;
+    justify-content: center;
   }
 }
 
-/* ✅ Very small phones (<= 480px) */
 @media (max-width: 480px) {
-  .cta-box h2 {
-    font-size: 1.2rem;
-  }
-
-  .cta-box p {
-    font-size: 0.9rem;
-  }
-
-  .cta-box button {
-    font-size: 0.9rem;
-    padding: 0.6rem;
+  .sh-cta { padding: 3rem 0; }
+  .sh-cta-badge { font-size: 0.78rem; padding: 0.4rem 1rem; }
+  .sh-cta-title { font-size: 1.5rem; }
+  .sh-cta-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
   }
 }

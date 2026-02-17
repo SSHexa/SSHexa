@@ -1,3 +1,4 @@
+import { useEffect, useLayoutEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import About from "./pages/About";
@@ -36,12 +37,28 @@ import HRCS2 from "./hexarobotics/pages/CS/CS2";
 import HRPricing from "./hexarobotics/pages/Pricing";
 
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useLayoutEffect(() => {
+    // Temporarily disable smooth scrolling so the reset is instant
+    document.documentElement.style.scrollBehavior = "auto";
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0; // Safari fallback
+    // Re-enable smooth scrolling after the reset
+    requestAnimationFrame(() => {
+      document.documentElement.style.scrollBehavior = "";
+    });
+  }, [pathname]);
+  return null;
+}
+
 function AppContent() {
   const location = useLocation();
   const isSubApp = location.pathname.startsWith('/practicloud') || location.pathname.startsWith('/hexarobotics');
 
   return (
     <>
+      <ScrollToTop />
       {!isSubApp && <NavBar />}
       <Routes>
 
@@ -95,6 +112,12 @@ function AppContent() {
 }
 
 function App() {
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
   return (
     <Router>
       <AppContent />
