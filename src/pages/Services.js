@@ -3,7 +3,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import "./Services.css";
 import backgroundImage from "./background.png";
 import { Link } from "react-router-dom";
-import { FaRobot, FaFlask, FaCloud, FaArrowRight, FaExternalLinkAlt } from "react-icons/fa";
+import { FaRobot, FaFlask, FaCloud, FaArrowRight, FaExternalLinkAlt, FaEnvelope } from "react-icons/fa";
 
 import ProteinTetramer from "./ProteinTetramer";
 import ProteinDensity from "./ProteinDensity";
@@ -31,6 +31,7 @@ const divisions = [
     description: "Full-service Contract Research Organization for cryo-EM. We handle your samples from receipt to final EM imaging, delivering publication-ready results with expert analysis.",
     icon: <FaFlask />,
     color: "#10b981",
+    contactLink: "/contactus",
   },
   {
     id: "practicloud",
@@ -188,8 +189,8 @@ const Services = () => {
             ))}
           </div>
 
-          {division.link && (
-            <div className="division-visit-cta">
+          <div className="division-visit-cta">
+            {division.link && (
               <Link
                 to={division.link}
                 className="division-visit-btn"
@@ -197,8 +198,17 @@ const Services = () => {
               >
                 Visit {division.name} <FaExternalLinkAlt style={{ marginLeft: "0.5rem", fontSize: "0.85em" }} />
               </Link>
-            </div>
-          )}
+            )}
+            {division.contactLink && (
+              <Link
+                to={division.contactLink}
+                className="division-visit-btn"
+                style={{ backgroundColor: division.color }}
+              >
+                Contact Us <FaEnvelope style={{ marginLeft: "0.5rem", fontSize: "0.85em" }} />
+              </Link>
+            )}
+          </div>
         </div>
       ))}
     </div>

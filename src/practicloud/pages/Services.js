@@ -69,7 +69,7 @@ const otherServices = {
       "On-grid mixing systems",
       "Custom protocol development",
     ],
-    link: "/hexarobotics/services",
+    link: "/hexarobotics",
   },
   cro: {
     title: "CRO Services",
@@ -81,7 +81,7 @@ const otherServices = {
       "Publication-ready deliverables",
       "Flexible turnaround options",
     ],
-    link: "/practicloud/contactus",
+    link: "/services#cro",
   },
 };
 
