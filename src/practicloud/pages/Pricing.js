@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { FaCheck, FaRocket, FaDollarSign, FaChartLine } from "react-icons/fa";
+import { FaCheck, FaRocket, FaDollarSign, FaChartLine, FaTag } from "react-icons/fa";
 import "./Pricing.css";
 
 const pricingPlans = [
@@ -13,7 +13,7 @@ const pricingPlans = [
     features: [
       "Cloud-based processing",
       "RELION & CryoSPARC access",
-      "Basic AI training modules",
+      "Interactive training modules",
       "Email support",
       "5 TB storage included",
       "Standard GPU access",
@@ -29,7 +29,7 @@ const pricingPlans = [
     features: [
       "Everything in Starter",
       "Priority GPU allocation",
-      "Advanced AI-powered training",
+      "Advanced hands-on training",
       "Live expert advisory sessions",
       "25 TB storage included",
       "EMAN2 & IMOD integration",
@@ -68,7 +68,7 @@ const benefits = [
   {
     icon: <FaChartLine />,
     title: "Cost Optimization",
-    description: "Our AI guides you on GPU selection to balance speed and cost for your specific needs.",
+    description: "Smart GPU selection guidance to balance speed and cost for your specific needs.",
     color: "#8b5cf6"
   },
   {
@@ -91,7 +91,7 @@ const Pricing = () => {
           <div className="hero-pattern"></div>
         </div>
         <div className="hero-content">
-          <span className="hero-badge">Pricing</span>
+          <span className="hero-badge"><FaTag /> Pricing</span>
           <h1 className="hero-title">Simple, Transparent Pricing</h1>
           <p className="hero-subtitle">
             Pay only for what you use. No hidden fees, no long-term commitments.
@@ -121,7 +121,7 @@ const Pricing = () => {
                   </ul>
                   <Button
                     className={`plan-button ${plan.highlighted ? "primary" : "secondary"}`}
-                    onClick={() => navigate("/contactus")}
+                    onClick={() => navigate("/practicloud/contactus")}
                   >
                     {plan.buttonText}
                   </Button>
@@ -164,7 +164,7 @@ const Pricing = () => {
           <div className="cta-card">
             <h3 className="cta-title">Try PractiCloud Free for 30 Days</h3>
             <p className="cta-description">No credit card required. Full access to all features.</p>
-            <Button className="cta-button" onClick={() => navigate("/contactus")}>
+            <Button className="cta-button" onClick={() => navigate("/practicloud/contactus")}>
               Start Your Free Trial
             </Button>
           </div>

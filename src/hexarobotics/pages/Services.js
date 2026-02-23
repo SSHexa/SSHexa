@@ -1,95 +1,72 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaCogs } from "react-icons/fa";
 import "./Services.css";
-import backgroundImage from "./background.png";
 
 const services = [
   {
     type: "text",
     title: "Programming And Integration",
     description:
-      "Our Cryo-EM Cloud Application is designed to meet the evolving demands of structural biology research. Built on a highly scalable infrastructure, it offers dynamic resource allocation that adjusts effortlessly to your project's complexity.",
+      "We program, configure, and integrate the VitriFlex robotic platform into your existing lab workflow. From robot calibration and position training to custom protocol scripting via our intuitive C# GUI, we ensure your system is ready for reproducible grid preparation from day one.",
   },
   {
     type: "image",
-    image: "/grid-preparation.jpg", // Add: Image of cryo-EM grid preparation
+    image: "/grid-preparation.jpg",
   },
   {
     type: "image",
-    image: "/vitrification.jpg", // Add: Image of vitrification process
+    image: "/spray-system.jpg",
   },
   {
     type: "text-dark",
-    title: "Blot-and-Plunge Vitrification",
-    description:
-      "Standard cryo-EM grid preparation with automated blotting using solenoid-actuated 47mm filter paper system. Achieve reproducible, high-quality grids with thin ice and minimal contamination for near-atomic resolution structures.",
-  },
-  {
-    type: "text",
     title: "Time-Resolved Cryo-EM",
     description:
       "Rapid spray-to-plunge freezing with delays as short as ~130 ms. Capture transient biochemical reactions and conformational changes at sub-second timescales prior to vitrification for time-resolved structural biology research.",
   },
   {
-    type: "image",
-    image: "/spray-system.jpg", // Add: Image of acoustic spray system
-  },
-  {
-    type: "image",
-    image: "/protein-structure.jpg", // Add: Image of 3D protein reconstruction
-  },
-  {
-    type: "text-dark",
+    type: "text",
     title: "On-Grid Mixing",
     description:
       "Two-component mixing directly on the grid using acoustic-assisted spray delivery. Ideal for studying protein-protein interactions, receptor-ligand binding, and complex formation under low sample volumes and short incubation times.",
   },
   {
-    type: "text",
+    type: "image",
+    image: "/protein-structure.jpg",
+  },
+  {
+    type: "image",
+    image: "/scara-robot.jpg",
+  },
+  {
+    type: "text-dark",
     title: "Custom Protocol Development",
     description:
       "Tailored freezing parameters optimized for your specific samples. We customize blot time, spray duration, incubation time, and humidity control to achieve optimal grid quality for your unique biological specimens.",
   },
   {
-    type: "image",
-    image: "/scara-robot.jpg", // Add: Image of SCARA robot arm
-  },
-  {
-    type: "image",
-    image: "/cryo-em-map.jpg", // Add: Image of cryo-EM density map
-  },
-  {
-    type: "text-dark",
+    type: "text",
     title: "Care Service Contract",
     description:
       "We provide extended uptime guarantees, priority pipeline execution, and reliability services to ensure your Cryo-EM workloads never face interruptions.",
   },
   {
-    type: "text",
-    title: "Custom Automation Solution",
-    description:
-      "Whether you need preprocessing automation, motion correction workflows, or full pipeline orchestration, our solutions are fast, scalable, and cost-efficient.",
+    type: "image",
+    image: "/cryo-em-map.jpg",
   },
   {
     type: "image",
-    image: "/data-processing.jpg", // Add: Image of data processing/pipeline
+    image: "/data-processing.jpg",
+  },
+  {
+    type: "text-dark",
+    title: "Custom Automation Solution",
+    description:
+      "Our platform features advanced, modular automation solutions that extend well beyond cryo-EM. Each module is designed to be fully customizable to your specific workflow requirements — whether it's sample preparation, liquid handling, imaging pipelines, or lab-wide orchestration. We continuously develop and release new modules, enabling you to scale and adapt your automation as your research evolves. Every solution is tailored to your needs, ensuring seamless integration with your existing equipment and processes.",
   },
 ];
 
 const otherServices = {
-  practicloud: {
-    title: "Practicloud",
-    description:
-      "Our cloud-based platform designed for structural biologists to run compute-intensive cryo-EM algorithms without local infrastructure. Access powerful GPU clusters for motion correction, CTF estimation, particle picking, 2D/3D classification, and refinement workflows. Scale your processing on-demand with pay-as-you-go pricing and eliminate hardware maintenance overhead.",
-    features: [
-      "Motion correction & CTF estimation",
-      "Particle picking & 2D classification",
-      "3D reconstruction & refinement",
-      "On-demand GPU scaling",
-    ],
-    link: "/practicloud/services",
-  },
   cro: {
     title: "CRO Services",
     description:
@@ -102,42 +79,58 @@ const otherServices = {
     ],
     link: "/hexarobotics/contactus",
   },
+  practicloud: {
+    title: "Practicloud",
+    description:
+      "Our cloud-based platform designed for structural biologists to run compute-intensive cryo-EM algorithms without local infrastructure. Access powerful GPU clusters for motion correction, CTF estimation, particle picking, 2D/3D classification, and refinement workflows. Scale your processing on-demand with pay-as-you-go pricing and eliminate hardware maintenance overhead.",
+    features: [
+      "Motion correction & CTF estimation",
+      "Particle picking & 2D classification",
+      "3D reconstruction & refinement",
+      "On-demand GPU scaling",
+    ],
+    link: "/practicloud",
+  },
 };
 
 const Services = () => {
-  const [activeTab, setActiveTab] = useState("practicloud");
+  const [activeTab, setActiveTab] = useState("cro");
 
   return (
-    <div className="services-page">
+    <div className="hr-services-page">
       {/* HERO */}
-      <div
-        className="services-hero"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-        <div className="overlay">
-          <h1 className="hero-title">
-            SSHexa Services And <span>Solutions</span>
-          </h1>
+      <div className="hr-services-hero">
+        <div className="hr-page-hero-bg">
+          <div className="hr-page-hero-gradient"></div>
+          <div className="hr-page-hero-pattern"></div>
+        </div>
+        <div className="hr-page-hero-content">
+          <span className="hr-page-badge"><FaCogs /> Services</span>
+          <h1 className="hr-page-hero-title">Services & Solutions</h1>
+          <p className="hr-page-hero-subtitle">
+            End-to-end cryo-EM automation services — from grid preparation
+            and vitrification to custom protocol development and care contracts.
+          </p>
         </div>
       </div>
 
       {/* SERVICE GRID */}
-      <div className="service-grid">
+      <div className="hr-service-grid">
         {services.map((item, idx) => (
           <div
             key={idx}
             className={
               item.type === "image"
-                ? "service-tile image-tile"
+                ? "hr-service-tile hr-image-tile"
                 : item.type === "text-dark"
-                ? "service-tile text-dark-tile"
-                : "service-tile text-tile"
+                ? "hr-service-tile hr-text-dark-tile"
+                : "hr-service-tile hr-text-tile"
             }
           >
             {item.type === "image" ? (
-              <img src={item.image} alt="" className="service-img" />
+              <img src={item.image} alt="" className="hr-service-img" />
             ) : (
-              <div className="service-text-box">
+              <div className="hr-service-text-box">
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
               </div>
@@ -147,28 +140,28 @@ const Services = () => {
       </div>
 
       {/* OUR OTHER SERVICES */}
-      <div className="other-services-section">
-        <h2 className="other-services-title">Our Other Services</h2>
+      <div className="hr-other-services-section">
+        <h2 className="hr-other-services-title">Our Other Services</h2>
 
-        <div className="services-tabs">
+        <div className="hr-services-tabs">
           <button
-            className={`tab-btn ${activeTab === "practicloud" ? "active" : ""}`}
-            onClick={() => setActiveTab("practicloud")}
-          >
-            Practicloud
-          </button>
-          <button
-            className={`tab-btn ${activeTab === "cro" ? "active" : ""}`}
+            className={`hr-tab-btn ${activeTab === "cro" ? "active" : ""}`}
             onClick={() => setActiveTab("cro")}
           >
             CRO Services
           </button>
+          <button
+            className={`hr-tab-btn ${activeTab === "practicloud" ? "active" : ""}`}
+            onClick={() => setActiveTab("practicloud")}
+          >
+            Practicloud
+          </button>
         </div>
 
-        <div className="tab-content">
+        <div className="hr-tab-content">
           <h3>{otherServices[activeTab].title}</h3>
           <p>{otherServices[activeTab].description}</p>
-          <ul className="service-features">
+          <ul className="hr-service-features">
             {otherServices[activeTab].features.map((feature, idx) => (
               <li key={idx}>{feature}</li>
             ))}

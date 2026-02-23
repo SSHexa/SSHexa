@@ -1,7 +1,7 @@
 import React from "react";
 import heroImage from "../EPSON.png";
 import "./BlogDetail.css";
-import { FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 const Blog5 = () => {
@@ -13,7 +13,7 @@ const Blog5 = () => {
           <p className="blog-category">BLOGS</p>
           <div className="heading-with-back">
             <Link to="/hexarobotics/blog" className="back-button">←</Link>
-            <h1>Open-Source vs Commercial Plungers: Making the Right Choice</h1>
+            <h1>VitriFlex vs Commercial Plungers: Making the Right Choice</h1>
           </div>
 
           <div className="blog-meta">
@@ -22,12 +22,8 @@ const Blog5 = () => {
               <p>JANUARY 2026 • SSHexa Robotics</p>
             </div>
 
-            <div className="share">
-              <span>SHARE</span>
-              <FaTwitter />
-              <FaLinkedin />
-              <FaFacebook />
-            </div>
+
+
           </div>
         </div>
 
@@ -44,7 +40,7 @@ const Blog5 = () => {
           <h3>In This Article</h3>
           <ul>
             <li><a href="#commercial-options">Commercial Options</a></li>
-            <li><a href="#open-source-alternative">Open-Source Alternative</a></li>
+            <li><a href="#vitriflex-alternative">The VitriFlex Alternative</a></li>
             <li><a href="#which-to-choose">Which to Choose</a></li>
           </ul>
         </aside>
@@ -61,13 +57,13 @@ const Blog5 = () => {
             technology.
           </p>
 
-          <h2 id="open-source-alternative">Open-Source Alternative</h2>
+          <h2 id="vitriflex-alternative">The VitriFlex Alternative</h2>
           <p>
             VitriFlex offers a different approach: industrial-grade SCARA robotics with
-            fully open hardware and software. Users get complete protocol control through
+            a fully customizable platform. Users get complete protocol control through
             the C# GUI, compatibility with standard grids and consumables, and the
             ability to modify or extend the system. The modular design allows integration
-            of new components without vendor approval.
+            of new components to suit your specific workflows.
           </p>
 
           <h2 id="which-to-choose">Which to Choose</h2>

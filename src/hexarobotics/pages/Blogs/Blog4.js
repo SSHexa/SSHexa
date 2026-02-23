@@ -1,7 +1,7 @@
 import React from "react";
 import heroImage from "../background.png";
 import "./BlogDetail.css";
-import { FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 const Blog4 = () => {
@@ -22,12 +22,8 @@ const Blog4 = () => {
               <p>JANUARY 2026 • SSHexa Robotics</p>
             </div>
 
-            <div className="share">
-              <span>SHARE</span>
-              <FaTwitter />
-              <FaLinkedin />
-              <FaFacebook />
-            </div>
+
+
           </div>
         </div>
 

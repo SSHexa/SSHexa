@@ -1,7 +1,7 @@
 import React from "react";
 import "./Pricing.css";
 import { Link } from "react-router-dom";
-import { FaRobot, FaLaptopCode, FaGraduationCap } from "react-icons/fa";
+import { FaRobot, FaLaptopCode, FaGraduationCap, FaTag } from "react-icons/fa";
 
 const pricingPlans = [
   {
@@ -62,62 +62,72 @@ const pricingPlans = [
 
 const Pricing = () => {
   return (
-    <div className="pricing-page">
-      <div className="pricing-header">
-        <h1 className="pricing-title">
-          Pricing <span>Plans</span>
-        </h1>
-        <p className="pricing-subtitle">
-          Choose the package that best fits your laboratory's needs. All plans include
-          our open-source VitriFlex platform for cryo-EM grid preparation.
-        </p>
+    <div className="hr-pricing-page">
+      {/* Hero */}
+      <div className="hr-pricing-hero">
+        <div className="hr-page-hero-bg">
+          <div className="hr-page-hero-gradient"></div>
+          <div className="hr-page-hero-pattern"></div>
+        </div>
+        <div className="hr-page-hero-content">
+          <span className="hr-page-badge"><FaTag /> Pricing</span>
+          <h1 className="hr-page-hero-title">Pricing Plans</h1>
+          <p className="hr-page-hero-subtitle">
+            Choose the package that best fits your laboratory's needs. All plans include
+            our VitriFlex platform for cryo-EM grid preparation.
+          </p>
+        </div>
       </div>
 
-      <div className="pricing-grid">
-        {pricingPlans.map((plan) => (
-          <div
-            key={plan.id}
-            className={`pricing-card ${plan.highlight ? "highlighted" : ""}`}
-          >
-            {plan.highlight && <div className="popular-badge">Most Popular</div>}
+      {/* Pricing Grid */}
+      <div className="hr-pricing-body">
+        <div className="hr-pricing-grid">
+          {pricingPlans.map((plan) => (
+            <div
+              key={plan.id}
+              className={`hr-pricing-card ${plan.highlight ? "hr-highlighted" : ""}`}
+            >
+              {plan.highlight && <div className="hr-popular-badge">Most Popular</div>}
 
-            <div className="pricing-icon">
-              <plan.icon size={48} />
+              <div className={`hr-pricing-icon ${plan.highlight ? "hr-icon-gold" : ""}`}>
+                <plan.icon size={48} />
+              </div>
+
+              <h2 className="hr-plan-name">{plan.name}</h2>
+              <p className="hr-plan-description">{plan.description}</p>
+
+              <div className="hr-plan-price">
+                <span className="hr-price">{plan.price}</span>
+                <span className="hr-price-period">one-time</span>
+              </div>
+
+              <ul className="hr-plan-features">
+                {plan.features.map((feature, idx) => (
+                  <li key={idx}>
+                    <span className={`hr-check-icon ${plan.highlight ? "hr-check-gold" : ""}`}>&#10003;</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <Link to="/hexarobotics/contactus" className={`hr-plan-cta ${plan.highlight ? "hr-cta-gold" : ""}`}>
+                Get Started
+              </Link>
             </div>
+          ))}
+        </div>
 
-            <h2 className="plan-name">{plan.name}</h2>
-            <p className="plan-description">{plan.description}</p>
-
-            <div className="plan-price">
-              <span className="price">{plan.price}</span>
-              <span className="price-period">one-time</span>
-            </div>
-
-            <ul className="plan-features">
-              {plan.features.map((feature, idx) => (
-                <li key={idx}>
-                  <span className="check-icon">&#10003;</span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-
-            <Link to="/hexarobotics/contactus" className="plan-cta">
-              Get Started
-            </Link>
-          </div>
-        ))}
-      </div>
-
-      <div className="pricing-footer">
-        <h3>Need a Custom Solution?</h3>
-        <p>
-          Contact us for enterprise pricing, bulk orders, or specialized configurations
-          tailored to your research requirements.
-        </p>
-        <Link to="/hexarobotics/contactus" className="custom-cta">
-          Contact Sales
-        </Link>
+        {/* Custom Solution CTA */}
+        <div className="hr-pricing-footer">
+          <h3>Need a Custom Solution?</h3>
+          <p>
+            Contact us for enterprise pricing, bulk orders, or specialized configurations
+            tailored to your research requirements.
+          </p>
+          <Link to="/hexarobotics/contactus" className="hr-custom-cta">
+            Contact Sales
+          </Link>
+        </div>
       </div>
     </div>
   );

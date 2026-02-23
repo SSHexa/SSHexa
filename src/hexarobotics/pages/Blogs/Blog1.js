@@ -1,7 +1,7 @@
 import React from "react";
 import heroImage from "../EPSON.png";
 import "./BlogDetail.css";
-import { FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
+
 import { HashLink as Link } from "react-router-hash-link";
 
 const Blog1 = () => {
@@ -19,12 +19,8 @@ const Blog1 = () => {
           <div className="blog-meta">
             <div className="author"></div>
 
-            <div className="share">
-              <span>SHARE</span>
-              <FaTwitter />
-              <FaLinkedin />
-              <FaFacebook />
-            </div>
+
+
           </div>
         </div>
 
@@ -78,7 +74,7 @@ const Blog1 = () => {
 
           <ul>
             <li>Industrial-grade Epson T3 SCARA robot (±0.020 mm repeatability)</li>
-            <li>Open-source hardware, software, and CAD designs</li>
+            <li>Fully customizable hardware, software, and CAD-designed components</li>
             <li>3D-printed components (PA6 nylon, ABS, or PETG compatible)</li>
             <li>Full protocol customization via C# GUI</li>
             <li>Accessible price point compared to commercial systems</li>
@@ -122,7 +118,7 @@ const Blog1 = () => {
 
           <h2 id="conclusion">Conclusion</h2>
           <p>
-            VitriFlex combines precision robotics, modular design, and open-source engineering to
+            VitriFlex combines precision robotics and modular design to
             create a powerful, affordable cryo-EM specimen preparation system. It empowers labs to
             explore new workflows while keeping costs low and flexibility high.
           </p>

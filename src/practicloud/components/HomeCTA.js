@@ -45,14 +45,14 @@ const HomeCTA = () => {
           <div className="cta-buttons">
             <Button
               className="btn-cta-primary"
-              onClick={() => navigate("/contactus")}
+              onClick={() => navigate("/practicloud/contactus")}
             >
               Start Free Trial
               <FaArrowRight className="btn-icon" />
             </Button>
             <Button
               className="btn-cta-secondary"
-              onClick={() => navigate("/services")}
+              onClick={() => navigate("/practicloud/services")}
             >
               <FaPlay className="play-icon" />
               See Demo

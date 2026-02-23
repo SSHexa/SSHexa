@@ -31,8 +31,8 @@ const features = [
   },
   {
     icon: <FaCode />,
-    title: "Open Source Platform",
-    desc: "Full hardware designs, firmware, and software available on GitHub. Build, modify, and contribute to the community.",
+    title: "Customizable Platform",
+    desc: "Fully configurable hardware and software tailored to your lab's needs. Extend, adapt, and optimize workflows with ease.",
     color: "#22c55e"
   },
   {

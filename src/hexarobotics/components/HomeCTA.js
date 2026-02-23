@@ -23,8 +23,8 @@ const HomeCTA = () => {
           </h2>
           <p className="hr-cta-description">
             Whether you're setting up a new cryo-EM lab or upgrading your
-            existing workflow, VitriFlex adapts to your needs. Open-source,
-            modular, and built for real research.
+            existing workflow, VitriFlex adapts to your needs. Modular,
+            customizable, and built for real research.
           </p>
 
           <div className="hr-cta-features">

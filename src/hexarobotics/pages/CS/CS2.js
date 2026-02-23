@@ -3,7 +3,7 @@ import heroImage from "../EPSON.png";
 import fig4 from "../Images/F4.gif";   // Add your Figure 4 image
 import fig5 from "../Images/F5.gif";   // Add your Figure 5 image
 import "./CSdetail.css";
-import { FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 const CS2 = () => {
@@ -23,12 +23,8 @@ const CS2 = () => {
           <div className="blog-meta">
             <div className="author"></div>
 
-            <div className="share">
-              <span>SHARE</span>
-              <FaTwitter />
-              <FaLinkedin />
-              <FaFacebook />
-            </div>
+
+
           </div>
 
         </div>

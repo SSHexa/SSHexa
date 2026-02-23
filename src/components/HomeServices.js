@@ -1,5 +1,5 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaRobot, FaFlask, FaCloud, FaArrowRight } from "react-icons/fa";
 import "./HomeServices.css";
 
@@ -34,15 +34,21 @@ const divisions = [
 ];
 
 const HomeServices = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="services-section">
       <Container>
         <h2 className="services-heading">Our Three Pillars</h2>
-        <p className="services-subheading">Together delivering a complete cryo-EM workflow solution</p>
+        <p className="services-subheading">Together, we deliver a complete cryo-EM workflow solution</p>
         <Row className="g-4 justify-content-center">
           {divisions.map((division, idx) => (
             <Col key={idx} md={6} lg={4}>
-              <Card className="service-card division-card" style={{ borderTopColor: division.color }}>
+              <Card
+                className="service-card division-card division-card-link"
+                style={{ borderTopColor: division.color, cursor: "pointer" }}
+                onClick={() => navigate(division.link)}
+              >
                 <Card.Body>
                   <div className="division-icon" style={{ backgroundColor: division.color }}>
                     {division.icon}
@@ -50,9 +56,9 @@ const HomeServices = () => {
                   <Card.Title>{division.title}</Card.Title>
                   <span className="division-tagline">{division.tagline}</span>
                   <Card.Text>{division.description}</Card.Text>
-                  <Link to={division.link} className="visit-link" style={{ color: division.color }}>
+                  <span className="visit-link" style={{ color: division.color }}>
                     Explore {division.title} <FaArrowRight />
-                  </Link>
+                  </span>
                 </Card.Body>
               </Card>
             </Col>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaNewspaper } from "react-icons/fa";
 import "./Blog.css";
 
 import product1 from "./EPSON.png";
@@ -28,7 +29,7 @@ const blogs = [
     category: "PRODUCTS",
     title: "Inside VitriFlex",
     description:
-      " System Overview and Design of an Cryo-EM Preparation Platform",
+      "System Overview and Design of a Cryo-EM Preparation Platform",
     readTime: "15 minute read",
     image: product2,
     link: "/hexarobotics/blogs/blog3",
@@ -44,16 +45,16 @@ const blogs = [
   },
   {
     category: "BLOGS",
-    title: "Open-Source vs Commercial Plungers: Making the Right Choice",
+    title: "VitriFlex vs Commercial Plungers: Making the Right Choice",
     description:
-      "Comparing Vitrobot, Chameleon, and VitroJet with open-source alternatives like VitriFlex to help you choose the right system for your lab.",
+      "Comparing Vitrobot, Chameleon, and VitroJet with VitriFlex to help you choose the right cryo-EM grid preparation system for your lab.",
     readTime: "5 minute read",
     image: product1,
     link: "/hexarobotics/blogs/blog5",
   },
 ];
 
-const filters = ["ALL", "BLOGS", "NEWS", "PRODUCTS"];
+const filtersList = ["ALL", "BLOGS", "NEWS", "PRODUCTS"];
 
 const Blog = () => {
   const [activeFilter, setActiveFilter] = useState("ALL");
@@ -63,57 +64,63 @@ const Blog = () => {
     : blogs.filter((blog) => blog.category === activeFilter);
 
   return (
-    <div className="blog-page">
+    <div className="hr-blog-page">
+      {/* Hero */}
+      <div className="hr-blog-hero">
+        <div className="hr-page-hero-bg">
+          <div className="hr-page-hero-gradient"></div>
+          <div className="hr-page-hero-pattern"></div>
+        </div>
+        <div className="hr-page-hero-content">
+          <span className="hr-page-badge"><FaNewspaper /> Blog</span>
+          <h1 className="hr-page-hero-title">Blog</h1>
+          <p className="hr-page-hero-subtitle">
+            SSHexa news, product launch announcements, and general discussions
+            on robotics and cryo-EM technology.
+          </p>
+        </div>
+      </div>
 
-      {/* Heading */}
-      <h1 className="blog-title">Blog</h1>
-      <p className="blog-subtitle">
-        You will find SSHexa news, product launch announcements, and general discussions
-        on robotics on this page.
-      </p>
+      {/* Body */}
+      <div className="hr-blog-body">
+        {/* Filters + Sorting */}
+        <div className="hr-blog-toolbar">
+          <div className="hr-blog-filters">
+            {filtersList.map((filter) => (
+              <button
+                key={filter}
+                className={`hr-filter-btn${activeFilter === filter ? " active" : ""}`}
+                onClick={() => setActiveFilter(filter)}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
 
-      {/* Filters + Sorting */}
-      <div className="blog-toolbar">
-        <div className="blog-filters">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              className={`filter-btn${activeFilter === filter ? " active" : ""}`}
-              onClick={() => setActiveFilter(filter)}
-            >
-              {filter}
-            </button>
+          <div className="hr-blog-sort">
+            <select>
+              <option>Sort by: Latest</option>
+              <option>Sort by: Oldest</option>
+            </select>
+          </div>
+        </div>
+
+        {/* Blog Cards */}
+        <div className="hr-blog-grid">
+          {filteredBlogs.map((blog, idx) => (
+            <Link to={blog.link} key={idx} className="hr-blog-card">
+              <img src={blog.image} alt={blog.title} className="hr-blog-image" />
+              <div className="hr-blog-content">
+                <p className="hr-blog-category">{blog.category}</p>
+                <h3 className="hr-blog-heading">{blog.title}</h3>
+                <p className="hr-blog-description">{blog.description}</p>
+                <p className="hr-blog-readtime">{blog.readTime}</p>
+                <span className="hr-blog-readmore">Read More →</span>
+              </div>
+            </Link>
           ))}
         </div>
-
-        <div className="blog-sort">
-          <select>
-            <option>Sort by: Latest</option>
-            <option>Sort by: Oldest</option>
-          </select>
-        </div>
       </div>
-
-      {/* Blog Cards */}
-      <div className="blog-grid">
-        {filteredBlogs.map((blog, idx) => (
-          <Link to={blog.link} key={idx} className="blog-card">
-
-            <img src={blog.image} alt={blog.title} className="blog-image" />
-
-            <div className="blog-content">
-              <p className="blog-category">{blog.category}</p>
-              <h3 className="blog-heading">{blog.title}</h3>
-              <p className="blog-description">{blog.description}</p>
-              <p className="blog-readtime">{blog.readTime}</p>
-
-              <button className="blog-readmore">Read More</button>
-            </div>
-
-          </Link>
-        ))}
-      </div>
-
     </div>
   );
 };

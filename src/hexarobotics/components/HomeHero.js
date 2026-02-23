@@ -30,7 +30,7 @@ const HomeHero = () => {
           <p className="hr-hero-subtitle">
             Purpose-built robotic systems for cryo-EM grid preparation.
             Achieve reproducible, high-quality vitrification with our
-            open-source VitriFlex platform.
+            VitriFlex platform.
           </p>
 
           <div className="hr-hero-buttons">
@@ -91,7 +91,7 @@ const HomeHero = () => {
           </div>
           <div className="hr-floating-tag hr-tag-2">
             <span className="hr-tag-dot hr-dot-amber"></span>
-            <span>Open Source Hardware</span>
+            <span>Modular Hardware</span>
           </div>
           <div className="hr-floating-tag hr-tag-3">
             <span className="hr-tag-dot hr-dot-blue"></span>

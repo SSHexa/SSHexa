@@ -18,8 +18,8 @@ const services = [
   },
   {
     icon: <FaBrain />,
-    title: "AI-Powered Training",
-    description: "Self-learning modules that adapt to your skill level for both Cryo-EM and tomography workflows.",
+    title: "Adaptive Training",
+    description: "Self-paced modules that adapt to your skill level for both Cryo-EM and tomography workflows.",
     color: "#06b6d4",
   },
   {

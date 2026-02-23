@@ -2,7 +2,7 @@ import React from "react";
 import heroImage from "../EPSON.png";
 import robotImage from "../robot.jpg";
 import "./BlogDetail.css";
-import { FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 const Blog3 = () => {
@@ -14,18 +14,14 @@ const Blog3 = () => {
           <p className="blog-category">BLOGS</p>
           <div className="heading-with-back">
             <Link to="/hexarobotics/blog" className="back-button">←</Link>
-            <h1>Inside VitriFlex: System Overview and Design of an Open-Source Cryo-EM Preparation Platform</h1>
+            <h1>Inside VitriFlex: System Overview and Design of a Modular Cryo-EM Preparation Platform</h1>
           </div>
 
           <div className="blog-meta">
             <div className="author"></div>
 
-            <div className="share">
-              <span>SHARE</span>
-              <FaTwitter />
-              <FaLinkedin />
-              <FaFacebook />
-            </div>
+
+
           </div>
         </div>
 
@@ -60,7 +56,7 @@ const Blog3 = () => {
           <p>
             Modern cryo-EM demands increasingly precise and flexible specimen preparation—but 
             most existing solutions remain expensive, closed, or difficult to modify. VitriFlex 
-            was built to challenge this paradigm. Designed as an open-source, modular, and 
+            was built to challenge this paradigm. Designed as a modular and
             robotics-driven system, VitriFlex empowers researchers to adapt sample-preparation 
             workflows to a wide range of experimental needs.
           </p>
@@ -171,7 +167,7 @@ const Blog3 = () => {
             <li>✔ Easy modular expansion</li>
             <li>✔ Lower cost than commercial systems</li>
             <li>✔ Fast assembly and simple repairability</li>
-            <li>✔ Fully open-source hardware and software</li>
+            <li>✔ Fully customizable hardware and software</li>
           </ul>
 
           {/* CONCLUSION */}
@@ -179,8 +175,8 @@ const Blog3 = () => {
 
           <p>
             The Materials and Methods behind VitriFlex reveal a system built from the ground up 
-            for accessibility, innovation, and scientific rigor. By combining open-source 
-            engineering, high-precision robotics, and a modular design philosophy, VitriFlex sets 
+            for accessibility, innovation, and scientific rigor. By combining
+            high-precision robotics and a modular design philosophy, VitriFlex sets 
             a new standard for cryo-EM specimen preparation—empowering laboratories to explore new 
             workflows, automate complex protocols, and accelerate structural biology research.
           </p>
