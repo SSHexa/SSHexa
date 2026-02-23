@@ -9,6 +9,7 @@ import HomeFeatures from "./components/HomeFeatures";
 import HomeCTA from "./components/HomeCTA";
 import HomeServices from "./components/HomeServices";
 import Footer from "./components/Footer";
+import ScrollToTopBtn from "./components/ScrollToTopBtn";
 import './responsive.css';
 
 // Practicloud imports
@@ -109,6 +110,7 @@ function AppContent() {
         </Routes>
       </div>
       {!isSubApp && <Footer />}
+      <ScrollToTopBtn />
     </div>
   );
 }

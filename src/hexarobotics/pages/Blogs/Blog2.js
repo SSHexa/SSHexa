@@ -19,7 +19,8 @@ const Blog2 = () => {
           <div className="blog-meta">
             <div className="author"></div>
 
-            <div className="share"></div>
+
+
           </div>
         </div>
 
@@ -35,7 +36,7 @@ const Blog2 = () => {
           <ul>
             <li><Link smooth to="#what-we-developed">What We Developed</Link></li>
             <li><Link smooth to="#scara-arm">SCARA Robotic Arm</Link></li>
-            <li><Link smooth to="#software-framework">Open-Source Software</Link></li>
+            <li><Link smooth to="#software-framework">Software Framework</Link></li>
             <li><Link smooth to="#modular-hardware">Modular Hardware</Link></li>
             <li><Link smooth to="#time-resolved">Time-Resolved Experiments</Link></li>
             <li><Link smooth to="#our-vision">Our Vision</Link></li>
@@ -64,10 +65,10 @@ const Blog2 = () => {
             Your browser does not support the video tag.
           </video>
 
-          <h3 id="software-framework">2. Open-Source Robotic Software Framework</h3>
+          <h3 id="software-framework">2. Robotic Software Framework</h3>
           <p>
-            We built a modular, open-source framework that enables researchers to customize,
-            automate, and share protocols with ease. The system supports plug-and-play
+            We built a modular software framework that enables researchers to customize,
+            automate, and streamline protocols with ease. The system supports plug-and-play
             components and allows rapid adaptation of new methods.
           </p>
 
@@ -89,7 +90,7 @@ const Blog2 = () => {
           <p>
             Our mission is to drastically lower the barrier to building high-performance,
             customizable cryo-EM freezing systems. By leveraging widely accessible robotics
-            and open-source tools, we aim to empower labs worldwide to innovate, collaborate,
+            and advanced tools, we aim to empower labs worldwide to innovate, collaborate,
             and push the boundaries of structural biology.
           </p>
         </div>

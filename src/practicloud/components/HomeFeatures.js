@@ -39,14 +39,14 @@ const features = [
   },
   {
     icon: <FaUserGraduate />,
-    title: "Human + AI Support",
-    desc: "Live expert advisory sessions combined with AI-powered guidance for both Cryo-EM and tomography workflows.",
+    title: "Expert Support",
+    desc: "Live expert advisory sessions combined with hands-on guidance for both Cryo-EM and tomography workflows.",
     color: "#f59e0b"
   },
   {
     icon: <FaRocket />,
-    title: "Adaptive AI Learning",
-    desc: "AI/LLM-powered training that evolves with your behavior. Reduce skill acquisition time from months to weeks.",
+    title: "Adaptive Learning",
+    desc: "Self-paced training that evolves with your progress. Reduce skill acquisition time from months to weeks.",
     color: "#ec4899"
   },
   {

@@ -1,33 +1,44 @@
 import React from "react";
 import "./Products.css";
 import { Link } from "react-router-dom";
+import { FaCubes } from "react-icons/fa";
 import product1 from "./EPSON.png";
 
 const Products = () => {
   return (
-    <div className="products-page">
-      <h1 className="products-title">Robots</h1>
-      <p className="products-subtitle">
-        SSHexa Robotics offers a series of fast, accurate, and agile robots that
-        are ideal for flexible and tabletop automation.
-      </p>
+    <div className="hr-products-page">
+      {/* Hero */}
+      <div className="hr-products-hero">
+        <div className="hr-page-hero-bg">
+          <div className="hr-page-hero-gradient"></div>
+          <div className="hr-page-hero-pattern"></div>
+        </div>
+        <div className="hr-page-hero-content">
+          <span className="hr-page-badge"><FaCubes /> Products</span>
+          <h1 className="hr-page-hero-title">Our Robots</h1>
+          <p className="hr-page-hero-subtitle">
+            SSHexa Robotics offers a series of fast, accurate, and agile robots
+            that are ideal for flexible and tabletop automation.
+          </p>
+        </div>
+      </div>
 
-      <div className="product-grid">
-
-        {/* === VITRIFLEX CARD === */}
-        <Link to="/hexarobotics/products/vitriflex" className="product-card">
-          <img src={product1} alt="Vitriflex" className="product-image" />
-          <div className="product-info">
-            <h3 className="product-name">Vitriflex</h3>
-            <p className="product-price">$5,990.00</p>
-            <p className="product-desc">
-              Open-source, modular cryo-EM grid preparation platform with SCARA
-              robot, supporting blot-and-plunge and time-resolved workflows.
-            </p>
-            <p className="know-more">Know More →</p>
-          </div>
-        </Link>
-
+      {/* Product Grid */}
+      <div className="hr-products-body">
+        <div className="hr-product-grid">
+          <Link to="/hexarobotics/products/vitriflex" className="hr-product-card">
+            <img src={product1} alt="Vitriflex" className="hr-product-image" />
+            <div className="hr-product-info">
+              <h3 className="hr-product-name">Vitriflex</h3>
+              <p className="hr-product-price">$5,990.00</p>
+              <p className="hr-product-desc">
+                Modular cryo-EM grid preparation platform with SCARA
+                robot, supporting blot-and-plunge and time-resolved workflows.
+              </p>
+              <span className="hr-know-more">Know More →</span>
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   );

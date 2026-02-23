@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { FaCloud, FaChalkboardTeacher, FaUsers, FaFlask, FaAward } from "react-icons/fa";
+import { FaCloud, FaChalkboardTeacher, FaUsers, FaFlask, FaAward, FaGraduationCap } from "react-icons/fa";
 import "./Academia.css";
 
 const academicPrograms = [
@@ -58,7 +58,7 @@ const Academia = () => {
           <div className="hero-pattern"></div>
         </div>
         <div className="hero-content">
-          <span className="hero-badge">Academia</span>
+          <span className="hero-badge"><FaGraduationCap /> Academia</span>
           <h1 className="hero-title">PractiCloud for Academia</h1>
           <p className="hero-subtitle">
             Empowering the next generation of structural biologists with free cloud access,
@@ -118,12 +118,12 @@ const Academia = () => {
       {/* Training Schedule */}
       <section className="training-schedule">
         <Container>
-          <h2 className="section-title">Upcoming Training Sessions</h2>
+          <h2 className="section-title">Training Sessions — Dates Coming Soon</h2>
           <div className="schedule-grid">
             <div className="schedule-item">
               <div className="schedule-date">
-                <span className="month">FEB</span>
-                <span className="day">15</span>
+                <span className="month">TBD</span>
+                <span className="day">--</span>
               </div>
               <div className="schedule-info">
                 <h4>Introduction to Cryo-EM</h4>
@@ -133,8 +133,8 @@ const Academia = () => {
             </div>
             <div className="schedule-item">
               <div className="schedule-date">
-                <span className="month">FEB</span>
-                <span className="day">22</span>
+                <span className="month">TBD</span>
+                <span className="day">--</span>
               </div>
               <div className="schedule-info">
                 <h4>RELION Workflow Deep Dive</h4>
@@ -144,19 +144,19 @@ const Academia = () => {
             </div>
             <div className="schedule-item">
               <div className="schedule-date">
-                <span className="month">MAR</span>
-                <span className="day">01</span>
+                <span className="month">TBD</span>
+                <span className="day">--</span>
               </div>
               <div className="schedule-info">
-                <h4>AI-Assisted Analysis</h4>
-                <p>Leveraging machine learning for particle picking</p>
+                <h4>Advanced Analysis Techniques</h4>
+                <p>Modern approaches to particle picking and classification</p>
                 <span className="badge advanced">Advanced</span>
               </div>
             </div>
             <div className="schedule-item">
               <div className="schedule-date">
-                <span className="month">MAR</span>
-                <span className="day">08</span>
+                <span className="month">TBD</span>
+                <span className="day">--</span>
               </div>
               <div className="schedule-info">
                 <h4>From Data to Publication</h4>
@@ -166,7 +166,7 @@ const Academia = () => {
             </div>
           </div>
           <div className="text-center mt-4">
-            <Button className="view-all-btn" onClick={() => navigate("/contactus")}>
+            <Button className="view-all-btn" onClick={() => navigate("/practicloud/contactus")}>
               Register for Sessions
             </Button>
           </div>
@@ -211,7 +211,7 @@ const Academia = () => {
             <Col md={4}>
               <div className="testimonial-card">
                 <p className="quote">
-                  "The AI-powered training adapted to my learning pace perfectly.
+                  "The training adapted to my learning pace perfectly.
                   I went from beginner to running my own experiments in just weeks."
                 </p>
                 <div className="author">
@@ -237,10 +237,10 @@ const Academia = () => {
               and expert support to accelerate your research journey.
             </p>
             <div className="cta-buttons">
-              <Button className="primary-btn" onClick={() => navigate("/contactus")}>
+              <Button className="primary-btn" onClick={() => navigate("/practicloud/contactus")}>
                 Apply as Student
               </Button>
-              <Button className="secondary-btn" onClick={() => navigate("/contactus")}>
+              <Button className="secondary-btn" onClick={() => navigate("/practicloud/contactus")}>
                 Partner as Institution
               </Button>
             </div>

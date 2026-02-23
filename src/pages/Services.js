@@ -1,4 +1,5 @@
 import React from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import "./Services.css";
 import backgroundImage from "./background.png";
 import { Link } from "react-router-dom";
@@ -125,47 +126,36 @@ const Services = () => {
       </div>
 
       {/* Divisions Overview */}
-      <div className="divisions-section">
-        <div className="divisions-header">
-          <h2>Our Three Pillars</h2>
-          <p>Together, we deliver a complete cryo-EM workflow solution</p>
-        </div>
-
-        <div className="divisions-flow">
-          {divisions.map((div, idx) => (
-            <div key={div.id} className="division-flow-item">
-              <div
-                className="division-card"
-                style={{ borderColor: div.color, cursor: "pointer" }}
-                onClick={() => {
-                  document.getElementById(div.id)?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                <div className="division-icon" style={{ backgroundColor: div.color }}>
-                  {div.icon}
-                </div>
-                <h3>{div.name}</h3>
-                <span className="division-tagline">{div.tagline}</span>
-                <p>{div.description}</p>
-                <span
-                    className="division-card-link"
-                    style={{ color: div.color, cursor: "pointer" }}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      document.getElementById(div.id)?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                  >
-                    Explore {div.name} <FaArrowRight style={{ fontSize: "0.8em" }} />
-                  </span>
-              </div>
-              {idx < divisions.length - 1 && (
-                <div className="flow-arrow">
-                  <FaArrowRight />
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+      <div className="services-section">
+        <Container>
+          <h2 className="services-heading">Our Three Pillars</h2>
+          <p className="services-subheading">Together, we deliver a complete cryo-EM workflow solution</p>
+          <Row className="g-4 justify-content-center">
+            {divisions.map((div) => (
+              <Col key={div.id} md={6} lg={4}>
+                <Card
+                  className="service-card division-card division-card-link"
+                  style={{ borderTopColor: div.color, cursor: "pointer" }}
+                  onClick={() => {
+                    document.getElementById(div.id)?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  <Card.Body>
+                    <div className="division-icon" style={{ backgroundColor: div.color }}>
+                      {div.icon}
+                    </div>
+                    <Card.Title>{div.name}</Card.Title>
+                    <span className="division-tagline">{div.tagline}</span>
+                    <Card.Text>{div.description}</Card.Text>
+                    <span className="visit-link" style={{ color: div.color }}>
+                      Explore {div.name} <FaArrowRight />
+                    </span>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
       </div>
 
       {/* Services by Division */}

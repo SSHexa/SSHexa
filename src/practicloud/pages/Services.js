@@ -8,7 +8,8 @@ import {
   FaExchangeAlt,
   FaCloud,
   FaDollarSign,
-  FaArrowRight
+  FaArrowRight,
+  FaCogs
 } from "react-icons/fa";
 import "./Services.css";
 
@@ -22,16 +23,16 @@ const services = [
   },
   {
     icon: <FaBrain />,
-    title: "AI-Powered Adaptive Training",
+    title: "Adaptive Training",
     description:
-      "PractiCloud's AI/LLM-powered, self-learning training modules dramatically outperform conventional solutions. Unlike competitors offering only static documentation, our platform delivers adaptive, context-aware guidance that evolves with user behavior for both Cryo-EM and tomography workflows. This reduces skill acquisition time from months to weeks.",
+      "PractiCloud's self-paced training modules dramatically outperform conventional solutions. Unlike competitors offering only static documentation, our platform delivers adaptive, context-aware guidance that evolves with user progress for both Cryo-EM and tomography workflows. This reduces skill acquisition time from months to weeks.",
     color: "#8b5cf6",
   },
   {
     icon: <FaUsers />,
-    title: "Human + AI Hybrid Training",
+    title: "Expert-Led Training",
     description:
-      "Beyond automation, PractiCloud combines AI with human-led e-training through live expert advisory sessions, modular e-learning, and automated data migration support. This unique hybrid approach ensures researchers successfully navigate complex Cryo-EM and tomography workflows.",
+      "Beyond self-paced modules, PractiCloud combines expert-led e-training through live advisory sessions, modular e-learning, and automated data migration support. This unique hybrid approach ensures researchers successfully navigate complex Cryo-EM and tomography workflows.",
     color: "#06b6d4",
   },
   {
@@ -45,7 +46,7 @@ const services = [
     icon: <FaCloud />,
     title: "Cloud-Native Platform",
     description:
-      "PractiCloud redefines ease of use through its ready-to-use, cloud-native platform that eliminates complex installations and HPC setup. Our single intuitive interface combines Cryo-EM processing, tomography reconstruction, analysis, and AI-powered training in one place.",
+      "PractiCloud redefines ease of use through its ready-to-use, cloud-native platform that eliminates complex installations and HPC setup. Our single intuitive interface combines Cryo-EM processing, tomography reconstruction, analysis, and expert-guided training in one place.",
     color: "#f59e0b",
   },
   {
@@ -96,7 +97,7 @@ const Services = () => {
           <div className="hero-pattern"></div>
         </div>
         <div className="hero-content">
-          <span className="hero-badge">Platform Features</span>
+          <span className="hero-badge"><FaCogs /> Platform Features</span>
           <h1 className="hero-title">
             Powerful Tools for Structural Biology
           </h1>

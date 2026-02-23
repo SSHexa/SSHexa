@@ -39,6 +39,19 @@
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
 
+/* Division Card Link Wrapper */
+.division-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  cursor: pointer;
+}
+
+.division-card-link:hover {
+  color: inherit;
+}
+
 /* Division Card */
 .division-card {
   border-top: 4px solid;

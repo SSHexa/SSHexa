@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "./CaseStudies.css";
 import { Link } from "react-router-dom";
+import { FaChartBar } from "react-icons/fa";
+import "./CaseStudies.css";
 import product1 from "./EPSON.png";
 
 const caseStudies = [
@@ -24,7 +25,7 @@ const caseStudies = [
   },
 ];
 
-const filters = ["ALL", "MANUFACTURING", "RESEARCH", "HEALTHCARE"];
+const filtersList = ["ALL", "MANUFACTURING", "RESEARCH", "HEALTHCARE"];
 
 const CaseStudies = () => {
   const [activeFilter, setActiveFilter] = useState("ALL");
@@ -34,52 +35,63 @@ const CaseStudies = () => {
     : caseStudies.filter((study) => study.category === activeFilter);
 
   return (
-    <div className="case-page">
+    <div className="hr-case-page">
+      {/* Hero */}
+      <div className="hr-case-hero">
+        <div className="hr-page-hero-bg">
+          <div className="hr-page-hero-gradient"></div>
+          <div className="hr-page-hero-pattern"></div>
+        </div>
+        <div className="hr-page-hero-content">
+          <span className="hr-page-badge"><FaChartBar /> Case Studies</span>
+          <h1 className="hr-page-hero-title">Case Studies</h1>
+          <p className="hr-page-hero-subtitle">
+            Explore real-world examples of how SSHexa Robotics has helped clients
+            improve efficiency, automate workflows, and accelerate scientific breakthroughs.
+          </p>
+        </div>
+      </div>
 
-      <h1 className="case-title">Case Studies</h1>
-      <p className="case-subtitle">
-        Explore real-world examples of how SSHexa Robotics has helped clients improve efficiency,
-        automate workflows, and accelerate scientific breakthroughs.
-      </p>
+      {/* Body */}
+      <div className="hr-case-body">
+        {/* Filters + Sorting */}
+        <div className="hr-case-toolbar">
+          <div className="hr-case-filters">
+            {filtersList.map((filter) => (
+              <button
+                key={filter}
+                className={`hr-filter-btn${activeFilter === filter ? " active" : ""}`}
+                onClick={() => setActiveFilter(filter)}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
 
-      <div className="case-toolbar">
-        <div className="case-filters">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              className={`filter-btn${activeFilter === filter ? " active" : ""}`}
-              onClick={() => setActiveFilter(filter)}
-            >
-              {filter}
-            </button>
+          <div className="hr-case-sort">
+            <select>
+              <option>Sort by: Latest</option>
+              <option>Sort by: Oldest</option>
+            </select>
+          </div>
+        </div>
+
+        {/* Case Study Cards */}
+        <div className="hr-case-grid">
+          {filteredStudies.map((study, idx) => (
+            <Link to={study.link} key={idx} className="hr-case-card">
+              <img src={study.image} alt={study.title} className="hr-case-image" />
+              <div className="hr-case-content">
+                <p className="hr-case-category">{study.category}</p>
+                <h3 className="hr-case-heading">{study.title}</h3>
+                <p className="hr-case-description">{study.description}</p>
+                <p className="hr-case-readtime">{study.readTime}</p>
+                <span className="hr-case-readmore">Read More →</span>
+              </div>
+            </Link>
           ))}
         </div>
-
-        <div className="case-sort">
-          <select>
-            <option>Sort by: Latest</option>
-            <option>Sort by: Oldest</option>
-          </select>
-        </div>
       </div>
-
-      <div className="case-grid">
-        {filteredStudies.map((study, idx) => (
-          <Link to={study.link} key={idx} className="case-card">
-            <img src={study.image} alt={study.title} className="case-image" />
-
-            <div className="case-content">
-              <p className="case-category">{study.category}</p>
-              <h3 className="case-heading">{study.title}</h3>
-              <p className="case-description">{study.description}</p>
-              <p className="case-readtime">{study.readTime}</p>
-
-              <button className="case-readmore">Read More</button>
-            </div>
-          </Link>
-        ))}
-      </div>
-
     </div>
   );
 };

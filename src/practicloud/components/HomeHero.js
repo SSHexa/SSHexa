@@ -27,7 +27,7 @@ const HomeHero = () => {
 
           <p className="hero-subtitle">
             The field's first comprehensive cloud platform that seamlessly integrates
-            parallel processing, AI-driven adaptive training, and cross-package
+            parallel processing, expert-guided adaptive training, and cross-package
             interoperability through a single intuitive interface.
           </p>
 
@@ -50,18 +50,18 @@ const HomeHero = () => {
 
           <div className="hero-stats">
             <div className="stat-item">
-              <span className="stat-number">500+</span>
-              <span className="stat-label">Researchers</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-number">50+</span>
-              <span className="stat-label">Institutions</span>
+              <span className="stat-number">4+</span>
+              <span className="stat-label">Integrated Packages</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
               <span className="stat-number">10x</span>
-              <span className="stat-label">Faster Analysis</span>
+              <span className="stat-label">Faster Processing</span>
+            </div>
+            <div className="stat-divider"></div>
+            <div className="stat-item">
+              <span className="stat-number">99.9%</span>
+              <span className="stat-label">Uptime SLA</span>
             </div>
           </div>
         </div>

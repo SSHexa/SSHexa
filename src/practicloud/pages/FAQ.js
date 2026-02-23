@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp, FaQuestionCircle } from "react-icons/fa";
 import "./FAQ.css";
 
 const faqData = [
@@ -50,12 +50,12 @@ const faqData = [
         a: "PractiCloud provides access to RELION, CryoSPARC, EMAN2 for Cryo-EM, and IMOD, EMAN2 tomo for tomography. Our platform intelligently manages transitions between these tools, preserving metadata integrity during conversions."
       },
       {
-        q: "How does the AI-powered training work?",
-        a: "Our AI/LLM-powered training modules adapt to your skill level for both Cryo-EM and tomography workflows. Unlike static documentation, PractiCloud delivers context-aware guidance that evolves with your behavior, reducing skill acquisition time from months to weeks."
+        q: "How does the adaptive training work?",
+        a: "Our training modules adapt to your skill level for both Cryo-EM and tomography workflows. Unlike static documentation, PractiCloud delivers context-aware guidance that evolves with your progress, reducing skill acquisition time from months to weeks."
       },
       {
-        q: "What is Human + AI hybrid support?",
-        a: "Beyond AI automation, PractiCloud offers live expert advisory sessions with specialists in both Cryo-EM and tomography, modular e-learning, and automated data migration support. This unique combination ensures you successfully navigate complex workflows."
+        q: "What expert support is available?",
+        a: "PractiCloud offers live expert advisory sessions with specialists in both Cryo-EM and tomography, modular e-learning, and automated data migration support. This unique combination ensures you successfully navigate complex workflows."
       },
       {
         q: "How fast is the processing?",
@@ -123,7 +123,7 @@ const FAQ = () => {
           <div className="hero-pattern"></div>
         </div>
         <div className="hero-content">
-          <span className="hero-badge">FAQ</span>
+          <span className="hero-badge"><FaQuestionCircle /> FAQ</span>
           <h1 className="hero-title">Frequently Asked Questions</h1>
           <p className="hero-subtitle">
             Everything you need to know about PractiCloud
