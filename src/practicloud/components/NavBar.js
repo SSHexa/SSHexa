@@ -49,7 +49,7 @@ export const NavBar = () => {
               FAQ
             </Nav.Link>
             <Nav.Link as={Link} to="/practicloud/contactus" className="nav-link-text">
-              Contact
+              Contact Us
             </Nav.Link>
           </Nav>
           <div className="nav-buttons">
