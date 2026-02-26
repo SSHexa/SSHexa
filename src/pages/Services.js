@@ -1,9 +1,10 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "./Services.css";
+import "../components/HomeServices.css";
 import backgroundImage from "./background.png";
 import { Link } from "react-router-dom";
-import { FaRobot, FaFlask, FaCloud, FaArrowRight, FaExternalLinkAlt, FaEnvelope } from "react-icons/fa";
+import { FaRobot, FaFlask, FaCloud, FaExternalLinkAlt, FaEnvelope } from "react-icons/fa";
 
 import ProteinTetramer from "./ProteinTetramer";
 import ProteinDensity from "./ProteinDensity";
@@ -146,11 +147,6 @@ const Services = () => {
                       {div.icon}
                     </div>
                     <Card.Title>{div.name}</Card.Title>
-                    <span className="division-tagline">{div.tagline}</span>
-                    <Card.Text>{div.description}</Card.Text>
-                    <span className="visit-link" style={{ color: div.color }}>
-                      Explore {div.name} <FaArrowRight />
-                    </span>
                   </Card.Body>
                 </Card>
               </Col>

@@ -29,28 +29,6 @@ const About = () => {
           SS Hexa is a comprehensive cryo-EM solutions provider, offering end-to-end services from sample preparation to final structure determination. Our integrated approach combines cutting-edge robotics, expert research services, and powerful cloud computing to accelerate your structural biology research. Whether you're a small research lab or a large institution, our platform is engineered to enhance your productivity, streamline your workflows, and help you achieve breakthrough results in the study of molecular structures.
         </p>
 
-        <h2 className="section-title">Our Three Divisions</h2>
-        <div className="divisions-info">
-          <div className="division-item">
-            <h4>Hexa Robotics</h4>
-            <p>
-              Advanced robotics systems designed specifically for cryo-EM sample preparation. Our automated solutions ensure consistent, high-quality grid preparation with minimal human intervention, eliminating variability and maximizing your success rate.
-            </p>
-          </div>
-          <div className="division-item">
-            <h4>SS Hexa CRO</h4>
-            <p>
-              Full-service Contract Research Organization for cryo-EM. We handle your samples from receipt to final EM imaging, delivering publication-ready results with expert analysis. Our experienced team works with small proteins, membrane proteins, viruses, nanoparticles, and more.
-            </p>
-          </div>
-          <div className="division-item">
-            <h4>PractiCloud</h4>
-            <p>
-              Powerful cloud platform for running cryo-EM algorithms. Process your data with scalable computing resources, advanced analysis tools, and seamless collaboration features. No need for your own HPC hardware or IT maintenance.
-            </p>
-          </div>
-        </div>
-
         <h2 className="section-title">Meet our Team</h2>
         <div className="team-section">
           <div className="team-member">

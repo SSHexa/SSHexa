@@ -30,7 +30,6 @@ const Products = () => {
             <img src={product1} alt="Vitriflex" className="hr-product-image" />
             <div className="hr-product-info">
               <h3 className="hr-product-name">Vitriflex</h3>
-              <p className="hr-product-price">$5,990.00</p>
               <p className="hr-product-desc">
                 Modular cryo-EM grid preparation platform with SCARA
                 robot, supporting blot-and-plunge and time-resolved workflows.

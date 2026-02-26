@@ -157,41 +157,61 @@
 
 .sh-visual-wrapper {
   width: 100%;
-  max-width: 440px;
+  max-width: 520px;
 }
 
 .sh-workflow-card {
   background: rgba(15, 23, 42, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
-  border-radius: 16px;
-  padding: 2rem;
+  border-radius: 20px;
+  padding: 2.25rem;
 }
 
 .sh-workflow-step {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
-  padding: 1rem;
+  gap: 1.1rem;
+  padding: 1.25rem 1.4rem;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
+  border-radius: 14px;
   transition: all 0.3s ease;
 }
 
-.sh-workflow-step:hover {
-  background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(255, 255, 255, 0.12);
+.sh-step-clickable {
+  cursor: pointer;
+}
+
+.sh-step-clickable:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateX(4px);
+}
+
+.sh-step-1.sh-step-clickable:hover {
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.12);
+}
+
+.sh-step-2.sh-step-clickable:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.12);
+}
+
+.sh-step-3.sh-step-clickable:hover {
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.12);
 }
 
 .sh-step-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   flex-shrink: 0;
 }
 
@@ -203,27 +223,47 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  gap: 1px;
 }
 
 .sh-step-label {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.4);
 }
 
 .sh-step-name {
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: white;
 }
 
+.sh-step-desc {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
 .sh-step-status {
   font-size: 0.72rem;
-  padding: 0.25rem 0.6rem;
+  padding: 0.3rem 0.75rem;
   border-radius: 50px;
   font-weight: 600;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.sh-step-arrow {
+  font-size: 0.6rem;
+  transition: transform 0.3s ease;
+}
+
+.sh-step-clickable:hover .sh-step-arrow {
+  transform: translateX(3px);
 }
 
 .sh-status-active {
@@ -234,7 +274,7 @@
 
 .sh-workflow-connector {
   width: 2px;
-  height: 20px;
+  height: 24px;
   background: linear-gradient(180deg, rgba(20, 184, 166, 0.4), rgba(20, 184, 166, 0.1));
   margin: 0 auto;
   border-radius: 2px;
@@ -252,7 +292,7 @@
   .sh-hero-content { display: flex; flex-direction: column; align-items: center; }
   .sh-hero-subtitle { max-width: 600px; }
   .sh-hero-buttons { justify-content: center; }
-  .sh-hero-visual { max-width: 400px; margin: 2rem auto 0; }
+  .sh-hero-visual { max-width: 480px; margin: 2rem auto 0; }
 }
 
 @media (max-width: 768px) {
@@ -261,13 +301,15 @@
   .sh-hero-subtitle { font-size: 1rem; }
   .sh-hero-buttons { flex-direction: column; width: 100%; max-width: 300px; }
   .sh-btn-primary, .sh-btn-secondary { width: 100%; justify-content: center; }
-  .sh-workflow-card { padding: 1.25rem; }
-  .sh-workflow-step { padding: 0.75rem; gap: 0.6rem; }
+  .sh-workflow-card { padding: 1.5rem; }
+  .sh-workflow-step { padding: 1rem; gap: 0.8rem; }
+  .sh-step-desc { display: none; }
   .sh-step-status { display: none; }
 }
 
 @media (max-width: 480px) {
   .sh-hero-title { font-size: 1.85rem; }
   .sh-hero-badge { font-size: 0.78rem; padding: 0.4rem 0.8rem; }
-  .sh-step-name { font-size: 0.85rem; }
+  .sh-step-name { font-size: 0.9rem; }
+  .sh-step-icon { width: 44px; height: 44px; font-size: 1.15rem; }
 }

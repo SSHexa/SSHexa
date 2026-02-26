@@ -7,7 +7,6 @@ import ContactUs from "./pages/ContactUs";
 import HomeHero from "./components/HomeHero";
 import HomeFeatures from "./components/HomeFeatures";
 import HomeCTA from "./components/HomeCTA";
-import HomeServices from "./components/HomeServices";
 import Footer from "./components/Footer";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
 import './responsive.css';
@@ -68,7 +67,6 @@ function AppContent() {
             element={
               <>
                 <HomeHero />
-                <HomeServices />
                 <HomeFeatures/>
                 <HomeCTA />
               </>
