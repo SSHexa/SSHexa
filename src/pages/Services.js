@@ -136,11 +136,8 @@ const Services = () => {
             {divisions.map((div) => (
               <Col key={div.id} md={6} lg={4}>
                 <Card
-                  className="service-card division-card division-card-link"
-                  style={{ borderTopColor: div.color, cursor: "pointer" }}
-                  onClick={() => {
-                    document.getElementById(div.id)?.scrollIntoView({ behavior: "smooth" });
-                  }}
+                  className="service-card division-card"
+                  style={{ borderTopColor: div.color }}
                 >
                   <Card.Body>
                     <div className="division-icon" style={{ backgroundColor: div.color }}>
@@ -162,11 +159,6 @@ const Services = () => {
             <div className="division-services-icon">{division.icon}</div>
             <h2>{division.name}</h2>
             <p>{division.tagline}</p>
-            {division.link && (
-              <Link to={division.link} className="division-header-link">
-                Visit {division.name} <FaExternalLinkAlt style={{ fontSize: "0.75em", marginLeft: "0.4rem" }} />
-              </Link>
-            )}
           </div>
 
           <div className="services-list">
