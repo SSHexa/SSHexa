@@ -25,7 +25,7 @@ const caseStudies = [
   },
 ];
 
-const filtersList = ["ALL", "MANUFACTURING", "RESEARCH", "HEALTHCARE"];
+const filtersList = ["ALL", "MANUFACTURING", "RESEARCH"];
 
 const CaseStudies = () => {
   const [activeFilter, setActiveFilter] = useState("ALL");
