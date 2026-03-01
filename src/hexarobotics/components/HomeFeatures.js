@@ -64,7 +64,7 @@ export default function HomeFeatures() {
 
         <Row className="hr-features-grid">
           {features.map((feature, idx) => (
-            <Col key={idx} sm={6} lg={4} className="hr-feature-col">
+            <Col key={feature.title} sm={6} lg={4} className="hr-feature-col">
               <div className="hr-feature-card">
                 <div
                   className="hr-feature-icon"

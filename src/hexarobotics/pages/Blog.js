@@ -5,6 +5,7 @@ import "./Blog.css";
 
 import product1 from "./EPSON.png";
 import product2 from "./background.png";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const blogs = [
   {
@@ -57,6 +58,7 @@ const blogs = [
 const filtersList = ["ALL", "BLOGS", "NEWS", "PRODUCTS"];
 
 const Blog = () => {
+  useDocumentTitle("Blog - Hexa Robotics");
   const [activeFilter, setActiveFilter] = useState("ALL");
 
   const filteredBlogs = activeFilter === "ALL"
@@ -91,6 +93,8 @@ const Blog = () => {
                 key={filter}
                 className={`hr-filter-btn${activeFilter === filter ? " active" : ""}`}
                 onClick={() => setActiveFilter(filter)}
+                aria-label={`Filter by ${filter.toLowerCase()}`}
+                aria-pressed={activeFilter === filter}
               >
                 {filter}
               </button>
@@ -108,7 +112,7 @@ const Blog = () => {
         {/* Blog Cards */}
         <div className="hr-blog-grid">
           {filteredBlogs.map((blog, idx) => (
-            <Link to={blog.link} key={idx} className="hr-blog-card">
+            <Link to={blog.link} key={blog.link} className="hr-blog-card">
               <img src={blog.image} alt={blog.title} className="hr-blog-image" />
               <div className="hr-blog-content">
                 <p className="hr-blog-category">{blog.category}</p>

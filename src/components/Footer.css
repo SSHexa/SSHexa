@@ -5,12 +5,11 @@
   font-size: 0.9rem;
   color: #333;
   border-top: 1px solid #ddd;
-  margin-top: 0; /* ✅ removed extra gap */
+  margin-top: 0;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Optional link styling (if footer has links) */
 .footer a {
   color: #003366;
   text-decoration: none;
@@ -22,17 +21,43 @@
   color: #0055aa;
 }
 
-/* ✅ Tablet screens (≤ 992px) */
+/* HR Footer variant */
+.hr-footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #333;
+  border-top: 1px solid #ddd;
+  margin-top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hr-footer a {
+  color: #2563eb;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.hr-footer a:hover {
+  color: #1d4ed8;
+}
+
+/* Tablet screens */
 @media (max-width: 992px) {
-  .footer {
+  .footer,
+  .hr-footer {
     padding: 1rem;
     font-size: 0.85rem;
   }
 }
 
-/* ✅ Mobile screens (≤ 768px) */
+/* Mobile screens */
 @media (max-width: 768px) {
-  .footer {
+  .footer,
+  .hr-footer {
     padding: 1rem 0.5rem;
     font-size: 0.8rem;
     line-height: 1.5;
@@ -44,9 +69,10 @@
   }
 }
 
-/* ✅ Very small phones (≤ 480px) */
+/* Very small phones */
 @media (max-width: 480px) {
-  .footer {
+  .footer,
+  .hr-footer {
     font-size: 0.75rem;
     padding: 0.8rem 0.5rem;
   }

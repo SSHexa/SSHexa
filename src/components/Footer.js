@@ -1,9 +1,9 @@
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = ({ brandName = "SS Hexa", className = "footer" }) => {
   return (
-    <footer className="footer">
-      <p>Copyright © 2026 SS Hexa | Powered by SS Hexa</p>
+    <footer className={className}>
+      <p>Copyright &copy; {new Date().getFullYear()} {brandName} | Powered by {brandName}</p>
     </footer>
   );
 };

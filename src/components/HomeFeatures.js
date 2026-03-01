@@ -77,7 +77,7 @@ export default function HomeFeatures() {
 
         <Row className="sh-features-grid">
           {features.map((f, idx) => (
-            <Col key={idx} sm={6} lg={3} className="sh-feature-col">
+            <Col key={f.title} sm={6} lg={3} className="sh-feature-col">
               <div className="sh-feature-card">
                 <div
                   className="sh-feature-icon"

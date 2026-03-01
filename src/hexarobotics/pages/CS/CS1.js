@@ -3,10 +3,13 @@ import heroImage from "../EPSON.png";        // Hero image at top
 import cs1Image from "../Images/CS1.jpg";           // Figure 3 image
 import "./CSdetail.css";
 
-import { Link } from "react-router-dom";  
+import { Link } from "react-router-dom";
+import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 
 const CS1 = () => {
+  useDocumentTitle("Automated Grid Preparation - Hexa Robotics");
+
   return (
     <div className="blog-wrapper">
 

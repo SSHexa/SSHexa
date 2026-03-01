@@ -3,8 +3,11 @@ import heroImage from "../EPSON.png";
 import "./BlogDetail.css";
 
 import { Link } from "react-router-dom";
+import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 const Blog5 = () => {
+  useDocumentTitle("VitriFlex vs Commercial Plungers - Hexa Robotics");
+
   return (
     <div className="blog-wrapper">
       {/* ====== HERO SECTION ====== */}

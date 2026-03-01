@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { FaChevronDown, FaChevronUp, FaQuestionCircle } from "react-icons/fa";
 import "./FAQ.css";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const faqData = [
   {
@@ -114,6 +115,8 @@ const FAQItem = ({ question, answer }) => {
 };
 
 const FAQ = () => {
+  useDocumentTitle("FAQ - PractiCloud");
+
   return (
     <div className="faq-page">
       {/* Hero section */}
@@ -134,11 +137,11 @@ const FAQ = () => {
       {/* FAQ Content */}
       <Container className="faq-container">
         {faqData.map((section, idx) => (
-          <div key={idx} className="faq-section">
+          <div key={section.category} className="faq-section">
             <h2 className="section-title">{section.category}</h2>
             <div className="faq-list">
               {section.questions.map((item, i) => (
-                <FAQItem key={i} question={item.q} answer={item.a} />
+                <FAQItem key={item.q} question={item.q} answer={item.a} />
               ))}
             </div>
           </div>

@@ -2,6 +2,7 @@ import React from "react";
 import "./Pricing.css";
 import { Link } from "react-router-dom";
 import { FaRobot, FaLaptopCode, FaGraduationCap, FaTag } from "react-icons/fa";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const pricingPlans = [
   {
@@ -61,6 +62,8 @@ const pricingPlans = [
 ];
 
 const Pricing = () => {
+  useDocumentTitle("Pricing - Hexa Robotics");
+
   return (
     <div className="hr-pricing-page">
       {/* Hero */}
@@ -103,7 +106,7 @@ const Pricing = () => {
 
               <ul className="hr-plan-features">
                 {plan.features.map((feature, idx) => (
-                  <li key={idx}>
+                  <li key={feature}>
                     <span className={`hr-check-icon ${plan.highlight ? "hr-check-gold" : ""}`}>&#10003;</span>
                     {feature}
                   </li>

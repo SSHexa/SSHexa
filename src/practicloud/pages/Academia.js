@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { FaCloud, FaChalkboardTeacher, FaUsers, FaFlask, FaAward, FaGraduationCap } from "react-icons/fa";
 import "./Academia.css";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const academicPrograms = [
   {
@@ -47,6 +48,7 @@ const institutionBenefits = [
 ];
 
 const Academia = () => {
+  useDocumentTitle("Academia - PractiCloud");
   const navigate = useNavigate();
 
   return (
@@ -80,7 +82,7 @@ const Academia = () => {
           </p>
           <Row className="g-4">
             {academicPrograms.map((program, idx) => (
-              <Col key={idx} md={6} lg={3}>
+              <Col key={program.title} md={6} lg={3}>
                 <Card className="program-card">
                   <Card.Body>
                     <div className="program-icon">{program.icon}</div>
@@ -104,7 +106,7 @@ const Academia = () => {
           </p>
           <Row className="g-4">
             {institutionBenefits.map((benefit, idx) => (
-              <Col key={idx} md={6}>
+              <Col key={benefit.title} md={6}>
                 <div className="benefit-item">
                   <h4>{benefit.title}</h4>
                   <p>{benefit.description}</p>

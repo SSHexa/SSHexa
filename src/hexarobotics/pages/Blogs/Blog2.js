@@ -3,8 +3,11 @@ import product2 from "../background.png";
 import "./BlogDetail.css";
 import videoFile from "./EPSON.mp4";
 import { HashLink as Link } from "react-router-hash-link";
+import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 const Blog2 = () => {
+  useDocumentTitle("VitriFlex Quick Start - Hexa Robotics");
+
   return (
     <div className="blog-wrapper">
       {/* HERO */}

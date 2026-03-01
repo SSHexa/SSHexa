@@ -3,8 +3,11 @@ import "./Products.css";
 import { Link } from "react-router-dom";
 import { FaCubes } from "react-icons/fa";
 import product1 from "./EPSON.png";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const Products = () => {
+  useDocumentTitle("Products - Hexa Robotics");
+
   return (
     <div className="hr-products-page">
       {/* Hero */}

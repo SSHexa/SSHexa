@@ -1,13 +1,17 @@
 import HomeHero from "../components/HomeHero";
 import HomeFeatures from "../components/HomeFeatures";
 import HomeCTA from "../components/HomeCTA";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
-const Home = () => (
-  <>
-    <HomeHero />
-    <HomeFeatures />
-    <HomeCTA />
-  </>
-);
+const Home = () => {
+  useDocumentTitle("Hexa Robotics");
+  return (
+    <>
+      <HomeHero />
+      <HomeFeatures />
+      <HomeCTA />
+    </>
+  );
+};
 
 export default Home;

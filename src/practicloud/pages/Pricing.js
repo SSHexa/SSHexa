@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { FaCheck, FaRocket, FaDollarSign, FaChartLine, FaTag } from "react-icons/fa";
 import "./Pricing.css";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const pricingPlans = [
   {
@@ -80,6 +81,7 @@ const benefits = [
 ];
 
 const Pricing = () => {
+  useDocumentTitle("Pricing - PractiCloud");
   const navigate = useNavigate();
 
   return (
@@ -104,7 +106,7 @@ const Pricing = () => {
         <Container>
           <Row className="pricing-grid justify-content-center">
             {pricingPlans.map((plan, idx) => (
-              <Col key={idx} md={6} lg={4} className="pricing-col">
+              <Col key={plan.name} md={6} lg={4} className="pricing-col">
                 <div className={`pricing-card ${plan.highlighted ? "highlighted" : ""}`}>
                   {plan.highlighted && <div className="popular-badge">Most Popular</div>}
                   <h3 className="plan-name">{plan.name}</h3>

@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
-import Footer from "./components/Footer";
+import Footer from "../components/Footer";
 
 const PracticloudLayout = () => (
   <div className="app-container">
@@ -8,7 +8,7 @@ const PracticloudLayout = () => (
     <div className="page-content">
       <Outlet />
     </div>
-    <Footer />
+    <Footer brandName="PractiCloud" />
   </div>
 );
 

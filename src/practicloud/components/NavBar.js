@@ -55,7 +55,7 @@ export const NavBar = () => {
           <div className="nav-buttons">
             <Button
               as={Link}
-              to="/services"
+              to="/"
               className="back-sshexa-btn"
             >
               Back to SS Hexa

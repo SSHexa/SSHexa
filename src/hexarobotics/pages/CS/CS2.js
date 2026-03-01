@@ -5,8 +5,11 @@ import fig5 from "../Images/F5.gif";   // Add your Figure 5 image
 import "./CSdetail.css";
 
 import { Link } from "react-router-dom";
+import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 const CS2 = () => {
+  useDocumentTitle("Spray-Based Vitrification - Hexa Robotics");
+
   return (
     <div className="blog-wrapper">
 
