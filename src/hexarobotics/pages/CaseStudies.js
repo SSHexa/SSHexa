@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaChartBar } from "react-icons/fa";
 import "./CaseStudies.css";
 import product1 from "./EPSON.png";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const caseStudies = [
   {
@@ -28,6 +29,7 @@ const caseStudies = [
 const filtersList = ["ALL", "MANUFACTURING", "RESEARCH"];
 
 const CaseStudies = () => {
+  useDocumentTitle("Case Studies - Hexa Robotics");
   const [activeFilter, setActiveFilter] = useState("ALL");
 
   const filteredStudies = activeFilter === "ALL"
@@ -62,6 +64,8 @@ const CaseStudies = () => {
                 key={filter}
                 className={`hr-filter-btn${activeFilter === filter ? " active" : ""}`}
                 onClick={() => setActiveFilter(filter)}
+                aria-label={`Filter by ${filter.toLowerCase()}`}
+                aria-pressed={activeFilter === filter}
               >
                 {filter}
               </button>
@@ -79,7 +83,7 @@ const CaseStudies = () => {
         {/* Case Study Cards */}
         <div className="hr-case-grid">
           {filteredStudies.map((study, idx) => (
-            <Link to={study.link} key={idx} className="hr-case-card">
+            <Link to={study.link} key={study.link} className="hr-case-card">
               <img src={study.image} alt={study.title} className="hr-case-image" />
               <div className="hr-case-content">
                 <p className="hr-case-category">{study.category}</p>

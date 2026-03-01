@@ -1,8 +1,10 @@
 import { Container } from "react-bootstrap";
 import "./About.css";
 import backgroundImage from "./background.png";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const About = () => {
+  useDocumentTitle("About");
   return (
     <div className="about-page">
       {/* Hero section with background image */}

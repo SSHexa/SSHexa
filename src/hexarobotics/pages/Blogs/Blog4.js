@@ -3,8 +3,11 @@ import heroImage from "../background.png";
 import "./BlogDetail.css";
 
 import { Link } from "react-router-dom";
+import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 const Blog4 = () => {
+  useDocumentTitle("Air-Water Interface Problem - Hexa Robotics");
+
   return (
     <div className="blog-wrapper">
       {/* ====== HERO SECTION ====== */}

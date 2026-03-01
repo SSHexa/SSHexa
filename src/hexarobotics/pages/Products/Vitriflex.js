@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import { FaArrowLeft, FaChevronLeft, FaChevronRight, FaCheckCircle, FaFlask, FaSprayCan, FaClock, FaExchangeAlt, FaCubes, FaDollarSign, FaTools } from "react-icons/fa";
 
 import img1 from "../EPSON.png";
+import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 const images = [img1];
 
 const Vitriflex = () => {
+  useDocumentTitle("VitriFlex - Hexa Robotics");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {
@@ -42,7 +44,7 @@ const Vitriflex = () => {
         <div className="hr-vf-box">
           {/* Left: Image Viewer */}
           <div className="hr-vf-image-viewer">
-            <button className="hr-vf-arrow hr-vf-arrow-left" onClick={prevImage}>
+            <button className="hr-vf-arrow hr-vf-arrow-left" onClick={prevImage} aria-label="Previous image">
               <FaChevronLeft />
             </button>
 
@@ -52,7 +54,7 @@ const Vitriflex = () => {
               className="hr-vf-main-image"
             />
 
-            <button className="hr-vf-arrow hr-vf-arrow-right" onClick={nextImage}>
+            <button className="hr-vf-arrow hr-vf-arrow-right" onClick={nextImage} aria-label="Next image">
               <FaChevronRight />
             </button>
 
@@ -60,7 +62,7 @@ const Vitriflex = () => {
             <div className="hr-vf-thumbnails">
               {images.map((img, idx) => (
                 <img
-                  key={idx}
+                  key={img}
                   src={img}
                   alt={`VitriFlex ${idx}`}
                   className={`hr-vf-thumb ${idx === currentIndex ? "hr-vf-thumb-active" : ""}`}

@@ -3,8 +3,10 @@ import { useLocation } from "react-router-dom";
 import "./ContactUs.css";
 import { FaUsers, FaBuilding, FaHeadset, FaCheckCircle, FaEnvelope } from "react-icons/fa";
 import backgroundImage from "./background.png";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const ContactUs = () => {
+  useDocumentTitle("Contact Us");
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const location = useLocation();

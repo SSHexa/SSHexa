@@ -12,6 +12,7 @@ import {
   FaCogs
 } from "react-icons/fa";
 import "./Services.css";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const services = [
   {
@@ -86,6 +87,7 @@ const otherServices = {
 };
 
 const Services = () => {
+  useDocumentTitle("Features - PractiCloud");
   const [activeTab, setActiveTab] = useState("hexarobotics");
 
   return (
@@ -113,7 +115,7 @@ const Services = () => {
         <Container>
           <Row className="services-grid">
             {services.map((service, idx) => (
-              <Col key={idx} md={6} className="service-col">
+              <Col key={service.title} md={6} className="service-col">
                 <div className="service-card">
                   <div
                     className="service-icon"
@@ -157,7 +159,7 @@ const Services = () => {
           <p>{otherServices[activeTab].description}</p>
           <ul className="pc-service-features">
             {otherServices[activeTab].features.map((feature, idx) => (
-              <li key={idx}>{feature}</li>
+              <li key={feature}>{feature}</li>
             ))}
           </ul>
           <Link to={otherServices[activeTab].link} className="pc-explore-link">

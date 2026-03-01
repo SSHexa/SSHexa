@@ -4,8 +4,11 @@ import robotImage from "../robot.jpg";
 import "./BlogDetail.css";
 
 import { Link } from "react-router-dom";
+import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 const Blog3 = () => {
+  useDocumentTitle("Inside VitriFlex - Hexa Robotics");
+
   return (
     <div className="blog-wrapper">
       {/* ===== HERO SECTION ===== */}

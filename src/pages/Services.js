@@ -1,5 +1,6 @@
-import React from "react";
+import { useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 import "./Services.css";
 import "../components/HomeServices.css";
 import backgroundImage from "./background.png";
@@ -98,12 +99,14 @@ const services = {
 };
 
 const Services = () => {
-  React.useEffect(() => {
+  useDocumentTitle("Services");
+  useEffect(() => {
     const hash = window.location.hash.slice(1);
     if (hash) {
-      setTimeout(() => {
+      const timerId = setTimeout(() => {
         document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
       }, 100);
+      return () => clearTimeout(timerId);
     }
   }, []);
 
@@ -163,7 +166,7 @@ const Services = () => {
 
           <div className="services-list">
             {services[division.id].map((service, idx) => (
-              <div key={idx} className="service-block">
+              <div key={service.title} className="service-block">
                 <div className="service-text">
                   <h2>{service.title}</h2>
                   <p>{service.description}</p>

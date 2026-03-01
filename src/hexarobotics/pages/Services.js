@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight, FaCogs } from "react-icons/fa";
 import "./Services.css";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const services = [
   {
@@ -94,6 +95,7 @@ const otherServices = {
 };
 
 const Services = () => {
+  useDocumentTitle("Services - Hexa Robotics");
   const [activeTab, setActiveTab] = useState("cro");
 
   return (
@@ -118,7 +120,7 @@ const Services = () => {
       <div className="hr-service-grid">
         {services.map((item, idx) => (
           <div
-            key={idx}
+            key={item.title || item.image}
             className={
               item.type === "image"
                 ? "hr-service-tile hr-image-tile"
@@ -128,7 +130,7 @@ const Services = () => {
             }
           >
             {item.type === "image" ? (
-              <img src={item.image} alt="" className="hr-service-img" />
+              <img src={item.image} alt={item.title || "Service illustration"} className="hr-service-img" />
             ) : (
               <div className="hr-service-text-box">
                 <h2>{item.title}</h2>
@@ -163,7 +165,7 @@ const Services = () => {
           <p>{otherServices[activeTab].description}</p>
           <ul className="hr-service-features">
             {otherServices[activeTab].features.map((feature, idx) => (
-              <li key={idx}>{feature}</li>
+              <li key={feature}>{feature}</li>
             ))}
           </ul>
           <Link to={otherServices[activeTab].link} className="hr-explore-link">

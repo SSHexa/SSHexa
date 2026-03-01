@@ -3,8 +3,11 @@ import heroImage from "../EPSON.png";
 import "./BlogDetail.css";
 
 import { HashLink as Link } from "react-router-hash-link";
+import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 const Blog1 = () => {
+  useDocumentTitle("Introducing VitriFlex - Hexa Robotics");
+
   return (
     <div className="blog-wrapper">
       {/* ====== HERO SECTION ====== */}
