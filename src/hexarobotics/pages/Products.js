@@ -2,7 +2,6 @@ import React from "react";
 import "./Products.css";
 import { Link } from "react-router-dom";
 import { FaCubes } from "react-icons/fa";
-import product1 from "./EPSON.png";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const Products = () => {
@@ -30,7 +29,7 @@ const Products = () => {
       <div className="hr-products-body">
         <div className="hr-product-grid">
           <Link to="/hexarobotics/products/vitriflex" className="hr-product-card">
-            <img src={product1} alt="Vitriflex" className="hr-product-image" />
+            <img src="/Images/vitriflex_full_system.jpg" alt="Vitriflex" className="hr-product-image" />
             <div className="hr-product-info">
               <h3 className="hr-product-name">Vitriflex</h3>
               <p className="hr-product-desc">

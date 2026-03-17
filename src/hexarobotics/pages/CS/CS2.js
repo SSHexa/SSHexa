@@ -1,5 +1,4 @@
 import React from "react";
-import heroImage from "../EPSON.png";
 import fig4 from "../Images/F4.gif";   // Add your Figure 4 image
 import fig5 from "../Images/F5.gif";   // Add your Figure 5 image
 import "./CSdetail.css";
@@ -33,7 +32,7 @@ const CS2 = () => {
         </div>
 
         <div className="hero-right">
-          <img src={heroImage} alt="Case Study Hero" />
+          <img src="/Images/cs2_ongrid_mixing.jpg" alt="Case Study Hero" />
         </div>
       </div>
 

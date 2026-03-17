@@ -66,6 +66,16 @@ const About = () => {
           </div>
 
           <div className="team-member">
+            <h4>Dhineshkumar Thiruppathi, PhD</h4>
+            <p>
+              Senior Scientist with 8+ years of combined academic and industry experience spanning computational biology, functional genomics, assay development, and data-driven R&D. Hands-on expertise in Python-based ML workflows, scalable data pipelines, and experimental validation-ready analytics. Practical experience building and adapting open-source biomolecule and chemical structure prediction and molecular design workflows (OpenFold/AlphaFold/RhoFold-style inference, ProteinMPNN-style sequence design logic, diffusion/generative model concepts) and translating model outputs into structure-to-function prediction and experiment-guiding scoring strategies.
+            </p>
+            <p>
+              <strong>Contact:</strong> dhinesh.t@sshexa.com
+            </p>
+          </div>
+
+          <div className="team-member">
             <h4>Sreeya Gutta</h4>
             <p>
               Software Developer specializing in building scalable microservices

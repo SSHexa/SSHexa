@@ -33,13 +33,6 @@ const HomeHero = () => {
 
           <div className="sh-hero-buttons">
             <Button
-              className="sh-btn-primary"
-              onClick={() => navigate("/services")}
-            >
-              Our Services
-              <FaArrowRight className="sh-btn-arrow" />
-            </Button>
-            <Button
               className="sh-btn-secondary"
               onClick={() => navigate("/about")}
             >
@@ -50,8 +43,9 @@ const HomeHero = () => {
 
         <div className="sh-hero-visual">
           <div className="sh-visual-wrapper">
+            <h3 className="sh-workflow-heading">Our Services</h3>
             <div className="sh-workflow-card">
-              <div className="sh-workflow-step sh-step-1 sh-step-clickable" onClick={() => navigate("/services#robotics")}>
+              <div className="sh-workflow-step sh-step-1 sh-step-clickable" onClick={() => navigate("/hexarobotics")}>
                 <div className="sh-step-icon sh-icon-amber"><FaRobot /></div>
                 <div className="sh-step-info">
                   <span className="sh-step-label">Step 1</span>
@@ -71,7 +65,7 @@ const HomeHero = () => {
                 <span className="sh-step-status sh-status-active">SS Hexa CRO <FaArrowRight className="sh-step-arrow" /></span>
               </div>
               <div className="sh-workflow-connector"></div>
-              <div className="sh-workflow-step sh-step-3 sh-step-clickable" onClick={() => navigate("/services#practicloud")}>
+              <div className="sh-workflow-step sh-step-3 sh-step-clickable" onClick={() => navigate("/practicloud")}>
                 <div className="sh-step-icon sh-icon-blue"><FaCloud /></div>
                 <div className="sh-step-info">
                   <span className="sh-step-label">Step 3</span>

@@ -23,8 +23,8 @@ const HomeCTA = () => {
           </h2>
           <p className="cta-description">
             Scientific progress should be limited only by curiosity, not resources.
-            With PractiCloud's pay-as-you-go model, professional-grade Cryo-EM and
-            tomography analysis is now accessible to labs of all sizes.
+            With PractiCloud's pay-as-you-go model, professional-grade cryo-EM data
+            analysis is now accessible to labs of all sizes.
           </p>
 
           <div className="cta-features">

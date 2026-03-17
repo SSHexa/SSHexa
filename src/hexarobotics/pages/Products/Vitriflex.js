@@ -3,10 +3,14 @@ import "./Vitriflex.css";
 import { Link } from "react-router-dom";
 import { FaArrowLeft, FaChevronLeft, FaChevronRight, FaCheckCircle, FaFlask, FaSprayCan, FaClock, FaExchangeAlt, FaCubes, FaDollarSign, FaTools } from "react-icons/fa";
 
-import img1 from "../EPSON.png";
 import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
-const images = [img1];
+const images = [
+  "/Images/vitriflex_full_system.jpg",
+  "/Images/vitriflex_chamber_closeup.jpg",
+  "/Images/vitriflex_grid_prep.jpg",
+  "/Images/vitriflex_spray_action.jpg",
+];
 
 const Vitriflex = () => {
   useDocumentTitle("VitriFlex - Hexa Robotics");
@@ -137,11 +141,11 @@ const Vitriflex = () => {
               </div>
               <div className="hr-vf-result-item">
                 <span className="hr-vf-result-label">Spike-ACE2 complex</span>
-                <span className="hr-vf-result-value">3.2 Å</span>
+                <span className="hr-vf-result-value">3.7 Å</span>
               </div>
               <div className="hr-vf-result-item">
                 <span className="hr-vf-result-label">Alpha7-Bungarotoxin</span>
-                <span className="hr-vf-result-value">2.9 Å</span>
+                <span className="hr-vf-result-value">2.6 Å</span>
               </div>
             </div>
 
