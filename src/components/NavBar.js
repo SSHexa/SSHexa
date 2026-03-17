@@ -1,57 +1,85 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { useState } from "react";
+import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import backImage from "./back.png"; // ✅ background image for navbar
-import "./NavBar.css"; // ✅ make sure you keep responsive CSS here
+import { FaTimes, FaBars } from "react-icons/fa";
+import backImage from "./back.png";
+import "./NavBar.css";
+
+const navLinks = [
+  { to: "/", label: "Home" },
+  { to: "/services", label: "Services" },
+  { to: "/about", label: "About" },
+  { to: "/contactus", label: "Contact Us" },
+];
 
 export const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <Navbar
-      expand="lg"
-      collapseOnSelect
+    <nav
       className="custom-navbar"
       style={{
         backgroundImage: `url(${backImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        marginBottom: "0", // ✅ fixed typo
       }}
     >
-      <Container fluid className="align-items-center">
-        {/* ✅ Logo */}
-        <Navbar.Brand as={Link} to="/" className="navbar-logo">
-          <img
-            src="/SSHexaLogo.png" // ✅ keep logo inside public/
-            alt="SS Hexa Logo"
-            height="70"
-            className="d-inline-block align-top"
-          />
-        </Navbar.Brand>
+      <Container fluid className="navbar-inner">
+        {/* Logo */}
+        <Link to="/" className="navbar-logo">
+          <img src="/SSHexaLogo.png" alt="SS Hexa Logo" />
+        </Link>
 
-        {/* ✅ Toggle for small screens */}
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          className="navbar-toggler"
-        />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto nav-links">
-            <Nav.Link as={Link} to="/" className="nav-link-text">
-              Home
-            </Nav.Link>
-            <Nav.Link as={Link} to="/services" className="nav-link-text">
-              Services
-            </Nav.Link>
-            <Nav.Link as={Link} to="/about" className="nav-link-text">
-              About
-            </Nav.Link>
-            {/* <Nav.Link as={Link} to="/projects" className="nav-link-text">
-              Projects
-            </Nav.Link> */}
-            <Nav.Link as={Link} to="/contactus" className="nav-link-text">
-              Contact Us
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        {/* Desktop nav links */}
+        <div className="nav-links-desktop">
+          {navLinks.map((link) => (
+            <Link key={link.to} to={link.to} className="nav-link-text">
+              {link.label}
+            </Link>
+          ))}
+        </div>
+
+        {/* Hamburger button (mobile/tablet only) */}
+        <button
+          className="sidebar-hamburger"
+          onClick={() => setMenuOpen(true)}
+          aria-label="Open menu"
+        >
+          <FaBars />
+        </button>
       </Container>
-    </Navbar>
+
+      {/* Sidebar overlay (mobile/tablet) */}
+      <div
+        className={`sidebar-backdrop ${menuOpen ? "open" : ""}`}
+        onClick={() => setMenuOpen(false)}
+      />
+      <div className={`sidebar-menu ${menuOpen ? "open" : ""}`}>
+        <div className="sidebar-header">
+          <Link to="/" className="sidebar-logo" onClick={() => setMenuOpen(false)}>
+            <img src="/SSHexaLogo.png" alt="SS Hexa Logo" />
+          </Link>
+          <button
+            className="sidebar-close-btn"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            <FaTimes />
+          </button>
+        </div>
+        <div className="sidebar-links">
+          {navLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className="sidebar-nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </nav>
   );
 };

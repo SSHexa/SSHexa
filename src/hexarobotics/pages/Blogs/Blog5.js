@@ -1,5 +1,4 @@
 import React from "react";
-import heroImage from "../EPSON.png";
 import "./BlogDetail.css";
 
 import { Link } from "react-router-dom";
@@ -31,7 +30,7 @@ const Blog5 = () => {
         </div>
 
         <div className="hero-right">
-          <img src={heroImage} alt="Plunger Comparison" />
+          <img src="/Images/blog5_vitriflex_vs_commercial.jpg" alt="Plunger Comparison" />
         </div>
       </div>
 

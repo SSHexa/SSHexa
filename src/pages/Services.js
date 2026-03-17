@@ -66,13 +66,13 @@ const services = {
     {
       title: "End-to-End CRO Services",
       description:
-        "From sample receipt to final structure, SS Hexa CRO handles it all. Our experienced team works with small proteins, membrane proteins, viruses, nanoparticles, and more. We provide feasibility assessments, data collection, and complete single-particle analysis with publication-quality results.",
+        "From sample receipt to final structure, SS Hexa CRO handles it all. Our in-house capabilities span the entire cryo-EM workflow — specimen preparation using Vitriflex (developed by our founder), imaging, and large-scale data analysis on our own cloud platform. We work with small proteins, membrane proteins, viruses, nanoparticles, and more, delivering publication-quality results with both our in-house tomography pipeline and RELION Web platform.",
       component: <ProteinCapsid />,
     },
     {
-      title: "Feasibility Consultation",
+      title: "Cost-Effective & Accessible",
       description:
-        "A feasibility consultation is always free! If you're new to cryo-EM, we'll gladly walk you through the basics and determine if single particle analysis is the right method for your sample. We also provide expert-guided learning on the platform, workflow, and core concepts of cryo-EM analysis.",
+        "We partner with various agencies to deliver cost-effective CRO services, making cryo-EM accessible to labs of all sizes. Our in-house capabilities keep evolving — from specimen prep to advanced data analysis — so you benefit from a continuously improving workflow. A feasibility consultation is always free! If you're new to cryo-EM, we'll walk you through the basics and determine if single particle analysis is the right method for your sample.",
       component: <CollaborationVisual />,
     },
   ],

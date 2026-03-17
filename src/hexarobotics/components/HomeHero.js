@@ -1,7 +1,6 @@
 import { Container, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { FaArrowRight, FaCog, FaThermometerHalf, FaMicrochip, FaFlask } from "react-icons/fa";
-import productImage from "../pages/EPSON.png";
 import "./HomeHero.css";
 
 const HomeHero = () => {
@@ -80,7 +79,7 @@ const HomeHero = () => {
           <div className="hr-product-showcase">
             <div className="hr-product-glow"></div>
             <img
-              src={productImage}
+              src="/Images/vitriflex_full_system.jpg"
               alt="VitriFlex Cryo-EM Robot"
               className="hr-product-image"
             />
@@ -95,7 +94,7 @@ const HomeHero = () => {
           </div>
           <div className="hr-floating-tag hr-tag-3">
             <span className="hr-tag-dot hr-dot-blue"></span>
-            <span>Modular Design</span>
+            <span>Precision Control</span>
           </div>
         </div>
       </Container>

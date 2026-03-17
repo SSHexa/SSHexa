@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { FaNewspaper } from "react-icons/fa";
 import "./Blog.css";
 
-import product1 from "./EPSON.png";
-import product2 from "./background.png";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const blogs = [
@@ -14,8 +12,8 @@ const blogs = [
     description:
       "Robotic automation is emerging as a transformative force that can revolutionize processes, optimize resources, and drive growth. However…",
     readTime: "32 minute read",
-    image: product1,
-    link: "/hexarobotics/blogs/blog1#why-we-built-vitriflex",
+    image: "/Images/blog1_introducing_vitriflex.jpg",
+    link: "/hexarobotics/blogs/blog1",
   },
   {
     category: "PRODUCTS",
@@ -23,7 +21,7 @@ const blogs = [
     description:
       "Robot joints are the movable connections between different parts of a robot's body, much like the joints in humans. These…",
     readTime: "39 minute read",
-    image: product2,
+    image: "/Images/blog2_flexible_robotic_platform.jpg",
     link: "/hexarobotics/blogs/blog2",
   },
   {
@@ -32,7 +30,7 @@ const blogs = [
     description:
       "System Overview and Design of a Cryo-EM Preparation Platform",
     readTime: "15 minute read",
-    image: product2,
+    image: "/Images/blog3_system_overview.jpg",
     link: "/hexarobotics/blogs/blog3",
   },
   {
@@ -41,7 +39,7 @@ const blogs = [
     description:
       "Understanding why proteins denature at the air-water interface and practical solutions to minimize sample damage during grid preparation.",
     readTime: "5 minute read",
-    image: product2,
+    image: "/Images/blog4_air_water_interface.jpg",
     link: "/hexarobotics/blogs/blog4",
   },
   {
@@ -50,7 +48,7 @@ const blogs = [
     description:
       "Comparing Vitrobot, Chameleon, and VitroJet with VitriFlex to help you choose the right cryo-EM grid preparation system for your lab.",
     readTime: "5 minute read",
-    image: product1,
+    image: "/Images/blog5_vitriflex_vs_commercial.jpg",
     link: "/hexarobotics/blogs/blog5",
   },
 ];

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaChartBar } from "react-icons/fa";
 import "./CaseStudies.css";
-import product1 from "./EPSON.png";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const caseStudies = [
@@ -12,7 +11,7 @@ const caseStudies = [
     description:
       "This study evaluates how automated blot-and-plunge and spray-based workflows produce consistent, high-quality cryo-EM grids across diverse specimens.",
     readTime: "12 minute read",
-    image: product1,
+    image: "/Images/cs1_blot_plunge_performance.jpg",
     link: "/hexarobotics/CS/CS1"
   },
   {
@@ -21,7 +20,7 @@ const caseStudies = [
     description:
       "A fast, low-volume mixing strategy that drives protein interactions directly on the cryo-EM grid. Ideal for trapping short-lived complexes with high structural precision.",
     readTime: "14 minute read",
-    image: product1,
+    image: "/Images/cs2_ongrid_mixing.jpg",
     link: "/hexarobotics/CS/CS2"
   },
 ];

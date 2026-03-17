@@ -17,7 +17,7 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 const services = [
   {
     icon: <FaMicroscope />,
-    title: "Cryo-EM & Cryo-Electron Tomography",
+    title: "Cryo-EM Data Analysis",
     description:
       "PractiCloud provides comprehensive support for both single particle analysis (SPA) and cryo-electron tomography (cryo-ET). Whether you're determining high-resolution structures or studying cellular architecture in situ, our platform handles the complete workflow. From tilt series acquisition to subtomogram averaging, we support IMOD, EMAN2 tomo, and other leading tomography tools.",
     color: "#3b82f6",
@@ -26,14 +26,14 @@ const services = [
     icon: <FaBrain />,
     title: "Adaptive Training",
     description:
-      "PractiCloud's self-paced training modules dramatically outperform conventional solutions. Unlike competitors offering only static documentation, our platform delivers adaptive, context-aware guidance that evolves with user progress for both Cryo-EM and tomography workflows. This reduces skill acquisition time from months to weeks.",
+      "PractiCloud's self-paced training modules dramatically outperform conventional solutions. Unlike competitors offering only static documentation, our platform delivers adaptive, context-aware guidance that evolves with user progress for both SPA and tomography workflows. This reduces skill acquisition time from months to weeks.",
     color: "#8b5cf6",
   },
   {
     icon: <FaUsers />,
     title: "Expert-Led Training",
     description:
-      "Beyond self-paced modules, PractiCloud combines expert-led e-training through live advisory sessions, modular e-learning, and automated data migration support. This unique hybrid approach ensures researchers successfully navigate complex Cryo-EM and tomography workflows.",
+      "Beyond self-paced modules, PractiCloud combines expert-led e-training through live advisory sessions, modular e-learning, and automated data migration support. This unique hybrid approach ensures researchers successfully navigate complex SPA and tomography workflows.",
     color: "#06b6d4",
   },
   {
@@ -47,14 +47,14 @@ const services = [
     icon: <FaCloud />,
     title: "Cloud-Native Platform",
     description:
-      "PractiCloud redefines ease of use through its ready-to-use, cloud-native platform that eliminates complex installations and HPC setup. Our single intuitive interface combines Cryo-EM processing, tomography reconstruction, analysis, and expert-guided training in one place.",
+      "PractiCloud redefines ease of use through its ready-to-use, cloud-native platform that eliminates complex installations and HPC setup. Our single intuitive interface combines SPA processing, tomography reconstruction, analysis, and expert-guided training in one place.",
     color: "#f59e0b",
   },
   {
     icon: <FaDollarSign />,
     title: "Cost-Optimized Computing",
     description:
-      "Our pay-as-you-go model makes advanced Cryo-EM and tomography accessible to all researchers without infrastructure burdens. PractiCloud guides users on cost-effective usage with intelligent GPU selection. Accessible to small labs (<$10K/year) yet powerful enough for high-throughput centers.",
+      "Our pay-as-you-go model makes advanced cryo-EM data analysis accessible to all researchers without infrastructure burdens. PractiCloud guides users on cost-effective usage with intelligent GPU selection. Accessible to small labs (<$10K/year) yet powerful enough for high-throughput centers.",
     color: "#ec4899",
   },
 ];
@@ -75,12 +75,12 @@ const otherServices = {
   cro: {
     title: "CRO Services",
     description:
-      "End-to-end cryo-EM data processing services handled by our expert team. From raw micrographs to publication-ready density maps and atomic models, we provide comprehensive Contract Research Organization support. Ideal for labs without dedicated computational staff or those seeking faster turnaround on critical projects.",
+      "Our in-house capabilities span the entire cryo-EM workflow — from specimen preparation using Vitriflex, developed by our founder, to large-scale data analysis on our own cloud platform. We partner with various agencies to deliver cost-effective Contract Research Organization services, and our capabilities keep evolving from specimen prep to advanced data analysis.",
     features: [
-      "Full data processing pipeline",
-      "Expert analysis & interpretation",
-      "Publication-ready deliverables",
-      "Flexible turnaround options",
+      "Vitriflex-powered specimen preparation",
+      "In-house tomography pipeline",
+      "RELION Web platform for data analysis",
+      "Agency tie-ups for cost-effective CRO",
     ],
     link: "/services#cro",
   },
@@ -104,7 +104,7 @@ const Services = () => {
             Powerful Tools for Structural Biology
           </h1>
           <p className="hero-subtitle">
-            Everything you need to accelerate your Cryo-EM and tomography research,
+            Everything you need to accelerate your cryo-EM data analysis research,
             from data processing to publication-ready results.
           </p>
         </div>
@@ -132,6 +132,32 @@ const Services = () => {
               </Col>
             ))}
           </Row>
+        </Container>
+      </section>
+
+      {/* Platform Showcase */}
+      <section className="pc-platform-showcase">
+        <Container>
+          <h2 className="pc-showcase-title">See the Platform in Action</h2>
+          <p className="pc-showcase-subtitle">
+            A single intuitive interface for cloud computing, data analysis, and expert-guided training.
+          </p>
+          <div className="pc-showcase-grid">
+            <div className="pc-showcase-item">
+              <div className="pc-showcase-img-wrapper">
+                <img src="/Practicloudweb.png" alt="PractiCloud Dashboard" />
+              </div>
+              <h4>PractiCloud Dashboard</h4>
+              <p>HPC resources, pinned applications, and quick access tools — all in one place.</p>
+            </div>
+            <div className="pc-showcase-item">
+              <div className="pc-showcase-img-wrapper">
+                <img src="/Relionweb.png" alt="RELION Web Platform" />
+              </div>
+              <h4>RELION Web Platform</h4>
+              <p>Run RELION 5 directly in your browser with full project management and job tracking.</p>
+            </div>
+          </div>
         </Container>
       </section>
 

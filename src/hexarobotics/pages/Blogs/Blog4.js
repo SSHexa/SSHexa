@@ -1,5 +1,4 @@
 import React from "react";
-import heroImage from "../background.png";
 import "./BlogDetail.css";
 
 import { Link } from "react-router-dom";
@@ -31,7 +30,7 @@ const Blog4 = () => {
         </div>
 
         <div className="hero-right">
-          <img src={heroImage} alt="Air-Water Interface" />
+          <img src="/Images/blog4_air_water_interface.jpg" alt="Air-Water Interface" />
         </div>
       </div>
 

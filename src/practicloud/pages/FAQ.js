@@ -14,7 +14,7 @@ const faqData = [
       },
       {
         q: "How do I start my free trial?",
-        a: "Click 'Start Free Trial' and create an account. You'll get 30 days of full access to all features including both Cryo-EM and tomography tools, with no credit card required."
+        a: "Click 'Start Free Trial' and create an account. You'll get 30 days of full access to all features including cryo-EM data analysis tools for both SPA and tomography, with no credit card required."
       },
       {
         q: "What file formats does PractiCloud support?",
@@ -23,7 +23,7 @@ const faqData = [
     ]
   },
   {
-    category: "Cryo-EM & Tomography",
+    category: "Cryo-EM Data Analysis",
     questions: [
       {
         q: "Does PractiCloud support cryo-electron tomography?",
@@ -52,11 +52,11 @@ const faqData = [
       },
       {
         q: "How does the adaptive training work?",
-        a: "Our training modules adapt to your skill level for both Cryo-EM and tomography workflows. Unlike static documentation, PractiCloud delivers context-aware guidance that evolves with your progress, reducing skill acquisition time from months to weeks."
+        a: "Our training modules adapt to your skill level for both SPA and tomography workflows. Unlike static documentation, PractiCloud delivers context-aware guidance that evolves with your progress, reducing skill acquisition time from months to weeks."
       },
       {
         q: "What expert support is available?",
-        a: "PractiCloud offers live expert advisory sessions with specialists in both Cryo-EM and tomography, modular e-learning, and automated data migration support. This unique combination ensures you successfully navigate complex workflows."
+        a: "PractiCloud offers live expert advisory sessions with specialists in both SPA and tomography, modular e-learning, and automated data migration support. This unique combination ensures you successfully navigate complex workflows."
       },
       {
         q: "How fast is the processing?",
@@ -69,7 +69,7 @@ const faqData = [
     questions: [
       {
         q: "How does pay-as-you-go pricing work?",
-        a: "You only pay for the compute and storage resources you actually use. No idle uptime charges, no long-term commitments. Our platform provides intelligent GPU guidance optimized for both Cryo-EM and tomography workloads."
+        a: "You only pay for the compute and storage resources you actually use. No idle uptime charges, no long-term commitments. Our platform provides intelligent GPU guidance optimized for both SPA and tomography workloads."
       },
       {
         q: "Is PractiCloud affordable for small labs?",
@@ -94,7 +94,7 @@ const faqData = [
       },
       {
         q: "Can I collaborate with my team?",
-        a: "Yes! PractiCloud is built for collaboration. Share Cryo-EM and tomography projects, results, and reports with colleagues. View 3D reconstructions together right in the browser with our integrated visualization tools."
+        a: "Yes! PractiCloud is built for collaboration. Share cryo-EM data analysis projects, results, and reports with colleagues. View 3D reconstructions together right in the browser with our integrated visualization tools."
       },
     ]
   },

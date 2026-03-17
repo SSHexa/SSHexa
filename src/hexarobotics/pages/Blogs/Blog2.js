@@ -1,5 +1,4 @@
 import React from "react";
-import product2 from "../background.png";
 import "./BlogDetail.css";
 import videoFile from "./EPSON.mp4";
 import { HashLink as Link } from "react-router-hash-link";
@@ -20,15 +19,15 @@ const Blog2 = () => {
           </div>
 
           <div className="blog-meta">
-            <div className="author"></div>
-
-
-
+            <div className="author">
+              <div className="author-icon">👤</div>
+              <p>JANUARY 2026 • SSHexa Robotics</p>
+            </div>
           </div>
         </div>
 
         <div className="hero-right">
-          <img src={product2} alt="Cryo-EM Robot" />
+          <img src="/Images/blog2_flexible_robotic_platform.jpg" alt="Cryo-EM Robot" />
         </div>
       </div>
 

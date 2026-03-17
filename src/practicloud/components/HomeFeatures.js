@@ -15,7 +15,7 @@ import "./HomeFeatures.css";
 const features = [
   {
     icon: <FaMicroscope />,
-    title: "Cryo-EM & Tomography",
+    title: "Cryo-EM Data Analysis",
     desc: "Full support for single particle analysis and cryo-electron tomography, with more structural biology techniques on the horizon.",
     color: "#3b82f6"
   },
@@ -40,7 +40,7 @@ const features = [
   {
     icon: <FaUserGraduate />,
     title: "Expert Support",
-    desc: "Live expert advisory sessions combined with hands-on guidance for both Cryo-EM and tomography workflows.",
+    desc: "Live expert advisory sessions combined with hands-on guidance for both SPA and tomography workflows.",
     color: "#f59e0b"
   },
   {

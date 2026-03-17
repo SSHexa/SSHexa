@@ -1,9 +1,8 @@
 import React from "react";
-import heroImage from "../EPSON.png";
 import robotImage from "../robot.jpg";
 import "./BlogDetail.css";
 
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 const Blog3 = () => {
@@ -21,15 +20,15 @@ const Blog3 = () => {
           </div>
 
           <div className="blog-meta">
-            <div className="author"></div>
-
-
-
+            <div className="author">
+              <div className="author-icon">👤</div>
+              <p>JANUARY 2026 • SSHexa Robotics</p>
+            </div>
           </div>
         </div>
 
         <div className="hero-right">
-          <img src={heroImage} alt="VitriFlex" />
+          <img src="/Images/blog3_system_overview.jpg" alt="VitriFlex" />
         </div>
       </div>
 
@@ -40,13 +39,13 @@ const Blog3 = () => {
         <aside className="blog-sidebar">
           <h3>In This Article</h3>
           <ul>
-            <li><a href="#intro">Introduction</a></li>
-            <li><a href="#platform">Modularity & Precision</a></li>
-            <li><a href="#robot-specs">Robot Specifications</a></li>
-            <li><a href="#prep-chamber">3D-Printed Chamber</a></li>
-            <li><a href="#workflow">Workflow Design</a></li>
-            <li><a href="#importance">Why This Matters</a></li>
-            <li><a href="#conclusion">Conclusion</a></li>
+            <li><Link smooth to="#intro">Introduction</Link></li>
+            <li><Link smooth to="#platform">Modularity & Precision</Link></li>
+            <li><Link smooth to="#robot-specs">Robot Specifications</Link></li>
+            <li><Link smooth to="#prep-chamber">3D-Printed Chamber</Link></li>
+            <li><Link smooth to="#workflow">Workflow Design</Link></li>
+            <li><Link smooth to="#importance">Why This Matters</Link></li>
+            <li><Link smooth to="#conclusion">Conclusion</Link></li>
           </ul>
         </aside>
 

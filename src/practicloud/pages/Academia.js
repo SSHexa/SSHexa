@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { FaCloud, FaChalkboardTeacher, FaUsers, FaFlask, FaAward, FaGraduationCap } from "react-icons/fa";
+import { FaCloud, FaChalkboardTeacher, FaUsers, FaFlask, FaGraduationCap } from "react-icons/fa";
 import "./Academia.css";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 
@@ -101,7 +101,7 @@ const Academia = () => {
         <Container>
           <h2 className="section-title">For Institutions</h2>
           <p className="section-subtitle">
-            Partner with PractiCloud to bring cutting-edge cryo-EM analysis to your students
+            Partner with PractiCloud to bring cutting-edge cryo-EM data analysis to your students
             and researchers without the infrastructure burden.
           </p>
           <Row className="g-4">
@@ -175,59 +175,6 @@ const Academia = () => {
         </Container>
       </section>
 
-      {/* Testimonials */}
-      <section className="academia-testimonials">
-        <Container>
-          <h2 className="section-title">What Students Say</h2>
-          <Row className="g-4">
-            <Col md={4}>
-              <div className="testimonial-card">
-                <p className="quote">
-                  "PractiCloud made it possible for me to complete my thesis research without
-                  waiting months for HPC queue time. The training sessions were invaluable."
-                </p>
-                <div className="author">
-                  <FaAward className="award-icon" />
-                  <div>
-                    <strong>Sarah M.</strong>
-                    <span>PhD Student, MIT</span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col md={4}>
-              <div className="testimonial-card">
-                <p className="quote">
-                  "As an undergrad, I never thought I'd have access to real cryo-EM tools.
-                  The free credits program opened doors I didn't know existed."
-                </p>
-                <div className="author">
-                  <FaAward className="award-icon" />
-                  <div>
-                    <strong>James L.</strong>
-                    <span>Undergraduate, Stanford</span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col md={4}>
-              <div className="testimonial-card">
-                <p className="quote">
-                  "The training adapted to my learning pace perfectly.
-                  I went from beginner to running my own experiments in just weeks."
-                </p>
-                <div className="author">
-                  <FaAward className="award-icon" />
-                  <div>
-                    <strong>Priya K.</strong>
-                    <span>Masters Student, Oxford</span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
 
       {/* CTA Section */}
       <section className="academia-cta">

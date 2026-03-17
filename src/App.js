@@ -23,6 +23,7 @@ const PCServices = lazy(() => import("./practicloud/pages/Services"));
 const PCPricing = lazy(() => import("./practicloud/pages/Pricing"));
 const PCAcademia = lazy(() => import("./practicloud/pages/Academia"));
 const PCFAQ = lazy(() => import("./practicloud/pages/FAQ"));
+const PCLogin = lazy(() => import("./practicloud/pages/Login"));
 
 // Lazy-load Hexa Robotics pages
 const HRHome = lazy(() => import("./hexarobotics/pages/Home"));
@@ -89,6 +90,7 @@ function AppContent() {
               <Route path="pricing" element={<PCPricing />} />
               <Route path="academia" element={<PCAcademia />} />
               <Route path="faq" element={<PCFAQ />} />
+              <Route path="login" element={<PCLogin />} />
               <Route path="contactus" element={<ContactUs />} />
             </Route>
 

@@ -21,7 +21,7 @@ const HomeHero = () => {
           </div>
 
           <h1 className="hero-title">
-            Cryo-EM & Tomography
+            Cryo-EM Data Analysis
             <span className="title-highlight"> Made Simple</span>
           </h1>
 

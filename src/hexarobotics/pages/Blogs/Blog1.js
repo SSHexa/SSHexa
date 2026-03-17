@@ -1,5 +1,4 @@
 import React from "react";
-import heroImage from "../EPSON.png";
 import "./BlogDetail.css";
 
 import { HashLink as Link } from "react-router-hash-link";
@@ -20,15 +19,15 @@ const Blog1 = () => {
           </div>
 
           <div className="blog-meta">
-            <div className="author"></div>
-
-
-
+            <div className="author">
+              <div className="author-icon">👤</div>
+              <p>JANUARY 2026 • SSHexa Robotics</p>
+            </div>
           </div>
         </div>
 
         <div className="hero-right">
-          <img src={heroImage} alt="VitriFlex" />
+          <img src="/Images/blog1_introducing_vitriflex.jpg" alt="VitriFlex" />
         </div>
       </div>
 
@@ -116,7 +115,7 @@ const Blog1 = () => {
             <li>Apoferritin: 1.9 Å (octahedral symmetry, 86,387 particles)</li>
             <li>E. coli dGTPase: 2.8 Å (D3 symmetry, 139,988 particles)</li>
             <li>Spike-ACE2 Complex: 3.7 Å (C1 symmetry, on-grid mixing)</li>
-            <li>Alpha7-Bungarotoxin: 2.9 Å (C5 symmetry, 246,001 particles)</li>
+            <li>Alpha7-Bungarotoxin: 2.6 Å (C5 symmetry, 246,001 particles)</li>
           </ul>
 
           <h2 id="conclusion">Conclusion</h2>
