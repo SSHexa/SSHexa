@@ -79,6 +79,7 @@
   border-radius: 12px;
   overflow: hidden;
   text-decoration: none;
+  cursor: pointer;
   color: inherit;
   border: 1px solid #e5e7eb;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -86,10 +87,15 @@
 }
 
 .hr-case-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
   border-color: rgba(245, 158, 11, 0.3);
   color: inherit;
+}
+
+.hr-case-image-wrapper {
+  overflow: hidden;
+  position: relative;
 }
 
 .hr-case-image {
@@ -97,6 +103,11 @@
   height: 220px;
   object-fit: cover;
   background: #f0f0f0;
+  transition: transform 0.4s ease;
+}
+
+.hr-case-card:hover .hr-case-image {
+  transform: scale(1.05);
 }
 
 /* Card Content */
@@ -130,7 +141,7 @@
 
 .hr-case-readtime {
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: #64748b;
   margin-bottom: 12px;
 }
 

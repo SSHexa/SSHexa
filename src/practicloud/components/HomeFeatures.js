@@ -1,5 +1,5 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import useScrollReveal from "../../hooks/useScrollReveal";
 import {
   FaCloud,
   FaDollarSign,
@@ -64,10 +64,13 @@ const features = [
 ];
 
 export default function HomeFeatures() {
+  const [headerRef, headerVisible] = useScrollReveal();
+  const [gridRef, gridVisible] = useScrollReveal();
+
   return (
     <section className="home-features">
       <Container>
-        <div className="features-header">
+        <div ref={headerRef} className={`features-header reveal ${headerVisible ? "visible" : ""}`}>
           <span className="features-badge">Why PractiCloud</span>
           <h2 className="features-title">Built for Modern Structural Biology</h2>
           <p className="features-subtitle">
@@ -76,9 +79,9 @@ export default function HomeFeatures() {
           </p>
         </div>
 
-        <Row className="features-grid">
+        <Row ref={gridRef} className={`features-grid reveal ${gridVisible ? "visible" : ""}`}>
           {features.map((feature, idx) => (
-            <Col key={feature.title} sm={6} lg={3} className="feature-col">
+            <Col key={feature.title} sm={6} lg={3} className="feature-col" style={{ transitionDelay: `${idx * 100}ms` }}>
               <div className="feature-card">
                 <div
                   className="feature-icon"

@@ -1,21 +1,22 @@
-import React from "react";
 import { Container, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { FaArrowRight, FaPlay } from "react-icons/fa";
+import useScrollReveal from "../../hooks/useScrollReveal";
 import "./HomeCTA.css";
 
 const HomeCTA = () => {
   const navigate = useNavigate();
+  const [ctaRef, ctaVisible] = useScrollReveal();
 
   return (
-    <section className="home-cta">
+    <section className="home-cta" ref={ctaRef}>
       <div className="cta-background">
         <div className="cta-gradient"></div>
         <div className="cta-pattern"></div>
       </div>
 
       <Container className="cta-container">
-        <div className="cta-content">
+        <div className={`cta-content reveal ${ctaVisible ? "visible" : ""}`}>
           <span className="cta-badge">Get Started Today</span>
           <h2 className="cta-title">
             Democratizing Structural Biology

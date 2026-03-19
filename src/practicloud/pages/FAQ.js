@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import { FaChevronDown, FaChevronUp, FaQuestionCircle } from "react-icons/fa";
+import { FaChevronDown, FaQuestionCircle } from "react-icons/fa";
 import "./FAQ.css";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 
@@ -107,9 +107,11 @@ const FAQItem = ({ question, answer }) => {
     <div className={`faq-item ${isOpen ? "open" : ""}`}>
       <div className="faq-question" onClick={() => setIsOpen(!isOpen)}>
         <span>{question}</span>
-        {isOpen ? <FaChevronUp /> : <FaChevronDown />}
+        <FaChevronDown className={`faq-chevron ${isOpen ? "rotated" : ""}`} />
       </div>
-      {isOpen && <div className="faq-answer">{answer}</div>}
+      <div className="faq-answer-wrapper">
+        <div className="faq-answer">{answer}</div>
+      </div>
     </div>
   );
 };

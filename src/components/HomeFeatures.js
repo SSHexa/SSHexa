@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import useScrollReveal from "../hooks/useScrollReveal";
 import {
   FaRobot,
   FaFlask,
@@ -63,10 +64,13 @@ const features = [
 ];
 
 export default function HomeFeatures() {
+  const [headerRef, headerVisible] = useScrollReveal();
+  const [gridRef, gridVisible] = useScrollReveal();
+
   return (
     <section className="sh-features">
       <Container>
-        <div className="sh-features-header">
+        <div ref={headerRef} className={`sh-features-header reveal ${headerVisible ? "visible" : ""}`}>
           <span className="sh-features-badge">Why SS Hexa</span>
           <h2 className="sh-features-title">Why Choose SS Hexa?</h2>
           <p className="sh-features-subtitle">
@@ -75,9 +79,9 @@ export default function HomeFeatures() {
           </p>
         </div>
 
-        <Row className="sh-features-grid">
+        <Row ref={gridRef} className={`sh-features-grid reveal ${gridVisible ? "visible" : ""}`}>
           {features.map((f, idx) => (
-            <Col key={f.title} sm={6} lg={3} className="sh-feature-col">
+            <Col key={f.title} sm={6} lg={3} className="sh-feature-col" style={{ transitionDelay: `${idx * 100}ms` }}>
               <div className="sh-feature-card">
                 <div
                   className="sh-feature-icon"
