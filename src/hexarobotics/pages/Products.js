@@ -29,7 +29,7 @@ const Products = () => {
       <div className="hr-products-body">
         <div className="hr-product-grid">
           <Link to="/hexarobotics/products/vitriflex" className="hr-product-card">
-            <img src="/Images/vitriflex_full_system.jpg" alt="Vitriflex" className="hr-product-image" />
+            <img src="/Images/vitriflex_full_system.jpg" alt="Vitriflex" className="hr-product-image" loading="lazy" />
             <div className="hr-product-info">
               <h3 className="hr-product-name">Vitriflex</h3>
               <p className="hr-product-desc">

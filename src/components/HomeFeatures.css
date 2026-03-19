@@ -55,6 +55,7 @@
   border-radius: 12px;
   padding: 1.75rem;
   height: 100%;
+  cursor: pointer;
   border: 1px solid #e5e7eb;
   transition: all 0.3s ease;
 }

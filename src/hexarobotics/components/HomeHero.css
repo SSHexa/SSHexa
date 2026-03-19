@@ -5,7 +5,19 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 120px 0 80px;
+  padding: 120px 0 120px;
+}
+
+.hr-hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80'%3E%3Cpath fill='%23f8fafc' d='M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z'/%3E%3C/svg%3E") no-repeat bottom;
+  background-size: cover;
+  z-index: 2;
 }
 
 /* Dark industrial background with warm undertones */
@@ -99,7 +111,7 @@
   display: block;
   font-size: 2.5rem;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   letter-spacing: 2px;
   margin-top: 0.25rem;
 }
@@ -108,7 +120,7 @@
 .hr-hero-subtitle {
   font-size: 1.15rem;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 2rem;
   max-width: 480px;
 }
@@ -201,7 +213,7 @@
 
 .hr-spec-label {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }

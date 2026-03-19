@@ -2,9 +2,12 @@ import { Container } from "react-bootstrap";
 import "./About.css";
 import backgroundImage from "./background.png";
 import useDocumentTitle from "../hooks/useDocumentTitle";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 const About = () => {
   useDocumentTitle("About");
+  const [teamRef, teamVisible] = useScrollReveal();
+
   return (
     <div className="about-page">
       {/* Hero section with background image */}
@@ -32,7 +35,7 @@ const About = () => {
         </p>
 
         <h2 className="section-title">Meet our Team</h2>
-        <div className="team-section">
+        <div ref={teamRef} className={`team-section reveal ${teamVisible ? "visible" : ""}`}>
           <div className="team-member">
             <h4>Venkata Dandey</h4>
             <p>

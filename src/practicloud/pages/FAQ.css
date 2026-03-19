@@ -125,10 +125,25 @@
   background: #f8fafc;
 }
 
-.faq-question svg {
+.faq-chevron {
   color: #2563eb;
   flex-shrink: 0;
   margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.faq-answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-item.open .faq-answer-wrapper {
+  max-height: 500px;
 }
 
 .faq-answer {
@@ -137,7 +152,6 @@
   line-height: 1.7;
   border-top: 1px solid #e2e8f0;
   padding-top: 1.25rem;
-  margin-top: -0.25rem;
 }
 
 /* Contact CTA */

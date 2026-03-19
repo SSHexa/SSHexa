@@ -83,7 +83,9 @@ const CaseStudies = () => {
         <div className="hr-case-grid">
           {filteredStudies.map((study, idx) => (
             <Link to={study.link} key={study.link} className="hr-case-card">
-              <img src={study.image} alt={study.title} className="hr-case-image" />
+              <div className="hr-case-image-wrapper">
+                <img src={study.image} alt={study.title} className="hr-case-image" loading="lazy" />
+              </div>
               <div className="hr-case-content">
                 <p className="hr-case-category">{study.category}</p>
                 <h3 className="hr-case-heading">{study.title}</h3>

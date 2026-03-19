@@ -7,6 +7,7 @@ import HomeCTA from "./components/HomeCTA";
 import Footer from "./components/Footer";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
 import ErrorBoundary from "./components/ErrorBoundary";
+import PageSkeleton from "./components/PageSkeleton";
 
 // Lazy-load pages not needed on initial home page render
 const About = lazy(() => import("./pages/About"));
@@ -67,7 +68,7 @@ function AppContent() {
       {!isSubApp && <NavBar />}
       <div className={!isSubApp ? "page-content" : undefined}>
         <ErrorBoundary>
-        <Suspense fallback={<div className="page-loading">Loading...</div>}>
+        <Suspense fallback={<PageSkeleton />}>
           <Routes>
 
             <Route path="/"

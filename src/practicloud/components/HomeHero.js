@@ -1,6 +1,6 @@
 import { Container, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { FaPlay, FaArrowRight } from "react-icons/fa";
+import { FaPlay, FaArrowRight, FaStar, FaMicroscope, FaBolt, FaLock } from "react-icons/fa";
 import "./HomeHero.css";
 
 const HomeHero = () => {
@@ -16,7 +16,7 @@ const HomeHero = () => {
       <Container className="hero-container">
         <div className="hero-content">
           <div className="hero-badge">
-            <span className="badge-icon">✨</span>
+            <span className="badge-icon"><FaStar /></span>
             <span>Cloud-Powered Structural Biology</span>
           </div>
 
@@ -92,15 +92,15 @@ const HomeHero = () => {
             </div>
           </div>
           <div className="floating-card card-1">
-            <span className="floating-icon">🔬</span>
+            <span className="floating-icon"><FaMicroscope /></span>
             <span>RELION Ready</span>
           </div>
           <div className="floating-card card-2">
-            <span className="floating-icon">⚡</span>
+            <span className="floating-icon"><FaBolt /></span>
             <span>GPU Optimized</span>
           </div>
           <div className="floating-card card-3">
-            <span className="floating-icon">🔒</span>
+            <span className="floating-icon"><FaLock /></span>
             <span>Secure</span>
           </div>
         </div>

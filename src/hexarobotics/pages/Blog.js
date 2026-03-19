@@ -111,7 +111,9 @@ const Blog = () => {
         <div className="hr-blog-grid">
           {filteredBlogs.map((blog, idx) => (
             <Link to={blog.link} key={blog.link} className="hr-blog-card">
-              <img src={blog.image} alt={blog.title} className="hr-blog-image" />
+              <div className="hr-blog-image-wrapper">
+                <img src={blog.image} alt={blog.title} className="hr-blog-image" loading="lazy" />
+              </div>
               <div className="hr-blog-content">
                 <p className="hr-blog-category">{blog.category}</p>
                 <h3 className="hr-blog-heading">{blog.title}</h3>

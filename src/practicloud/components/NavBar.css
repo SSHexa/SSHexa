@@ -10,6 +10,10 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-sm);
 }
 
 .navbar-inner {

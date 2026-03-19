@@ -1,3 +1,52 @@
+/* =========================
+   DESIGN TOKENS
+========================= */
+:root {
+  /* SSHexa Main */
+  --sh-primary: #14b8a6;
+  --sh-primary-dark: #0d9488;
+  --sh-primary-light: #5eead4;
+  --sh-navy: #0f172a;
+  --sh-navy-light: #1e293b;
+
+  /* PractiCloud */
+  --pc-primary: #3b82f6;
+  --pc-primary-dark: #2563eb;
+  --pc-primary-light: #60a5fa;
+  --pc-accent: #8b5cf6;
+
+  /* Hexa Robotics */
+  --hr-primary: #f59e0b;
+  --hr-primary-dark: #d97706;
+  --hr-primary-light: #fbbf24;
+
+  /* Shared Neutrals */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --bg-white: #ffffff;
+  --bg-light: #f8fafc;
+  --bg-subtle: #f1f5f9;
+  --border-light: #e5e7eb;
+  --border-subtle: #e2e8f0;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 50px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
 /* Base reset and typography */
 * {
   margin: 0;
@@ -120,4 +169,45 @@ h3 {
   min-height: 60vh;
   font-size: 1.1rem;
   color: #64748b;
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+/* Keyboard-only focus ring */
+:focus-visible {
+  outline: 2px solid var(--pc-primary, #3b82f6);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -145,14 +145,14 @@ const Services = () => {
           <div className="pc-showcase-grid">
             <div className="pc-showcase-item">
               <div className="pc-showcase-img-wrapper">
-                <img src="/Practicloudweb.png" alt="PractiCloud Dashboard" />
+                <img src="/Practicloudweb.png" alt="PractiCloud Dashboard" loading="lazy" />
               </div>
               <h4>PractiCloud Dashboard</h4>
               <p>HPC resources, pinned applications, and quick access tools — all in one place.</p>
             </div>
             <div className="pc-showcase-item">
               <div className="pc-showcase-img-wrapper">
-                <img src="/Relionweb.png" alt="RELION Web Platform" />
+                <img src="/Relionweb.png" alt="RELION Web Platform" loading="lazy" />
               </div>
               <h4>RELION Web Platform</h4>
               <p>Run RELION 5 directly in your browser with full project management and job tracking.</p>
