@@ -113,9 +113,9 @@ const Blog = () => {
             <Link to={blog.link} key={blog.link} className="hr-blog-card">
               <div className="hr-blog-image-wrapper">
                 <img src={blog.image} alt={blog.title} className="hr-blog-image" loading="lazy" />
+                <span className="hr-blog-category-badge">{blog.category}</span>
               </div>
               <div className="hr-blog-content">
-                <p className="hr-blog-category">{blog.category}</p>
                 <h3 className="hr-blog-heading">{blog.title}</h3>
                 <p className="hr-blog-description">{blog.description}</p>
                 <p className="hr-blog-readtime">{blog.readTime}</p>

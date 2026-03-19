@@ -80,20 +80,31 @@ export default function HomeFeatures() {
         </div>
 
         <Row ref={gridRef} className={`sh-features-grid reveal ${gridVisible ? "visible" : ""}`}>
-          {features.map((f, idx) => (
-            <Col key={f.title} sm={6} lg={3} className="sh-feature-col" style={{ transitionDelay: `${idx * 100}ms` }}>
-              <div className="sh-feature-card">
-                <div
-                  className="sh-feature-icon"
-                  style={{ background: `${f.color}12`, color: f.color }}
-                >
-                  {f.icon}
+          {features.map((f, idx) => {
+            const isWide = idx === 0 || idx === 4;
+            return (
+              <Col
+                key={f.title}
+                sm={6}
+                lg={isWide ? 6 : 3}
+                className="sh-feature-col"
+                style={{ transitionDelay: `${idx * 80}ms` }}
+              >
+                <div className={`sh-feature-card${isWide ? " sh-feature-card-wide" : ""}`}>
+                  <div
+                    className="sh-feature-icon"
+                    style={{ background: `${f.color}12`, color: f.color }}
+                  >
+                    {f.icon}
+                  </div>
+                  <div className="sh-feature-text">
+                    <h3 className="sh-feature-name">{f.title}</h3>
+                    <p className="sh-feature-desc">{f.desc}</p>
+                  </div>
                 </div>
-                <h3 className="sh-feature-name">{f.title}</h3>
-                <p className="sh-feature-desc">{f.desc}</p>
-              </div>
-            </Col>
-          ))}
+              </Col>
+            );
+          })}
         </Row>
       </Container>
     </section>

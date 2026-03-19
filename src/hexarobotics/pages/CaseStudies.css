@@ -110,6 +110,22 @@
   transform: scale(1.05);
 }
 
+/* Category pill badge overlaid on image */
+.hr-case-category-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: var(--hr-primary, #f59e0b);
+  color: #000;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  z-index: 1;
+}
+
 /* Card Content */
 .hr-case-content {
   padding: 20px;
