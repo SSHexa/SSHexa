@@ -52,30 +52,54 @@
 /* Card */
 .sh-feature-card {
   background: white;
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 1.75rem;
   height: 100%;
   cursor: pointer;
   border: 1px solid #e5e7eb;
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .sh-feature-card:hover {
-  transform: translateY(-4px);
+  transform: scale(1.02);
   border-color: transparent;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Wide card — horizontal layout (bento) */
+.sh-feature-card-wide {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.sh-feature-card-wide .sh-feature-icon {
+  flex-shrink: 0;
+  margin-bottom: 0;
+  width: 56px;
+  height: 56px;
+}
+
+/* Text wrapper */
+.sh-feature-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 /* Icon */
 .sh-feature-icon {
   width: 50px;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.35rem;
   margin-bottom: 1.1rem;
+  flex-shrink: 0;
 }
 
 /* Title */
@@ -99,6 +123,16 @@
   .sh-features { padding: 4.5rem 0; }
   .sh-features-title { font-size: 2rem; }
   .sh-feature-card { padding: 1.5rem; }
+}
+
+/* Collapse wide card to vertical on ≤992px */
+@media (max-width: 992px) {
+  .sh-feature-card-wide {
+    flex-direction: column;
+  }
+  .sh-feature-card-wide .sh-feature-icon {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 992px) {

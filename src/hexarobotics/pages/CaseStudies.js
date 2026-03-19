@@ -85,9 +85,9 @@ const CaseStudies = () => {
             <Link to={study.link} key={study.link} className="hr-case-card">
               <div className="hr-case-image-wrapper">
                 <img src={study.image} alt={study.title} className="hr-case-image" loading="lazy" />
+                <span className="hr-case-category-badge">{study.category}</span>
               </div>
               <div className="hr-case-content">
-                <p className="hr-case-category">{study.category}</p>
                 <h3 className="hr-case-heading">{study.title}</h3>
                 <p className="hr-case-description">{study.description}</p>
                 <p className="hr-case-readtime">{study.readTime}</p>
