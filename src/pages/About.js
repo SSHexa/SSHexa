@@ -1,8 +1,8 @@
 import { Container } from "react-bootstrap";
 import "./About.css";
-import backgroundImage from "./background.png";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 import useScrollReveal from "../hooks/useScrollReveal";
+import { FaUsers } from "react-icons/fa";
 
 const About = () => {
   useDocumentTitle("About");
@@ -10,14 +10,19 @@ const About = () => {
 
   return (
     <div className="about-page">
-      {/* Hero section with background image */}
-      <div
-        className="about-hero"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${backgroundImage})`,
-        }}
-      >
-        <h1 className="about-hero-title">About SS Hexa</h1>
+      {/* Hero section */}
+      <div className="about-hero">
+        <div className="about-hero-bg">
+          <div className="about-hero-gradient"></div>
+          <div className="about-hero-mesh"></div>
+        </div>
+        <div className="about-hero-content">
+          <span className="sh-page-badge"><FaUsers /> About SS Hexa</span>
+          <h1 className="about-hero-title">Who We <span className="sh-title-accent">Are</span></h1>
+          <p className="about-hero-subtitle">
+            End-to-end cryo-EM solutions from the world's leading integrated platform.
+          </p>
+        </div>
       </div>
 
       <div className="about-logo" style={{ textAlign: "center" }}>

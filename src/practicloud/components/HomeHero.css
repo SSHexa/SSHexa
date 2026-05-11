@@ -388,8 +388,16 @@
   }
 
   .hero-visual {
-    display: none;
+    max-width: 480px;
+    margin: 2rem auto 0;
   }
+  .floating-card {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.75rem;
+  }
+  .card-1 { top: 2%; right: 0; }
+  .card-2 { bottom: 25%; left: 0; }
+  .card-3 { bottom: 2%; right: 0; }
 }
 
 @media (max-width: 768px) {
@@ -425,6 +433,13 @@
 
   .stat-divider {
     display: none;
+  }
+  .hero-visual {
+    max-width: 320px;
+  }
+  .floating-card {
+    font-size: 0.65rem;
+    padding: 0.4rem 0.6rem;
   }
 }
 

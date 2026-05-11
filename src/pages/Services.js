@@ -3,7 +3,6 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 import "./Services.css";
 import "../components/HomeServices.css";
-import backgroundImage from "./background.png";
 import { Link } from "react-router-dom";
 import { FaRobot, FaFlask, FaCloud, FaExternalLinkAlt, FaEnvelope } from "react-icons/fa";
 
@@ -113,16 +112,14 @@ const Services = () => {
   return (
     <div className="services-page">
       {/* Hero Section */}
-      <div
-        className="services-hero"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(${backgroundImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="hero-content">
-          <h1 className="hero-title">Complete 360° Cryo-EM Solutions</h1>
+      <div className="services-hero">
+        <div className="services-hero-bg">
+          <div className="services-hero-gradient"></div>
+          <div className="services-hero-mesh"></div>
+        </div>
+        <div className="services-hero-content">
+          <span className="sh-page-badge"><FaFlask /> Our Services</span>
+          <h1 className="hero-title">Complete 360° <span className="sh-title-accent">Cryo-EM</span> Solutions</h1>
           <p className="hero-subtitle">
             From sample preparation to final structure — SS Hexa provides end-to-end services
             through our three specialized divisions
@@ -158,8 +155,8 @@ const Services = () => {
       {/* Services by Division */}
       {divisions.map((division) => (
         <div key={division.id} className="division-services" id={division.id}>
-          <div className="division-services-header" style={{ backgroundColor: division.color }}>
-            <div className="division-services-icon">{division.icon}</div>
+          <div className="division-services-header">
+            <div className="division-services-icon" style={{ color: division.color }}>{division.icon}</div>
             <h2>{division.name}</h2>
             <p>{division.tagline}</p>
           </div>

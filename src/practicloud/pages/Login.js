@@ -5,7 +5,13 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 import "./Login.css";
 
 // OOD portal URL - can be overridden via environment variable
-const OOD_URL = process.env.REACT_APP_OOD_URL || "https://68.154.80.224";
+// IMPORTANT: Must be the hostname (not raw IP) so the TLS cert matches and
+// the OIDC/Dex flow stays on a single origin. Using an IP here causes the
+// login to fail with `400 Bad Request` on /dex/auth/local/login because the
+// OAuth2 state cookie is bound to a different origin than the callback.
+const OOD_URL =
+  process.env.REACT_APP_OOD_URL ||
+  "https://practicloud-ood.eastus2.cloudapp.azure.com";
 
 const Login = () => {
   useDocumentTitle("Login - PractiCloud");

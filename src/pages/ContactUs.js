@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./ContactUs.css";
 import { FaUsers, FaBuilding, FaHeadset, FaCheckCircle, FaEnvelope } from "react-icons/fa";
-import backgroundImage from "./background.png";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const ContactUs = () => {
@@ -79,16 +78,20 @@ const ContactUs = () => {
           </div>
         </div>
       ) : (
-        <div
-          className="ct-hero-img"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${backgroundImage})`,
-          }}
-        >
-          <h1 className="ct-hero-img-title">Contact Us</h1>
-          <p className="ct-hero-img-subtitle">
-            Get in touch with our team for inquiries, support, or partnership opportunities
-          </p>
+        <div className="ct-hero-sh">
+          <div className="ct-hero-sh-bg">
+            <div className="ct-hero-sh-gradient"></div>
+            <div className="ct-hero-sh-mesh"></div>
+          </div>
+          <div className="ct-hero-content">
+            <span className="ct-badge" style={{ background: "rgba(20,184,166,0.12)", borderColor: "rgba(20,184,166,0.3)", color: "#5eead4" }}>
+              <FaEnvelope /> Contact Us
+            </span>
+            <h1 className="ct-hero-title">Get In <span style={{ color: "#5eead4" }}>Touch</span></h1>
+            <p className="ct-hero-subtitle">
+              Have questions? Reach out to our team for inquiries, support, or partnership opportunities.
+            </p>
+          </div>
         </div>
       )}
 
@@ -113,43 +116,43 @@ const ContactUs = () => {
               </button>
             </div>
           ) : (
-            <form className="ct-form" onSubmit={handleSubmit}>
+            <form className="ct-form" onSubmit={handleSubmit} style={{"--ct-focus-color": accentColor}}>
               <div className="ct-form-row">
                 <div className="ct-form-group">
+                  <input type="text" id="first_name" name="first_name" placeholder=" " required />
                   <label htmlFor="first_name">First Name *</label>
-                  <input type="text" id="first_name" name="first_name" placeholder="John" required />
                 </div>
                 <div className="ct-form-group">
+                  <input type="text" id="last_name" name="last_name" placeholder=" " />
                   <label htmlFor="last_name">Last Name</label>
-                  <input type="text" id="last_name" name="last_name" placeholder="Doe" />
                 </div>
               </div>
 
               <div className="ct-form-group">
+                <input type="text" id="company" name="company" placeholder=" " />
                 <label htmlFor="company">Institution or Company</label>
-                <input type="text" id="company" name="company" placeholder="University / Research Lab" />
               </div>
 
               <div className="ct-form-row">
                 <div className="ct-form-group">
+                  <input type="email" id="email" name="email" placeholder=" " required />
                   <label htmlFor="email">Email *</label>
-                  <input type="email" id="email" name="email" placeholder="john@example.com" required />
                 </div>
                 <div className="ct-form-group">
+                  <input type="tel" id="phone" name="phone" placeholder=" " />
                   <label htmlFor="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" />
                 </div>
               </div>
 
               <div className="ct-form-group">
-                <label htmlFor="message">Message *</label>
                 <textarea
                   id="message"
                   name="message"
                   rows="5"
-                  placeholder="Tell us about your research needs..."
+                  placeholder=" "
                   required
                 ></textarea>
+                <label htmlFor="message">Message *</label>
               </div>
 
               {status === "error" && (

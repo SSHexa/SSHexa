@@ -9,7 +9,7 @@ const navLinks = [
   { to: "/hexarobotics", label: "Home" },
   { to: "/hexarobotics/products", label: "Products" },
   { to: "/hexarobotics/services", label: "Services" },
-  { to: "/hexarobotics/blog", label: "Blog" },
+  { to: "/hexarobotics/blog", label: "Blogs and News" },
   { to: "/hexarobotics/casestudies", label: "Case Studies" },
   { to: "/hexarobotics/pricing", label: "Pricing" },
   { to: "/hexarobotics/contactus", label: "Contact Us" },
@@ -19,46 +19,48 @@ export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav
-      className="hr-custom-navbar"
-      style={{
-        backgroundImage: `url(${backImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <Container fluid className="hr-navbar-inner">
-        {/* Logo + brand text */}
-        <Link to="/hexarobotics" className="hr-navbar-logo d-flex align-items-center">
-          <img src="/logo1.png" alt="CryoEM Logo" className="me-2" />
-          <span className="hr-navbar-brand-text">Hexa Robotics</span>
-        </Link>
+    <>
+      <nav
+        className="hr-custom-navbar"
+        style={{
+          backgroundImage: `url(${backImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <Container fluid className="hr-navbar-inner">
+          {/* Logo + brand text */}
+          <Link to="/hexarobotics" className="hr-navbar-logo d-flex align-items-center">
+            <img src="/logo1.png" alt="CryoEM Logo" className="me-2" />
+            <span className="hr-navbar-brand-text">Hexa Robotics</span>
+          </Link>
 
-        {/* Desktop nav links + button */}
-        <div className="hr-nav-links-desktop">
-          {navLinks.map((link) => (
-            <Link key={link.to} to={link.to} className="hr-nav-link-text">
-              {link.label}
-            </Link>
-          ))}
-          <div className="hr-nav-buttons">
-            <Link to="/" className="btn hr-back-sshexa-btn">
-              Back to SS Hexa
-            </Link>
+          {/* Desktop nav links + button */}
+          <div className="hr-nav-links-desktop">
+            {navLinks.map((link) => (
+              <Link key={link.to} to={link.to} className="hr-nav-link-text">
+                {link.label}
+              </Link>
+            ))}
+            <div className="hr-nav-buttons">
+              <Link to="/" className="btn hr-back-sshexa-btn">
+                Back to SS Hexa
+              </Link>
+            </div>
           </div>
-        </div>
 
-        {/* Hamburger button (mobile/tablet only) */}
-        <button
-          className="hr-sidebar-hamburger"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Open menu"
-        >
-          <FaBars />
-        </button>
-      </Container>
+          {/* Hamburger button (mobile/tablet only) */}
+          <button
+            className="hr-sidebar-hamburger"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            <FaBars />
+          </button>
+        </Container>
+      </nav>
 
-      {/* Sidebar overlay (mobile/tablet) */}
+      {/* Sidebar overlay — outside <nav> to avoid backdrop-filter containing block bug */}
       <div
         className={`hr-sidebar-backdrop ${menuOpen ? "open" : ""}`}
         onClick={() => setMenuOpen(false)}
@@ -95,6 +97,6 @@ export const NavBar = () => {
           </Link>
         </div>
       </div>
-    </nav>
+    </>
   );
 };

@@ -1,6 +1,6 @@
 import { Container, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { FaArrowRight, FaRobot, FaFlask, FaCloud } from "react-icons/fa";
+import { FaArrowRight, FaRobot, FaFlask, FaCloud, FaExternalLinkAlt } from "react-icons/fa";
 import "./HomeHero.css";
 
 const HomeHero = () => {
@@ -10,7 +10,7 @@ const HomeHero = () => {
     <div className="sh-hero-section">
       <div className="sh-hero-bg">
         <div className="sh-hero-gradient"></div>
-        <div className="sh-hero-mesh"></div>
+        <div className="sh-hero-mesh" aria-hidden="true"></div>
       </div>
 
       <Container className="sh-hero-container">
@@ -39,6 +39,8 @@ const HomeHero = () => {
               About SS Hexa
             </Button>
           </div>
+
+
         </div>
 
         <div className="sh-hero-visual">
@@ -46,19 +48,21 @@ const HomeHero = () => {
             <h3 className="sh-workflow-heading">Our Services</h3>
             <div className="sh-workflow-card">
               <div className="sh-workflow-step sh-step-1 sh-step-clickable" onClick={() => navigate("/hexarobotics")}>
+                <FaExternalLinkAlt className="sh-step-link-icon" />
                 <div className="sh-step-icon sh-icon-amber"><FaRobot /></div>
                 <div className="sh-step-info">
-                  <span className="sh-step-label">Step 1</span>
+                  <span className="sh-step-label">Pillar 1</span>
                   <span className="sh-step-name">Sample Preparation</span>
-                  <span className="sh-step-desc">Automated grid preparation with precise control</span>
+                  <span className="sh-step-desc">Automated grid preparation using precision robotics</span>
                 </div>
                 <span className="sh-step-status sh-status-active">Hexa Robotics <FaArrowRight className="sh-step-arrow" /></span>
               </div>
               <div className="sh-workflow-connector"></div>
-              <div className="sh-workflow-step sh-step-2 sh-step-clickable" onClick={() => navigate("/services#cro")}>
+              <div className="sh-workflow-step sh-step-2 sh-step-clickable" onClick={() => navigate("/services")}>
+                <FaExternalLinkAlt className="sh-step-link-icon" />
                 <div className="sh-step-icon sh-icon-green"><FaFlask /></div>
                 <div className="sh-step-info">
-                  <span className="sh-step-label">Step 2</span>
+                  <span className="sh-step-label">Pillar 2</span>
                   <span className="sh-step-name">EM Imaging & Analysis</span>
                   <span className="sh-step-desc">End-to-end contract research services</span>
                 </div>
@@ -66,11 +70,12 @@ const HomeHero = () => {
               </div>
               <div className="sh-workflow-connector"></div>
               <div className="sh-workflow-step sh-step-3 sh-step-clickable" onClick={() => navigate("/practicloud")}>
+                <FaExternalLinkAlt className="sh-step-link-icon" />
                 <div className="sh-step-icon sh-icon-blue"><FaCloud /></div>
                 <div className="sh-step-info">
-                  <span className="sh-step-label">Step 3</span>
+                  <span className="sh-step-label">Pillar 3</span>
                   <span className="sh-step-name">Data Processing</span>
-                  <span className="sh-step-desc">Cloud-powered cryo-EM computing</span>
+                  <span className="sh-step-desc">Cloud-powered data analysis</span>
                 </div>
                 <span className="sh-step-status sh-status-active">PractiCloud <FaArrowRight className="sh-step-arrow" /></span>
               </div>

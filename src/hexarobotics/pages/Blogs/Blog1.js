@@ -100,7 +100,6 @@ const Blog1 = () => {
 
           <ul>
             <li><strong>Standard blot-and-plunge:</strong> Pipette application with automated blotting</li>
-            <li><strong>Pre-mixing on acoustic transducer:</strong> Sample mixed before spray</li>
             <li><strong>On-grid mixing:</strong> Two-component reactions directly on the grid</li>
             <li><strong>Rapid spray-to-plunge:</strong> ~130 ms delays for time-resolved studies</li>
           </ul>

@@ -14,6 +14,11 @@ node_modules
 
 # production
 /build
+build*.zip
+build*.tar.gz
+
+# tool internal
+.claude-flow/
 
 # misc
 .DS_Store

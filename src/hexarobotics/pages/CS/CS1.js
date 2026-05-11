@@ -123,19 +123,20 @@ const CS1 = () => {
           <h2 id="challenges">System Limitations and Ongoing Refinements</h2>
 
           <p>
-            Although the automated workflow substantially improves reproducibility, some parameters 
-            still require optimization. Spray performance, for example, can vary depending on sample 
+            To ensure reliable operation, the acoustic transducer is cleaned with ethanol after each
+            spray cycle. This prevents droplet misalignment and eliminates cross-sample carryover.
+            Across hundreds of vitrified grids, we observed no detectable contamination between
+            samples, confirming the effectiveness of this maintenance step.
+          </p>
+
+          <p>
+            Although the automated workflow substantially improves reproducibility, some parameters
+            still require optimization. Spray performance, for example, can vary depending on sample
             viscosity, droplet placement, and transducer condition. Ongoing efforts focus on reducing 
             required sample volumes—ideally to tens of nanoliters—to support high-throughput experiments 
             with limited material.
           </p>
 
-          <p>
-            To ensure reliable operation, the acoustic transducer is cleaned with ethanol after each 
-            spray cycle. This prevents droplet misalignment and eliminates cross-sample carryover.
-            Across hundreds of vitrified grids, we observed no detectable contamination between 
-            samples, confirming the effectiveness of this maintenance step.
-          </p>
 
           {/* SECTION 5 */}
           <h2 id="table3">Freezing Conditions (Table 3)</h2>

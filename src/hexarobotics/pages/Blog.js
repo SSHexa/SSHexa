@@ -16,7 +16,7 @@ const blogs = [
     link: "/hexarobotics/blogs/blog1",
   },
   {
-    category: "PRODUCTS",
+    category: "BLOGS",
     title: "Vitriflex Quick Start",
     description:
       "Robot joints are the movable connections between different parts of a robot's body, much like the joints in humans. These…",
@@ -25,7 +25,7 @@ const blogs = [
     link: "/hexarobotics/blogs/blog2",
   },
   {
-    category: "PRODUCTS",
+    category: "NEWS",
     title: "Inside VitriFlex",
     description:
       "System Overview and Design of a Cryo-EM Preparation Platform",
@@ -53,10 +53,10 @@ const blogs = [
   },
 ];
 
-const filtersList = ["ALL", "BLOGS", "NEWS", "PRODUCTS"];
+const filtersList = ["ALL", "BLOGS", "NEWS"];
 
 const Blog = () => {
-  useDocumentTitle("Blog - Hexa Robotics");
+  useDocumentTitle("Blogs and News - Hexa Robotics");
   const [activeFilter, setActiveFilter] = useState("ALL");
 
   const filteredBlogs = activeFilter === "ALL"
@@ -72,8 +72,8 @@ const Blog = () => {
           <div className="hr-page-hero-pattern"></div>
         </div>
         <div className="hr-page-hero-content">
-          <span className="hr-page-badge"><FaNewspaper /> Blog</span>
-          <h1 className="hr-page-hero-title">Blog</h1>
+          <span className="hr-page-badge"><FaNewspaper /> Blogs and News</span>
+          <h1 className="hr-page-hero-title">Blogs and News</h1>
           <p className="hr-page-hero-subtitle">
             SSHexa news, product launch announcements, and general discussions
             on robotics and cryo-EM technology.

@@ -33,7 +33,7 @@ const services = [
   },
   {
     type: "image",
-    image: "/protein-structure.jpg",
+    image: "/Images/cryo_em_spike.jpg",
   },
   {
     type: "image",
@@ -53,14 +53,10 @@ const services = [
   },
   {
     type: "image",
-    image: "/cryo-em-map.jpg",
+    image: "/Images/Care_service.png",
   },
   {
-    type: "image",
-    image: "/data-processing.jpg",
-  },
-  {
-    type: "text-dark",
+    type: "text-dark-wide",
     title: "Custom Automation Solution",
     description:
       "Our platform features advanced, modular automation solutions that extend well beyond cryo-EM. Each module is designed to be fully customizable to your specific workflow requirements — whether it's sample preparation, liquid handling, imaging pipelines, or lab-wide orchestration. We continuously develop and release new modules, enabling you to scale and adapt your automation as your research evolves. Every solution is tailored to your needs, ensuring seamless integration with your existing equipment and processes.",
@@ -126,6 +122,8 @@ const Services = () => {
                 ? "hr-service-tile hr-image-tile"
                 : item.type === "text-dark"
                 ? "hr-service-tile hr-text-dark-tile"
+                : item.type === "text-dark-wide"
+                ? "hr-service-tile hr-text-dark-tile hr-wide-tile"
                 : "hr-service-tile hr-text-tile"
             }
           >

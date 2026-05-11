@@ -39,6 +39,28 @@ const Products = () => {
               <span className="hr-know-more">Know More →</span>
             </div>
           </Link>
+          <Link to="/hexarobotics/products/on-grid-mixing" className="hr-product-card">
+            <img src="/Images/vitriflex_spray_action.jpg" alt="On-Grid Mixing Module" className="hr-product-image" loading="lazy" />
+            <div className="hr-product-info">
+              <h3 className="hr-product-name">On-Grid Mixing Module</h3>
+              <p className="hr-product-desc">
+                Two-component mixing directly on the grid for protein-protein
+                interaction and time-resolved cryo-EM studies.
+              </p>
+              <span className="hr-know-more">Know More →</span>
+            </div>
+          </Link>
+          <div className="hr-product-card hr-product-coming-soon">
+            <img src="/Images/IDS_camera.webp" alt="IDS Camera Module" className="hr-product-image" loading="lazy" />
+            <span className="hr-coming-soon-badge">Coming Soon</span>
+            <div className="hr-product-info">
+              <h3 className="hr-product-name">IDS Camera Module</h3>
+              <p className="hr-product-desc">
+                Integrated with VitriFlex for real-time tracking during specimen
+                preparation. Currently in test phase.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

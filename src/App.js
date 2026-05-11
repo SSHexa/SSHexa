@@ -9,38 +9,49 @@ import ScrollToTopBtn from "./components/ScrollToTopBtn";
 import ErrorBoundary from "./components/ErrorBoundary";
 import PageSkeleton from "./components/PageSkeleton";
 
+// Retry helper for chunk load errors — auto-reloads on stale cache
+const lazyRetry = (importFn) =>
+  lazy(() =>
+    importFn().catch(() => {
+      window.location.reload();
+      return importFn();
+    })
+  );
+
 // Lazy-load pages not needed on initial home page render
-const About = lazy(() => import("./pages/About"));
-const Services = lazy(() => import("./pages/Services"));
-const ContactUs = lazy(() => import("./pages/ContactUs"));
+const About = lazyRetry(() => import("./pages/About"));
+const Services = lazyRetry(() => import("./pages/Services"));
+const Services1 = lazyRetry(() => import("./pages/Services1"));
+const ContactUs = lazyRetry(() => import("./pages/ContactUs"));
 
 // Lazy-load sub-app layouts (each pulls in its own nav, footer, and pages)
-const PracticloudLayout = lazy(() => import("./practicloud/PracticloudLayout"));
-const HexaRoboticsLayout = lazy(() => import("./hexarobotics/HexaRoboticsLayout"));
+const PracticloudLayout = lazyRetry(() => import("./practicloud/PracticloudLayout"));
+const HexaRoboticsLayout = lazyRetry(() => import("./hexarobotics/HexaRoboticsLayout"));
 
 // Lazy-load Practicloud pages
-const PCHome = lazy(() => import("./practicloud/pages/Home"));
-const PCServices = lazy(() => import("./practicloud/pages/Services"));
-const PCPricing = lazy(() => import("./practicloud/pages/Pricing"));
-const PCAcademia = lazy(() => import("./practicloud/pages/Academia"));
-const PCFAQ = lazy(() => import("./practicloud/pages/FAQ"));
-const PCLogin = lazy(() => import("./practicloud/pages/Login"));
+const PCHome = lazyRetry(() => import("./practicloud/pages/Home"));
+const PCServices = lazyRetry(() => import("./practicloud/pages/Services"));
+const PCPricing = lazyRetry(() => import("./practicloud/pages/Pricing"));
+const PCAcademia = lazyRetry(() => import("./practicloud/pages/Academia"));
+const PCFAQ = lazyRetry(() => import("./practicloud/pages/FAQ"));
+const PCLogin = lazyRetry(() => import("./practicloud/pages/Login"));
 
 // Lazy-load Hexa Robotics pages
-const HRHome = lazy(() => import("./hexarobotics/pages/Home"));
-const HRProducts = lazy(() => import("./hexarobotics/pages/Products"));
-const HRVitriflex = lazy(() => import("./hexarobotics/pages/Products/Vitriflex"));
-const HRServices = lazy(() => import("./hexarobotics/pages/Services"));
-const HRBlog = lazy(() => import("./hexarobotics/pages/Blog"));
-const HRBlog1 = lazy(() => import("./hexarobotics/pages/Blogs/Blog1"));
-const HRBlog2 = lazy(() => import("./hexarobotics/pages/Blogs/Blog2"));
-const HRBlog3 = lazy(() => import("./hexarobotics/pages/Blogs/Blog3"));
-const HRBlog4 = lazy(() => import("./hexarobotics/pages/Blogs/Blog4"));
-const HRBlog5 = lazy(() => import("./hexarobotics/pages/Blogs/Blog5"));
-const HRCaseStudies = lazy(() => import("./hexarobotics/pages/CaseStudies"));
-const HRCS1 = lazy(() => import("./hexarobotics/pages/CS/CS1"));
-const HRCS2 = lazy(() => import("./hexarobotics/pages/CS/CS2"));
-const HRPricing = lazy(() => import("./hexarobotics/pages/Pricing"));
+const HRHome = lazyRetry(() => import("./hexarobotics/pages/Home"));
+const HRProducts = lazyRetry(() => import("./hexarobotics/pages/Products"));
+const HRVitriflex = lazyRetry(() => import("./hexarobotics/pages/Products/Vitriflex"));
+const HROnGridMixing = lazyRetry(() => import("./hexarobotics/pages/Products/OnGridMixing"));
+const HRServices = lazyRetry(() => import("./hexarobotics/pages/Services"));
+const HRBlog = lazyRetry(() => import("./hexarobotics/pages/Blog"));
+const HRBlog1 = lazyRetry(() => import("./hexarobotics/pages/Blogs/Blog1"));
+const HRBlog2 = lazyRetry(() => import("./hexarobotics/pages/Blogs/Blog2"));
+const HRBlog3 = lazyRetry(() => import("./hexarobotics/pages/Blogs/Blog3"));
+const HRBlog4 = lazyRetry(() => import("./hexarobotics/pages/Blogs/Blog4"));
+const HRBlog5 = lazyRetry(() => import("./hexarobotics/pages/Blogs/Blog5"));
+const HRCaseStudies = lazyRetry(() => import("./hexarobotics/pages/CaseStudies"));
+const HRCS1 = lazyRetry(() => import("./hexarobotics/pages/CS/CS1"));
+const HRCS2 = lazyRetry(() => import("./hexarobotics/pages/CS/CS2"));
+const HRPricing = lazyRetry(() => import("./hexarobotics/pages/Pricing"));
 
 
 function ScrollToTop() {
@@ -82,6 +93,7 @@ function AppContent() {
 
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services1" element={<Services1 />} />
             <Route path="/contactus" element={<ContactUs />} />
 
             {/* Practicloud Routes */}
@@ -100,6 +112,7 @@ function AppContent() {
               <Route index element={<HRHome />} />
               <Route path="products" element={<HRProducts />} />
               <Route path="products/vitriflex" element={<HRVitriflex />} />
+              <Route path="products/on-grid-mixing" element={<HROnGridMixing />} />
               <Route path="services" element={<HRServices />} />
               <Route path="blog" element={<HRBlog />} />
               <Route path="blogs/blog1" element={<HRBlog1 />} />

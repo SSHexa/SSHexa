@@ -2,6 +2,9 @@
    NAVBAR BASE STYLES
 ========================= */
 .custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   background-size: cover;
   background-position: center;
   min-height: 100px;
@@ -122,6 +125,11 @@
   color: #333;
   cursor: pointer;
   padding: 0.5rem;
+  touch-action: manipulation;
+}
+
+.sidebar-close-btn {
+  touch-action: manipulation;
 }
 
 /* =========================
@@ -286,6 +294,6 @@
   }
 
   .sidebar-menu {
-    width: 260px;
+    width: min(280px, 85vw);
   }
 }
