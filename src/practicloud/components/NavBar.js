@@ -18,51 +18,53 @@ export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav
-      className="custom-navbar"
-      style={{
-        backgroundImage: `url(${backImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <Container fluid className="navbar-inner">
-        {/* Logo */}
-        <Link to="/practicloud" className="navbar-logo">
-          <img src="/logo.png" alt="PractiCloud Logo" />
-        </Link>
+    <>
+      <nav
+        className="custom-navbar"
+        style={{
+          backgroundImage: `url(${backImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <Container fluid className="navbar-inner">
+          {/* Logo */}
+          <Link to="/practicloud" className="navbar-logo">
+            <img src="/logo.png" alt="PractiCloud Logo" />
+          </Link>
 
-        {/* Desktop nav links + buttons */}
-        <div className="nav-links-desktop">
-          {navLinks.map((link) => (
-            <Link key={link.to} to={link.to} className="nav-link-text">
-              {link.label}
-            </Link>
-          ))}
-          <div className="nav-buttons">
-            <Link to="/practicloud/login" className="btn login-btn">
-              Login
-            </Link>
-            <Link to="/practicloud/login" className="btn signup-btn">
-              Get Started Free
-            </Link>
-            <Link to="/" className="btn back-sshexa-btn">
-              Back to SS Hexa
-            </Link>
+          {/* Desktop nav links + buttons */}
+          <div className="nav-links-desktop">
+            {navLinks.map((link) => (
+              <Link key={link.to} to={link.to} className="nav-link-text">
+                {link.label}
+              </Link>
+            ))}
+            <div className="nav-buttons">
+              <Link to="/practicloud/login" className="btn login-btn">
+                Login
+              </Link>
+              <Link to="/practicloud/login" className="btn signup-btn">
+                Get Started Free
+              </Link>
+              <Link to="/" className="btn back-sshexa-btn">
+                Back to SS Hexa
+              </Link>
+            </div>
           </div>
-        </div>
 
-        {/* Hamburger button (mobile/tablet only) */}
-        <button
-          className="sidebar-hamburger"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Open menu"
-        >
-          <FaBars />
-        </button>
-      </Container>
+          {/* Hamburger button (mobile/tablet only) */}
+          <button
+            className="sidebar-hamburger"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            <FaBars />
+          </button>
+        </Container>
+      </nav>
 
-      {/* Sidebar overlay (mobile/tablet) */}
+      {/* Sidebar overlay — outside <nav> to avoid backdrop-filter containing block bug */}
       <div
         className={`sidebar-backdrop ${menuOpen ? "open" : ""}`}
         onClick={() => setMenuOpen(false)}
@@ -104,6 +106,6 @@ export const NavBar = () => {
           </Link>
         </div>
       </div>
-    </nav>
+    </>
   );
 };

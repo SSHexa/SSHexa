@@ -8,25 +8,26 @@ const pricingPlans = [
   {
     id: 1,
     name: "Silver",
-    price: "$15,000",
+    price: "$27,500",
+    promo: "2026 Introductory Pricing — First Few Customers Only",
     description: "Complete robot with basic installation to get you started",
     icon: FaRobot,
     features: [
       "Epson T3 SCARA Robot Arm",
       "3D-Printed Specimen Chamber",
       "Blotting Solenoid System",
-      "Acoustic Transducer Sprayer",
       "Cryogen Holder (Vitrobot compatible)",
       "Emergency Stop Button",
       "Basic Software Installation",
       "Hardware Documentation",
+      "Open platform for early adopters to add and customize modules",
     ],
     highlight: false,
   },
   {
     id: 2,
     name: "Gold",
-    price: "$22,500",
+    price: "$35,000",
     description: "Everything in Silver plus 3 days of dedicated support",
     icon: FaLaptopCode,
     features: [
@@ -44,7 +45,7 @@ const pricingPlans = [
   {
     id: 3,
     name: "Platinum",
-    price: "$30,000",
+    price: "$60,000",
     description: "Everything in Gold plus 1 year of training, consulting & support",
     icon: FaGraduationCap,
     features: [
@@ -56,6 +57,7 @@ const pricingPlans = [
       "Protocol Optimization Consulting",
       "Direct Access to Engineers",
       "All Future Software Updates",
+      "2 Hardware Upgrades",
     ],
     highlight: false,
   },
@@ -91,18 +93,20 @@ const Pricing = () => {
               className={`hr-pricing-card ${plan.highlight ? "hr-highlighted" : ""}`}
             >
               {plan.highlight && <div className="hr-popular-badge">Most Popular</div>}
+              {plan.promo && <div className="hr-promo-banner">{plan.promo}</div>}
 
               <div className={`hr-pricing-icon ${plan.highlight ? "hr-icon-gold" : ""}`}>
                 <plan.icon size={48} />
               </div>
 
               <h2 className="hr-plan-name">{plan.name}</h2>
+              {plan.price && (
+                <div className="hr-plan-price">
+                  <span className="hr-price-currency">$</span>
+                  <span className="hr-price-amount">{plan.price.replace("$", "")}</span>
+                </div>
+              )}
               <p className="hr-plan-description">{plan.description}</p>
-
-              <div className="hr-plan-price">
-                <span className="hr-price">{plan.price}</span>
-                <span className="hr-price-period">one-time</span>
-              </div>
 
               <ul className="hr-plan-features">
                 {plan.features.map((feature, idx) => (

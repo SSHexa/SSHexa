@@ -53,6 +53,23 @@
   box-shadow: 0 16px 40px rgba(245, 158, 11, 0.15);
 }
 
+/* Promo Banner */
+.hr-promo-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #0d9488, #14b8a6);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 12px;
+  border-radius: 14px 14px 0 0;
+  text-align: center;
+}
+
 /* Popular Badge */
 .hr-popular-badge {
   position: absolute;
@@ -101,12 +118,33 @@
 
 /* Price */
 .hr-plan-price {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
 }
 
-.hr-price {
-  font-size: 3rem;
+.hr-price-currency {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f59e0b;
+  vertical-align: super;
+}
+
+.hr-price-amount {
+  font-size: 2.8rem;
   font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.hr-highlighted .hr-price-currency {
+  color: #d97706;
+}
+
+.hr-highlighted .hr-price-amount {
   color: #0f172a;
 }
 
@@ -220,6 +258,73 @@
   color: #fff;
 }
 
+/* ===== BILLING TOGGLE (HR) ===== */
+.hr-pricing-toggle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 2rem 1rem 0;
+}
+
+.hr-pricing-toggle-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #94a3b8;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hr-pricing-toggle-label.active {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.hr-pricing-toggle-btn {
+  width: 48px;
+  height: 26px;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  flex-shrink: 0;
+}
+
+.hr-pricing-toggle-btn.monthly {
+  background: #f59e0b;
+}
+
+.hr-pricing-toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.25s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.hr-pricing-toggle-btn.monthly .hr-pricing-toggle-knob {
+  transform: translateX(22px);
+}
+
+.hr-pricing-finance-badge {
+  background: #fef9c3;
+  color: #854d0e;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .hr-pricing-grid {
@@ -263,5 +368,22 @@
 
   .hr-pricing-footer h3 {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .hr-pricing-toggle-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .hr-promo-banner {
+    font-size: 0.65rem;
+    padding: 5px 8px;
+  }
+
+  .hr-price {
+    font-size: 2rem;
   }
 }

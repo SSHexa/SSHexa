@@ -86,6 +86,34 @@
   color: #d97706;
 }
 
+/* Coming Soon */
+.hr-product-coming-soon {
+  position: relative;
+  cursor: default;
+  opacity: 0.85;
+}
+
+.hr-product-coming-soon:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: #e5e7eb;
+}
+
+.hr-coming-soon-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #f59e0b;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  z-index: 1;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hr-products-hero { padding: 7rem 1.5rem 4rem; }

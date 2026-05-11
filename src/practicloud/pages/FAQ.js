@@ -105,7 +105,14 @@ const FAQItem = ({ question, answer }) => {
 
   return (
     <div className={`faq-item ${isOpen ? "open" : ""}`}>
-      <div className="faq-question" onClick={() => setIsOpen(!isOpen)}>
+      <div
+        className="faq-question"
+        onClick={() => setIsOpen(!isOpen)}
+        role="button"
+        tabIndex={0}
+        aria-expanded={isOpen}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setIsOpen(!isOpen); } }}
+      >
         <span>{question}</span>
         <FaChevronDown className={`faq-chevron ${isOpen ? "rotated" : ""}`} />
       </div>

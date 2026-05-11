@@ -9,6 +9,9 @@ class ErrorBoundary extends Component {
 
   componentDidCatch(error, errorInfo) {
     console.error("Component error:", error, errorInfo);
+    if (error?.message?.includes("Loading chunk") || error?.name === "ChunkLoadError") {
+      window.location.reload();
+    }
   }
 
   render() {

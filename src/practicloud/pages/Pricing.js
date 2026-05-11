@@ -8,7 +8,9 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 const pricingPlans = [
   {
     name: "Starter",
-    price: "Pay-as-you-go",
+    monthlyPrice: null,
+    annualPrice: null,
+    priceLabel: "Pay-as-you-go",
     priceSubtext: "Only pay for what you use",
     description: "Perfect for small labs and individual researchers",
     features: [
@@ -24,7 +26,9 @@ const pricingPlans = [
   },
   {
     name: "Professional",
-    price: "$499",
+    monthlyPrice: 499,
+    annualPrice: 399,
+    priceLabel: null,
     priceSubtext: "per month",
     description: "For growing research teams needing more power",
     features: [
@@ -41,7 +45,9 @@ const pricingPlans = [
   },
   {
     name: "Enterprise",
-    price: "Custom",
+    monthlyPrice: null,
+    annualPrice: null,
+    priceLabel: "Custom",
     priceSubtext: "Contact us for pricing",
     description: "For high-throughput centers and institutions",
     features: [
@@ -84,6 +90,16 @@ const Pricing = () => {
   useDocumentTitle("Pricing - PractiCloud");
   const navigate = useNavigate();
 
+  const getPrice = (plan) => {
+    if (plan.priceLabel) return plan.priceLabel;
+    return `$${plan.monthlyPrice}`;
+  };
+
+  const getSubtext = (plan) => {
+    if (plan.priceLabel) return plan.priceSubtext;
+    return "per month";
+  };
+
   return (
     <div className="pricing-page">
       {/* Hero section */}
@@ -110,8 +126,8 @@ const Pricing = () => {
                 <div className={`pricing-card ${plan.highlighted ? "highlighted" : ""}`}>
                   {plan.highlighted && <div className="popular-badge">Most Popular</div>}
                   <h3 className="plan-name">{plan.name}</h3>
-                  <div className="plan-price">{plan.price}</div>
-                  <div className="plan-price-subtext">{plan.priceSubtext}</div>
+                  <div className="plan-price">{getPrice(plan)}</div>
+                  <div className="plan-price-subtext">{getSubtext(plan)}</div>
                   <p className="plan-description">{plan.description}</p>
                   <ul className="feature-list">
                     {plan.features.map((feature, i) => (

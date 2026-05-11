@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import "./Vitriflex.css";
 import { Link } from "react-router-dom";
-import { FaArrowLeft, FaChevronLeft, FaChevronRight, FaCheckCircle, FaFlask, FaSprayCan, FaClock, FaCubes, FaDollarSign, FaTools } from "react-icons/fa";
+import { FaArrowLeft, FaChevronLeft, FaChevronRight, FaCheckCircle, FaExchangeAlt, FaSprayCan, FaClock, FaCubes, FaDollarSign, FaTools } from "react-icons/fa";
 
 import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 const images = [
+  "/Images/vitriflex_spray_action.jpg",
   "/Images/vitriflex_full_system.jpg",
   "/Images/vitriflex_chamber_closeup.jpg",
   "/Images/vitriflex_grid_prep.jpg",
-  "/Images/vitriflex_spray_action.jpg",
 ];
 
-const Vitriflex = () => {
-  useDocumentTitle("VitriFlex - Hexa Robotics");
+const OnGridMixing = () => {
+  useDocumentTitle("On-Grid Mixing Module - Hexa Robotics");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {
@@ -36,9 +36,9 @@ const Vitriflex = () => {
           <Link to="/hexarobotics/products" className="hr-vf-back">
             <FaArrowLeft /> Back to Products
           </Link>
-          <h1 className="hr-vf-topbar-title">VitriFlex</h1>
+          <h1 className="hr-vf-topbar-title">On-Grid Mixing Module</h1>
           <p className="hr-vf-topbar-subtitle">
-            Modular robotic platform for cryo-EM grid preparation
+            Two-component mixing directly on the grid for time-resolved cryo-EM
           </p>
         </div>
       </div>
@@ -54,7 +54,7 @@ const Vitriflex = () => {
 
             <img
               src={images[currentIndex]}
-              alt="VitriFlex Robot"
+              alt="On-Grid Mixing Module"
               className="hr-vf-main-image"
             />
 
@@ -68,7 +68,7 @@ const Vitriflex = () => {
                 <img
                   key={img}
                   src={img}
-                  alt={`VitriFlex ${idx}`}
+                  alt={`On-Grid Mixing ${idx}`}
                   className={`hr-vf-thumb ${idx === currentIndex ? "hr-vf-thumb-active" : ""}`}
                   onClick={() => setCurrentIndex(idx)}
                 />
@@ -83,57 +83,50 @@ const Vitriflex = () => {
             </h2>
 
             <p className="hr-vf-summary">
-              VitriFlex is a modular and fully customizable robotic platform for
-              cryo-EM grid preparation. Built around an industrial-grade SCARA robot and 3D-printed
-              components, it enables programmable control of grid handling, sample deposition,
-              and blotting for both standard and time-resolved workflows.
+              The On-Grid Mixing Module enables efficient two-component reactions
+              directly on the cryo-EM grid using minimal sample volumes. A smaller ligand
+              is pre-applied to the grid in molar excess, and a larger biomolecule is sprayed
+              during the blotting cycle via acoustic-assisted delivery. The interaction occurs
+              almost immediately upon contact, outpacing diffusion for higher binding efficiency.
+              This approach minimizes unbound particles and reduces background noise, improving
+              particle homogeneity for more reliable data collection.
             </p>
 
             <h3 className="hr-vf-section-title">Main Features</h3>
             <ul className="hr-vf-features">
-              <li><FaCheckCircle className="hr-vf-check" /> Epson T3 SCARA robot with ±0.020 mm repeatability and 1 m/s vertical speed</li>
-              <li><FaCheckCircle className="hr-vf-check" /> 4 degrees of freedom for precise grid handling and complex motions</li>
-              <li><FaCheckCircle className="hr-vf-check" /> Automated blotting with solenoid-actuated 47mm filter paper system</li>
-              <li><FaCheckCircle className="hr-vf-check" /> Ultrasonic piezoelectric transducer for non-contact aerosol spray delivery</li>
-              <li><FaCheckCircle className="hr-vf-check" /> Spray-to-plunge delays as short as ~130 ms for time-resolved studies</li>
-              <li><FaCheckCircle className="hr-vf-check" /> 3D-printed modular chamber with humidity control ports</li>
-              <li><FaCheckCircle className="hr-vf-check" /> Intuitive C# GUI for customizable timing and protocol sequences</li>
-              <li><FaCheckCircle className="hr-vf-check" /> Compatible with UltrAuFoil, Quantifoil, HexAuFoil, and gold-coated grids</li>
-              <li><FaCheckCircle className="hr-vf-check" /> Supports Vitrobot ethane cups and Nanosoft cryostat configurations</li>
-              <li><FaCheckCircle className="hr-vf-check" /> Automated grid transfer from ethane to LN2 with hands-free storage</li>
-              <li><FaCheckCircle className="hr-vf-check" /> Digital run logging — date, time, grid ID, sample, and all timing parameters</li>
-              <li><FaCheckCircle className="hr-vf-check" /> Physical emergency-stop button for operator safety</li>
+              <li><FaCheckCircle className="hr-vf-check" /> Acoustic-assisted spray delivery via ultrasonic piezoelectric transducer</li>
+              <li><FaCheckCircle className="hr-vf-check" /> Spray-to-plunge delays as short as ~130 ms for sub-second reaction trapping</li>
+              <li><FaCheckCircle className="hr-vf-check" /> Pre-wetting with 0.5–3 µL buffer for improved sample distribution and ice uniformity</li>
+              <li><FaCheckCircle className="hr-vf-check" /> Two-component mixing directly on grid during blotting cycle</li>
+              <li><FaCheckCircle className="hr-vf-check" /> Fast spray mode: sample sprayed during first 0.5s of blotting sequence</li>
+              <li><FaCheckCircle className="hr-vf-check" /> Delayed spray mode: incubation period before blotting for controlled reaction timing</li>
+              <li><FaCheckCircle className="hr-vf-check" /> Localized binding minimizes unbound particles and background noise</li>
+              <li><FaCheckCircle className="hr-vf-check" /> Compatible with standard Vitrobot ethane cups and Nanosoft cryostat</li>
+              <li><FaCheckCircle className="hr-vf-check" /> Ethanol cleaning between sprays prevents cross-contamination</li>
+              <li><FaCheckCircle className="hr-vf-check" /> Seamless integration with the VitriFlex platform</li>
             </ul>
 
             <h3 className="hr-vf-section-title">Supported Workflows</h3>
             <div className="hr-vf-workflows">
               <div className="hr-vf-workflow-card">
-                <FaFlask className="hr-vf-workflow-icon" />
-                <h4>Blot & Plunge</h4>
-                <p>Conventional blotting with precise timing control for standard single-particle cryo-EM</p>
+                <FaExchangeAlt className="hr-vf-workflow-icon" />
+                <h4>On-Grid Mixing</h4>
+                <p>Pipette one component onto the grid, spray the second during blotting for rapid complex formation</p>
               </div>
               <div className="hr-vf-workflow-card">
                 <FaSprayCan className="hr-vf-workflow-icon" />
-                <h4>Fast Spray</h4>
-                <p>Sample sprayed during blotting for rapid specimen application with minimal delay</p>
+                <h4>Spray & Pre-Wet</h4>
+                <p>Pre-wet the grid with buffer before spraying sample for improved spreading and ice uniformity</p>
               </div>
               <div className="hr-vf-workflow-card">
                 <FaClock className="hr-vf-workflow-icon" />
-                <h4>Delayed Spray</h4>
-                <p>Incubation period before blotting for controlled reaction timing</p>
+                <h4>Time-Resolved Mixing</h4>
+                <p>Capture transient biochemical reactions at sub-second timescales prior to vitrification</p>
               </div>
             </div>
 
             <h3 className="hr-vf-section-title">Validated Results</h3>
             <div className="hr-vf-results">
-              <div className="hr-vf-result-item">
-                <span className="hr-vf-result-label">Apoferritin</span>
-                <span className="hr-vf-result-value">1.9 Å</span>
-              </div>
-              <div className="hr-vf-result-item">
-                <span className="hr-vf-result-label">E. coli dGTPase</span>
-                <span className="hr-vf-result-value">2.8 Å</span>
-              </div>
               <div className="hr-vf-result-item">
                 <span className="hr-vf-result-label">Spike-ACE2 complex</span>
                 <span className="hr-vf-result-value">3.7 Å</span>
@@ -146,10 +139,9 @@ const Vitriflex = () => {
 
             <h3 className="hr-vf-section-title">Ideal For</h3>
             <div className="hr-vf-tags">
-              <span className="hr-vf-tag">Cryo-EM Sample Preparation Labs</span>
               <span className="hr-vf-tag">Time-Resolved Structural Biology</span>
               <span className="hr-vf-tag">Protein-Protein Interaction Studies</span>
-              <span className="hr-vf-tag">University & Government Research</span>
+              <span className="hr-vf-tag">Receptor-Ligand Binding Studies</span>
               <span className="hr-vf-tag">Drug Discovery & Biopharma</span>
             </div>
 
@@ -158,22 +150,22 @@ const Vitriflex = () => {
               <div className="hr-vf-advantage">
                 <FaCubes className="hr-vf-advantage-icon" />
                 <div>
-                  <strong>Complete Turnkey Package</strong>
-                  <p>Fully assembled system with CAD-designed components, 3D-printed parts, wiring, and pre-configured software — ready to deploy</p>
+                  <strong>Modular Add-On</strong>
+                  <p>Integrates seamlessly with the VitriFlex platform — add on-grid mixing capability to your existing setup</p>
                 </div>
               </div>
               <div className="hr-vf-advantage">
                 <FaDollarSign className="hr-vf-advantage-icon" />
                 <div>
-                  <strong>Significant Cost Savings</strong>
-                  <p>Substantially lower cost compared to commercial systems like Vitrobot, Chameleon, and VitroJet</p>
+                  <strong>Minimal Sample Consumption</strong>
+                  <p>Only 1–3 µL per component — enables multiple experiments from limited biological material</p>
                 </div>
               </div>
               <div className="hr-vf-advantage">
                 <FaTools className="hr-vf-advantage-icon" />
                 <div>
-                  <strong>Easy Setup & Operation</strong>
-                  <p>Minimal technical expertise required — 3D-printed components, plug-and-play SCARA robot, and intuitive GUI</p>
+                  <strong>No Cross-Contamination</strong>
+                  <p>Simple ethanol cleaning between sprays — verified across hundreds of frozen grids with zero carryover</p>
                 </div>
               </div>
             </div>
@@ -188,4 +180,4 @@ const Vitriflex = () => {
   );
 };
 
-export default Vitriflex;
+export default OnGridMixing;

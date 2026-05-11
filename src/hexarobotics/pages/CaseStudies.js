@@ -6,7 +6,7 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const caseStudies = [
   {
-    category: "MANUFACTURING",
+    category: "RESEARCH",
     title: "Performance of Automated Blot-and-Plunge and Spray-Based Grid Preparation",
     description:
       "This study evaluates how automated blot-and-plunge and spray-based workflows produce consistent, high-quality cryo-EM grids across diverse specimens.",
@@ -25,7 +25,7 @@ const caseStudies = [
   },
 ];
 
-const filtersList = ["ALL", "MANUFACTURING", "RESEARCH"];
+const filtersList = ["ALL", "RESEARCH"];
 
 const CaseStudies = () => {
   useDocumentTitle("Case Studies - Hexa Robotics");

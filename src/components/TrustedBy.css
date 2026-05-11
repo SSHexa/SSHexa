@@ -1,0 +1,109 @@
+.tb-section {
+  background: var(--bg-white, #ffffff);
+  border-top: 1px solid var(--border-light, #e5e7eb);
+  border-bottom: 1px solid var(--border-light, #e5e7eb);
+  padding: 1.5rem 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.tb-label {
+  flex-shrink: 0;
+  padding: 0 1.5rem 0 2rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted, #64748b);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  border-right: 1px solid var(--border-light, #e5e7eb);
+}
+
+.tb-track-wrap {
+  flex: 1;
+  overflow: hidden;
+  /* Edge fade */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 60px,
+    black calc(100% - 60px),
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 60px,
+    black calc(100% - 60px),
+    transparent
+  );
+}
+
+.tb-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: tb-scroll 35s linear infinite;
+}
+
+.tb-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes tb-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.tb-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary, #475569);
+  white-space: nowrap;
+  padding: 0 0.25rem;
+  transition: color 0.2s;
+}
+
+.tb-item:hover {
+  color: var(--sh-primary, #14b8a6);
+}
+
+.tb-dot {
+  margin: 0 1.25rem;
+  color: var(--border-light, #e5e7eb);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .tb-label {
+    display: none;
+  }
+
+  .tb-track-wrap {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 30px,
+      black calc(100% - 30px),
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 30px,
+      black calc(100% - 30px),
+      transparent
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tb-track {
+    animation: none;
+  }
+}

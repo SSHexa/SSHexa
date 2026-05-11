@@ -6,6 +6,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Auto-reload on stale chunk errors after deploy
+window.addEventListener('error', (e) => {
+  if (e.message?.includes('ChunkLoadError') || e.message?.includes('Loading chunk')) {
+    window.location.reload();
+  }
+});
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

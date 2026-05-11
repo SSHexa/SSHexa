@@ -349,8 +349,12 @@
     margin: 2rem auto 0;
   }
   .hr-floating-tag {
-    display: none;
+    font-size: 0.7rem;
+    padding: 0.45rem 0.7rem;
   }
+  .hr-tag-1 { top: 2%; right: 0; }
+  .hr-tag-2 { bottom: 25%; left: 0; }
+  .hr-tag-3 { bottom: 2%; right: 0; }
 }
 
 @media (max-width: 768px) {
@@ -387,6 +391,10 @@
   }
   .hr-hero-visual {
     max-width: 300px;
+  }
+  .hr-floating-tag {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.6rem;
   }
 }
 
