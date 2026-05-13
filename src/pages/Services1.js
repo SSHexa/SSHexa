@@ -25,27 +25,6 @@ const Services1 = () => {
             Send us your sample. Receive a structure. We own every step in between —
             preparation, imaging, and analysis — so you can focus on the science.
           </p>
-          <div className="s1-hero-stats">
-            <div className="s1-hero-stat">
-              <span className="s1-stat-value">1.9 Å</span>
-              <span className="s1-stat-label">Best Resolution</span>
-            </div>
-            <div className="s1-hero-stat-divider"></div>
-            <div className="s1-hero-stat">
-              <span className="s1-stat-value">~130 ms</span>
-              <span className="s1-stat-label">Spray-to-Plunge</span>
-            </div>
-            <div className="s1-hero-stat-divider"></div>
-            <div className="s1-hero-stat">
-              <span className="s1-stat-value">300 kV</span>
-              <span className="s1-stat-label">Titan Krios</span>
-            </div>
-            <div className="s1-hero-stat-divider"></div>
-            <div className="s1-hero-stat">
-              <span className="s1-stat-value">100%</span>
-              <span className="s1-stat-label">In-House</span>
-            </div>
-          </div>
         </div>
       </div>
 
