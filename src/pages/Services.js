@@ -168,11 +168,7 @@ const Services = () => {
                   <h2>{service.title}</h2>
                   <p>{service.description}</p>
                 </div>
-                <div className="service-image-wrapper">
-                  <div style={{ width: "100%", height: "100%" }}>
-                    {service.component}
-                  </div>
-                </div>
+              
               </div>
             ))}
           </div>
