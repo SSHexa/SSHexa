@@ -21,7 +21,6 @@ const lazyRetry = (importFn) =>
 // Lazy-load pages not needed on initial home page render
 const About = lazyRetry(() => import("./pages/About"));
 const Services = lazyRetry(() => import("./pages/Services"));
-const Services1 = lazyRetry(() => import("./pages/Services1"));
 const ContactUs = lazyRetry(() => import("./pages/ContactUs"));
 
 // Lazy-load sub-app layouts (each pulls in its own nav, footer, and pages)
@@ -93,7 +92,6 @@ function AppContent() {
 
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/services1" element={<Services1 />} />
             <Route path="/contactus" element={<ContactUs />} />
 
             {/* Practicloud Routes */}

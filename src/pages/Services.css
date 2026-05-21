@@ -187,6 +187,24 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
 
+/* Text-only service block (no visual) */
+.service-block.service-block--text-only,
+.service-block.service-block--text-only:nth-child(even) {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-block--text-only .service-text {
+  flex: 1 1 auto;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+}
+
 /* Text section */
 .service-text {
   flex: 1.2;
