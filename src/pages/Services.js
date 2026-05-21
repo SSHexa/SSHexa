@@ -6,13 +6,13 @@ import "../components/HomeServices.css";
 import { Link } from "react-router-dom";
 import { FaRobot, FaFlask, FaCloud, FaExternalLinkAlt, FaEnvelope } from "react-icons/fa";
 
-import ProteinTetramer from "./ProteinTetramer";
-import ProteinDensity from "./ProteinDensity";
-import ProteinCapsid from "./ProteinCapsid";
-import ConsultationVisual from "./ConsultationVisual";
-import SecurityVisual from "./SecurityVisual";
-import PricingVisual from "./PricingVisual";
-import CollaborationVisual from "./CollaborationVisual";
+// import ProteinTetramer from "./ProteinTetramer";
+// import ProteinDensity from "./ProteinDensity";
+// import ProteinCapsid from "./ProteinCapsid";
+// import ConsultationVisual from "./ConsultationVisual";
+// import SecurityVisual from "./SecurityVisual";
+// import PricingVisual from "./PricingVisual";
+// import CollaborationVisual from "./CollaborationVisual";
 
 // SS Hexa Divisions
 const divisions = [
@@ -52,13 +52,13 @@ const services = {
       title: "Automated Grid Preparation",
       description:
         "Our Hexa Robotics systems automate the entire grid preparation process. From sample application to vitrification, our robots ensure reproducible results with precise control over blotting time, humidity, and temperature—eliminating human variability and maximizing your success rate.",
-      component: <ConsultationVisual />,
+      // component: <ConsultationVisual />,
     },
     {
       title: "Sample Optimization",
       description:
         "Not sure about the best conditions for your sample? Our robotic screening platform can test multiple conditions in parallel, helping you identify optimal buffer compositions, concentrations, and grid types for your specific protein or complex.",
-      component: <ProteinDensity />,
+      // component: <ProteinDensity />,
     },
   ],
   cro: [
@@ -66,13 +66,13 @@ const services = {
       title: "End-to-End CRO Services",
       description:
         "From sample receipt to final structure, SS Hexa CRO handles it all. Our in-house capabilities span the entire cryo-EM workflow — specimen preparation using Vitriflex (developed by our founder), imaging, and large-scale data analysis on our own cloud platform. We work with small proteins, membrane proteins, viruses, nanoparticles, and more, delivering publication-quality results with both our in-house tomography pipeline and RELION Web platform.",
-      component: <ProteinCapsid />,
+      // component: <ProteinCapsid />,
     },
     {
       title: "Cost-Effective & Accessible",
       description:
         "We partner with various agencies to deliver cost-effective CRO services, making cryo-EM accessible to labs of all sizes. Our in-house capabilities keep evolving — from specimen prep to advanced data analysis — so you benefit from a continuously improving workflow. A feasibility consultation is always free! If you're new to cryo-EM, we'll walk you through the basics and determine if single particle analysis is the right method for your sample.",
-      component: <CollaborationVisual />,
+       // component: <CollaborationVisual />,
     },
   ],
   practicloud: [
@@ -80,19 +80,19 @@ const services = {
       title: "Scalable Cloud Computing",
       description:
         "PractiCloud is designed to meet the evolving demands of structural biology research. Built on a highly scalable infrastructure, it offers dynamic resource allocation that adjusts seamlessly to your project's complexity. Process small datasets or large-scale cryo-EM data with the computational power you need.",
-      component: <ProteinTetramer />,
+      // component: <ProteinTetramer />,
     },
     {
       title: "Advanced Data Management",
       description:
         "Managing large volumes of cryo-EM data can be challenging, but PractiCloud makes it simple. With intuitive data management tools, you can easily organize, access, and share your datasets. Our platform supports a wide range of data formats and integrates seamlessly with existing repositories.",
-      component: <SecurityVisual />,
+      // component: <SecurityVisual />,
     },
     {
       title: "Flexible Pricing & Support",
       description:
         "We understand that every research project is unique. Choose from pay-as-you-go options for occasional use or subscribe to our monthly or annual plans for continuous access. Our dedicated support team is available 24/7 to assist with any technical issues, ensuring your research is never interrupted.",
-      component: <PricingVisual />,
+      // component: <PricingVisual />,
     },
   ],
 };
