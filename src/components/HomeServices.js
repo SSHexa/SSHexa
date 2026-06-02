@@ -24,7 +24,7 @@ const divisions = [
   },
   {
     id: "practicloud",
-    title: "PractiCloud",
+    title: "Cloud Processing",
     tagline: "Cloud-Based Processing",
     description: "Powerful cloud platform for running cryo-EM algorithms with scalable computing resources.",
     icon: <FaCloud />,

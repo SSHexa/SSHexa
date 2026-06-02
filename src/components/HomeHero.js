@@ -69,7 +69,7 @@ const HomeHero = () => {
                 <span className="sh-step-status sh-status-active">SS Hexa CRO <FaArrowRight className="sh-step-arrow" /></span>
               </div>
               <div className="sh-workflow-connector"></div>
-              <div className="sh-workflow-step sh-step-3 sh-step-clickable" onClick={() => navigate("/practicloud")}>
+              <div className="sh-workflow-step sh-step-3 sh-step-clickable" onClick={() => navigate("/services")}>
                 <FaExternalLinkAlt className="sh-step-link-icon" />
                 <div className="sh-step-icon sh-icon-blue"><FaCloud /></div>
                 <div className="sh-step-info">
@@ -77,7 +77,7 @@ const HomeHero = () => {
                   <span className="sh-step-name">Data Processing</span>
                   <span className="sh-step-desc">Cloud-powered data analysis</span>
                 </div>
-                <span className="sh-step-status sh-status-active">PractiCloud <FaArrowRight className="sh-step-arrow" /></span>
+                <span className="sh-step-status sh-status-active">Cloud Processing <FaArrowRight className="sh-step-arrow" /></span>
               </div>
             </div>
           </div>

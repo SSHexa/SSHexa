@@ -14,7 +14,7 @@ const testimonials = [
   },
   {
     quote:
-      "PractiCloud's AI-accelerated processing gave us publication-quality maps on our first attempt. The cloud infrastructure handles our high-throughput projects without any bottlenecks.",
+      "Our cloud platform's AI-accelerated processing gave us publication-quality maps on our first attempt. The cloud infrastructure handles our high-throughput projects without any bottlenecks.",
     name: "Dr. Rajiv Krishnan",
     role: "Senior Scientist, Structural Biology",
     org: "AstraZeneca R&D",

@@ -28,12 +28,12 @@ const divisions = [
   },
   {
     id: "practicloud",
-    name: "PractiCloud",
+    name: "Cloud Processing",
     tagline: "Cloud-Based Processing",
     description: "Powerful cloud platform for running cryo-EM algorithms. Process your data with scalable computing resources, advanced analysis tools, and seamless collaboration features.",
     icon: <FaCloud />,
     color: "#3b82f6",
-    link: "/practicloud",
+    contactLink: "/contactus",
   },
 ];
 
@@ -67,12 +67,12 @@ const services = {
     {
       title: "Scalable Cloud Computing",
       description:
-        "PractiCloud is designed to meet the evolving demands of structural biology research. Built on a highly scalable infrastructure, it offers dynamic resource allocation that adjusts seamlessly to your project's complexity. Process small datasets or large-scale cryo-EM data with the computational power you need.",
+        "Our cloud platform is designed to meet the evolving demands of structural biology research. Built on a highly scalable infrastructure, it offers dynamic resource allocation that adjusts seamlessly to your project's complexity. Process small datasets or large-scale cryo-EM data with the computational power you need.",
     },
     {
       title: "Advanced Data Management",
       description:
-        "Managing large volumes of cryo-EM data can be challenging, but PractiCloud makes it simple. With intuitive data management tools, you can easily organize, access, and share your datasets. Our platform supports a wide range of data formats and integrates seamlessly with existing repositories.",
+        "Managing large volumes of cryo-EM data can be challenging, but our cloud platform makes it simple. With intuitive data management tools, you can easily organize, access, and share your datasets. Our platform supports a wide range of data formats and integrates seamlessly with existing repositories.",
     },
     {
       title: "Flexible Pricing & Support",

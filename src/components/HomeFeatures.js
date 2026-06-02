@@ -28,7 +28,7 @@ const features = [
   {
     icon: <FaCloud />,
     title: "Cloud-Powered Processing",
-    desc: "PractiCloud offers scalable computing resources for running cryo-EM algorithms without hardware hassles.",
+    desc: "Our cloud platform offers scalable computing resources for running cryo-EM algorithms without hardware hassles.",
     color: "#3b82f6"
   },
   {

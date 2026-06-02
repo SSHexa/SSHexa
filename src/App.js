@@ -24,16 +24,16 @@ const Services = lazyRetry(() => import("./pages/Services"));
 const ContactUs = lazyRetry(() => import("./pages/ContactUs"));
 
 // Lazy-load sub-app layouts (each pulls in its own nav, footer, and pages)
-const PracticloudLayout = lazyRetry(() => import("./practicloud/PracticloudLayout"));
+// const PracticloudLayout = lazyRetry(() => import("./practicloud/PracticloudLayout"));
 const HexaRoboticsLayout = lazyRetry(() => import("./hexarobotics/HexaRoboticsLayout"));
 
 // Lazy-load Practicloud pages
-const PCHome = lazyRetry(() => import("./practicloud/pages/Home"));
-const PCServices = lazyRetry(() => import("./practicloud/pages/Services"));
-const PCPricing = lazyRetry(() => import("./practicloud/pages/Pricing"));
-const PCAcademia = lazyRetry(() => import("./practicloud/pages/Academia"));
-const PCFAQ = lazyRetry(() => import("./practicloud/pages/FAQ"));
-const PCLogin = lazyRetry(() => import("./practicloud/pages/Login"));
+// const PCHome = lazyRetry(() => import("./practicloud/pages/Home"));
+// const PCServices = lazyRetry(() => import("./practicloud/pages/Services"));
+// const PCPricing = lazyRetry(() => import("./practicloud/pages/Pricing"));
+// const PCAcademia = lazyRetry(() => import("./practicloud/pages/Academia"));
+// const PCFAQ = lazyRetry(() => import("./practicloud/pages/FAQ"));
+// const PCLogin = lazyRetry(() => import("./practicloud/pages/Login"));
 
 // Lazy-load Hexa Robotics pages
 const HRHome = lazyRetry(() => import("./hexarobotics/pages/Home"));
@@ -70,7 +70,7 @@ function ScrollToTop() {
 
 function AppContent() {
   const location = useLocation();
-  const isSubApp = location.pathname.startsWith('/practicloud') || location.pathname.startsWith('/hexarobotics');
+  const isSubApp = location.pathname.startsWith('/hexarobotics');
 
   return (
     <div className={!isSubApp ? "app-container" : undefined}>
@@ -94,7 +94,8 @@ function AppContent() {
             <Route path="/services" element={<Services />} />
             <Route path="/contactus" element={<ContactUs />} />
 
-            {/* Practicloud Routes */}
+            {/* Practicloud Routes — disabled; Practicloud is hosted on its own domain */}
+            {/*
             <Route path="/practicloud" element={<PracticloudLayout />}>
               <Route index element={<PCHome />} />
               <Route path="services" element={<PCServices />} />
@@ -104,6 +105,7 @@ function AppContent() {
               <Route path="login" element={<PCLogin />} />
               <Route path="contactus" element={<ContactUs />} />
             </Route>
+            */}
 
             {/* Hexa Robotics Routes */}
             <Route path="/hexarobotics" element={<HexaRoboticsLayout />}>

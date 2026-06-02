@@ -9,7 +9,7 @@ const pricingPlans = [
     id: 1,
     name: "Silver",
     price: "$27,500",
-    promo: "2026 Introductory Pricing — First Few Customers Only",
+    promo: "2026 Introductory Pricing — For Customers and Collaborators Interested in Our Prototype System",
     description: "Complete robot with basic installation to get you started",
     icon: FaRobot,
     features: [
