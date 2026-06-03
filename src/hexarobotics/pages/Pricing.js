@@ -32,7 +32,6 @@ const pricingPlans = [
     description: "Everything in Silver plus 3 days of dedicated support",
     icon: FaLaptopCode,
     features: [
-      "Everything in Silver Plan",
       "3 Days On-Site Support",
       "System Configuration & Calibration",
       "Protocol Setup & Testing",
@@ -51,7 +50,7 @@ const pricingPlans = [
     description: "Everything in Gold plus 1 year of training, consulting & support",
     icon: FaGraduationCap,
     features: [
-      "Everything in Gold Plan",
+      "2 Advanced Modules Included",
       "1 Year Priority Support",
       "Ongoing Training Sessions",
       "Custom Protocol Development",
@@ -59,7 +58,6 @@ const pricingPlans = [
       "Protocol Optimization Consulting",
       "Direct Access to Engineers",
       "All Future Software Updates",
-      "2 Hardware Upgrades",
     ],
     highlight: false,
   },
