@@ -94,21 +94,14 @@ const Pricing = () => {
               key={plan.id}
               className={`hr-pricing-card ${plan.highlight ? "hr-highlighted" : ""}`}
             >
-              {plan.highlight && <div className="hr-popular-badge">Most Popular</div>}
               {plan.promo && <div className="hr-promo-banner">{plan.promo}</div>}
 
-              <div className={`hr-pricing-icon ${plan.highlight ? "hr-icon-gold" : ""}`}>
-                <plan.icon size={48} />
-              </div>
-
-              <h2 className="hr-plan-name">{plan.name}</h2>
               {plan.price && (
                 <div className="hr-plan-price">
                   <span className="hr-price-currency">$</span>
                   <span className="hr-price-amount">{plan.price.replace("$", "")}</span>
                 </div>
               )}
-              <p className="hr-plan-description">{plan.description}</p>
 
               <ul className="hr-plan-features">
                 {plan.features.map((feature, idx) => (

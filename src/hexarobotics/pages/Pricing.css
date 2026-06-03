@@ -30,11 +30,14 @@
 .hr-pricing-card {
   background: #fff;
   border-radius: 16px;
-  padding: 40px 30px;
+  padding: 0 30px 40px;
   text-align: center;
   border: 1px solid #e5e7eb;
   transition: all 0.3s ease;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .hr-pricing-card:hover {
@@ -55,33 +58,20 @@
 
 /* Promo Banner */
 .hr-promo-banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  margin: 0 -30px 40px;
   background: linear-gradient(90deg, #0d9488, #14b8a6);
   color: #fff;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 6px 12px;
-  border-radius: 14px 14px 0 0;
+  padding: 16px 18px;
   text-align: center;
-}
-
-/* Popular Badge */
-.hr-popular-badge {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #f59e0b;
-  color: #fff;
-  padding: 6px 20px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  line-height: 1.35;
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Icon */
