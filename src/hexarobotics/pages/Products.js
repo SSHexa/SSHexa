@@ -31,10 +31,10 @@ const Products = () => {
           <Link to="/hexarobotics/products/vitriflex" className="hr-product-card">
             <img src="/Images/vitriflex_full_system.jpg" alt="Vitriflex" className="hr-product-image" loading="lazy" />
             <div className="hr-product-info">
-              <h3 className="hr-product-name">Vitriflex</h3>
+              <h3 className="hr-product-name">Early Prototype Based on VitriFlex</h3>
               <p className="hr-product-desc">
-                Modular cryo-EM grid preparation platform with SCARA
-                robot, supporting blot-and-plunge and time-resolved workflows.
+                A modular cryo-EM grid preparation system with a SCARA robot,
+                supporting blot-and-plunge and time-resolved workflows.
               </p>
               <span className="hr-know-more">Know More →</span>
             </div>

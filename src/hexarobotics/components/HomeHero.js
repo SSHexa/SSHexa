@@ -1,6 +1,6 @@
 import { Container, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { FaArrowRight, FaCog, FaThermometerHalf, FaMicrochip, FaFlask } from "react-icons/fa";
+import { FaArrowRight, FaCog } from "react-icons/fa";
 import "./HomeHero.css";
 
 const HomeHero = () => {
@@ -27,9 +27,7 @@ const HomeHero = () => {
           </h1>
 
           <p className="hr-hero-subtitle">
-            Purpose-built robotic systems for cryo-EM grid preparation.
-            Achieve reproducible, high-quality vitrification with our
-            VitriFlex platform.
+            Automated cryo-EM grid prep, with our platform based on the VitriFlex system.
           </p>
 
           <div className="hr-hero-buttons">
@@ -37,7 +35,7 @@ const HomeHero = () => {
               className="hr-btn-primary-hero"
               onClick={() => navigate("/hexarobotics/products")}
             >
-              View VitriFlex
+              View Products
               <FaArrowRight className="hr-btn-icon" />
             </Button>
             <Button
@@ -48,31 +46,6 @@ const HomeHero = () => {
             </Button>
           </div>
 
-          <div className="hr-hero-specs">
-            <div className="hr-spec-item">
-              <FaThermometerHalf className="hr-spec-icon" />
-              <div className="hr-spec-text">
-                <span className="hr-spec-value">&plusmn;0.1&deg;C</span>
-                <span className="hr-spec-label">Temperature Control</span>
-              </div>
-            </div>
-            <div className="hr-spec-divider"></div>
-            <div className="hr-spec-item">
-              <FaMicrochip className="hr-spec-icon" />
-              <div className="hr-spec-text">
-                <span className="hr-spec-value">&lt;3 min</span>
-                <span className="hr-spec-label">Grid Prep Time</span>
-              </div>
-            </div>
-            <div className="hr-spec-divider"></div>
-            <div className="hr-spec-item">
-              <FaFlask className="hr-spec-icon" />
-              <div className="hr-spec-text">
-                <span className="hr-spec-value">99.5%</span>
-                <span className="hr-spec-label">Reproducibility</span>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="hr-hero-visual">

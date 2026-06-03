@@ -28,6 +28,7 @@ const pricingPlans = [
     id: 2,
     name: "Gold",
     price: "$35,000",
+    promo: "Early Beta Release — Launching May 2027",
     description: "Everything in Silver plus 3 days of dedicated support",
     icon: FaLaptopCode,
     features: [
@@ -46,6 +47,7 @@ const pricingPlans = [
     id: 3,
     name: "Platinum",
     price: "$60,000",
+    promo: "Fully Commercialized Release — Available Q4 2027",
     description: "Everything in Gold plus 1 year of training, consulting & support",
     icon: FaGraduationCap,
     features: [

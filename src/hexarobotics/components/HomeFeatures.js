@@ -44,7 +44,7 @@ const features = [
   {
     icon: <FaShieldAlt />,
     title: "Reproducible Results",
-    desc: "Eliminate human variability with robotic precision. Achieve 99.5% reproducibility across experiments with logged parameters.",
+    desc: "Eliminate human variability with robotic precision. Every freezing run is automatically logged — date, time, grid ID, sample, and timing parameters — for full traceability across experiments.",
     color: "#06b6d4"
   }
 ];

@@ -114,6 +114,21 @@
   z-index: 1;
 }
 
+.hr-prototype-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #0ea5e9;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  z-index: 1;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hr-products-hero { padding: 7rem 1.5rem 4rem; }

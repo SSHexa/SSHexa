@@ -177,53 +177,6 @@
   color: #fbbf24;
 }
 
-/* Engineering Specs bar */
-.hr-hero-specs {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
-}
-
-.hr-spec-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.hr-spec-icon {
-  font-size: 1.1rem;
-  color: #f59e0b;
-}
-
-.hr-spec-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.hr-spec-value {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: white;
-  font-family: "Courier New", monospace;
-}
-
-.hr-spec-label {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.7);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.hr-spec-divider {
-  width: 1px;
-  height: 36px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
 /* Product Visual — robot image showcase */
 .hr-hero-visual {
   position: relative;
@@ -341,9 +294,6 @@
   .hr-hero-buttons {
     justify-content: center;
   }
-  .hr-hero-specs {
-    justify-content: center;
-  }
   .hr-hero-visual {
     max-width: 400px;
     margin: 2rem auto 0;
@@ -381,14 +331,6 @@
     width: 100%;
     justify-content: center;
   }
-  .hr-hero-specs {
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 0.75rem 1rem;
-  }
-  .hr-spec-divider {
-    display: none;
-  }
   .hr-hero-visual {
     max-width: 300px;
   }
@@ -408,11 +350,5 @@
   .hr-hero-badge {
     font-size: 0.78rem;
     padding: 0.4rem 0.8rem;
-  }
-  .hr-spec-value {
-    font-size: 0.95rem;
-  }
-  .hr-spec-label {
-    font-size: 0.7rem;
   }
 }
