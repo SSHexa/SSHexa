@@ -31,6 +31,8 @@ const HomeHero = () => {
             research, and cloud-powered data processing.
           </p>
 
+          {/* About SS Hexa button — hidden while About page is disabled */}
+          {/*
           <div className="sh-hero-buttons">
             <Button
               className="sh-btn-secondary"
@@ -39,6 +41,7 @@ const HomeHero = () => {
               About SS Hexa
             </Button>
           </div>
+          */}
 
 
         </div>

@@ -19,7 +19,7 @@ const lazyRetry = (importFn) =>
   );
 
 // Lazy-load pages not needed on initial home page render
-const About = lazyRetry(() => import("./pages/About"));
+// const About = lazyRetry(() => import("./pages/About"));
 const Services = lazyRetry(() => import("./pages/Services"));
 const ContactUs = lazyRetry(() => import("./pages/ContactUs"));
 
@@ -90,7 +90,7 @@ function AppContent() {
                 </>
               } />
 
-            <Route path="/about" element={<About />} />
+            {/* <Route path="/about" element={<About />} /> */}
             <Route path="/services" element={<Services />} />
             <Route path="/contactus" element={<ContactUs />} />
 
