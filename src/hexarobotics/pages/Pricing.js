@@ -76,7 +76,7 @@ const Pricing = () => {
         </div>
         <div className="hr-page-hero-content">
           <span className="hr-page-badge"><FaTag /> Pricing</span>
-          <h1 className="hr-page-hero-title">Pricing Plans</h1>
+          <h1 className="hr-page-hero-title">Pricing Plans for Industry Only — Including the Robot</h1>
           <p className="hr-page-hero-subtitle">
             Choose the package that best fits your laboratory's needs. All plans include
             our VitriFlex platform for cryo-EM grid preparation.
