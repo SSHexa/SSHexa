@@ -207,13 +207,31 @@
 }
 
 /* Footer Section */
+.hr-pricing-footer-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 24px;
+  margin: 60px auto 0;
+  max-width: 1000px;
+  flex-wrap: wrap;
+}
+
 .hr-pricing-footer {
   text-align: center;
+  flex: 0 0 600px;
   max-width: 600px;
-  margin: 60px auto 0;
   padding: 50px 30px;
   background: linear-gradient(135deg, #0f172a 0%, #1a1a2e 50%, #16213e 100%);
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hr-pricing-footer--academic {
+  flex: 0 0 360px;
+  max-width: 360px;
 }
 
 .hr-pricing-footer h3 {
@@ -352,8 +370,11 @@
     padding: 30px 20px;
   }
 
-  .hr-pricing-footer {
+  .hr-pricing-footer,
+  .hr-pricing-footer--academic {
     padding: 40px 20px;
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 
   .hr-pricing-footer h3 {

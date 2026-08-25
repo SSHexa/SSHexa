@@ -51,6 +51,7 @@ const HRCaseStudies = lazyRetry(() => import("./hexarobotics/pages/CaseStudies")
 const HRCS1 = lazyRetry(() => import("./hexarobotics/pages/CS/CS1"));
 const HRCS2 = lazyRetry(() => import("./hexarobotics/pages/CS/CS2"));
 const HRPricing = lazyRetry(() => import("./hexarobotics/pages/Pricing"));
+const HRAcademicPricing = lazyRetry(() => import("./hexarobotics/pages/AcademicPricing"));
 
 
 function ScrollToTop() {
@@ -124,6 +125,7 @@ function AppContent() {
               <Route path="CS/CS1" element={<HRCS1 />} />
               <Route path="CS/CS2" element={<HRCS2 />} />
               <Route path="pricing" element={<HRPricing />} />
+              <Route path="academic-pricing" element={<HRAcademicPricing />} />
               <Route path="contactus" element={<ContactUs />} />
             </Route>
           </Routes>

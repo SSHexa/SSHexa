@@ -117,16 +117,27 @@ const Pricing = () => {
           ))}
         </div>
 
-        {/* Custom Solution CTA */}
-        <div className="hr-pricing-footer">
-          <h3>Need a Custom Solution?</h3>
-          <p>
-            Contact us for enterprise pricing, bulk orders, or specialized configurations
-            tailored to your research requirements.
-          </p>
-          <Link to="/hexarobotics/contactus" className="hr-custom-cta">
-            Contact Sales
-          </Link>
+        {/* Footer CTAs */}
+        <div className="hr-pricing-footer-row">
+          <div className="hr-pricing-footer">
+            <h3>Need a Custom Solution?</h3>
+            <p>
+              Contact us for enterprise pricing, bulk orders, or specialized configurations
+              tailored to your research requirements.
+            </p>
+            <Link to="/hexarobotics/contactus" className="hr-custom-cta">
+              Contact Sales
+            </Link>
+          </div>
+          <div className="hr-pricing-footer hr-pricing-footer--academic">
+            <h3>Academic Pricing</h3>
+            <p>
+              Discounted plans available for academic labs and non-profit research groups.
+            </p>
+            <Link to="/hexarobotics/academic-pricing" className="hr-custom-cta">
+              View Academic Tiers
+            </Link>
+          </div>
         </div>
       </div>
     </div>
