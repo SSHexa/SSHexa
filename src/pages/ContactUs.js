@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./ContactUs.css";
-import { FaUsers, FaBuilding, FaHeadset, FaCheckCircle, FaEnvelope } from "react-icons/fa";
+import { FaUsers, FaHeadset, FaCheckCircle, FaEnvelope } from "react-icons/fa";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const ContactUs = () => {
@@ -182,13 +182,6 @@ const ContactUs = () => {
             <div>
               <strong>Sales</strong>
               <p>sales@sshexa.com</p>
-            </div>
-          </div>
-          <div className="ct-info-item">
-            <FaBuilding className="ct-info-icon" style={{ color: accentColor }} />
-            <div>
-              <strong>Enterprise</strong>
-              <p>enterprise@sshexa.com</p>
             </div>
           </div>
         </div>
